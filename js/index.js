@@ -10,3 +10,12 @@ navLinks.forEach(link => {
     document.body.classList.remove('nav-open');
   })
 });
+
+function showHide() {
+  var x = document.getElementById("src-code");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
