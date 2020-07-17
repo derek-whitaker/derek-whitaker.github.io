@@ -40,7 +40,11 @@
             <h1 class="section__title section__title--intro">
                 Neural Networks for Loans
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Using Machine Learning to Determine Financial Risk</p>
+            <p class="section__subtitle section__subtitle--intro">Using Deep Learning to Determine Financial Risk</p>
+            <!-- Source of LendingClub Photo -->
+            <!-- https://upload.wikimedia.org/wikipedia/commons/f/f3/Lending_club_picture_from_the_street.jpg -->
+            <!-- Mediasagax / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0) -->
+            <img src="img/lending-header.jpg" alt="a picture of Lending Club in New York City" class="intro__img">
         </section>
         <section>
           <div class="portfolio-item-individual">
@@ -53,10 +57,20 @@
             <!-- <button onclick="showHide()">Show/Hide Code</button> -->
 
             <h3>0.1 Objective</h3>
-            <p>Using data provided by the LendingClub, construct a model that can predict if a potential borrower will pay back their loan. The model will be designed to aid LendingClub, and business like it, determine if offering an individual a loan is worthwhile investment.</p>
+            <p>Using data provided by the LendingClub, a peer-to-peer lending company, we sought to design a model that would analyze information known about a potential borrower and predict if this person would fully pay back their loan. </p>
 
             <h3>0.2 Dataset</h3>
-            <p>We use a subset of a LendingClub dataset available on <a href="https://www.kaggle.com/wordsforthewise/lending-club">Kaggle</a>. This dataset contains information about the person requesting the loan, if their request was accepted or denied, and, if the request was accepted, whether the loan was paid back in full or charged off.</p>
+            <p>We use a subset of a LendingClub dataset available on <a href="https://www.kaggle.com/wordsforthewise/lending-club">Kaggle</a>. This dataset contains information about the person requesting the loan, if their request was accepted or denied, and — if the request was accepted — whether the loan was paid back in full or charged off.</p>
+
+            <p>The dataset contains 396030 entries and is organized into 27 columns containing a mix of categorical and numeric features.</p>
+
+            <h3>0.3 Outcome</h3>
+            <p>We used TensorFlow and Keras to design a deep learning neural network that was able to predict with 89% accuracy if a potential borrower would pay back their loan. Considering the unbalanced nature of dataset, which contains much almost 80% fully paid loans, this model presents a moderate level of accuracy which could potentially be approved upon with further development.</p>
+
+            <!-- SECTION 1 -->
+            <h2>1.0 Exploratory Data Analysis</h2>
+
+            <p>We began by performing an initial analysis of the data in order to view summary statistics, visualize the data, and gain an understanding of potentially important data features.</p>
 
             <pre><code class="python" id="src-code">
               #Load the necessary Python libraries and frameworks
@@ -81,11 +95,6 @@
                   print(data_info.loc[col_name]['Description'])
             </code></pre>
 
-            <!-- SECTION 1 -->
-            <h2>1.0 Exploratory Data Analysis</h2>
-
-            <p>We began by performing an initial analysis of the data in order to view summary statistics, visualize the data, and gain an understanding of potentially important data features.</p>
-
             <h3>1.1 Loan Status</h3>
             <p>Since we were interested in predicting loan status, we began by creating a count plot that shows how many loans were fully paid off and how many were charged off.</p>
 
@@ -96,7 +105,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 1</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Number of Loans per Loan Status</p>
               <img src="img/loan-prediction/fig1.png" alt="">
             </div>
 
@@ -112,7 +121,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 2</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Number of Loans by Loan Amount</p>
               <img src="img/loan-prediction/fig2.png" alt="">
             </div>
 
@@ -129,7 +138,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 3</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Heat Map of Feature Correlations</p>
               <img src="img/loan-prediction/fig3.png" alt="">
             </div>
 
@@ -142,7 +151,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 4</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>The Relation of Installment Size and Loan Ammount</p>
               <img src="img/loan-prediction/fig4.png" alt="">
             </div>
 
@@ -158,7 +167,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 5</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Box Plot of Loan Amount by Loan Status</p>
               <img src="img/loan-prediction/fig5.png" alt="">
             </div>
 
@@ -225,7 +234,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 6</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Count of Fully Paid and Charged Off Loans per Grade Category</p>
               <img src="img/loan-prediction/fig6.png" alt="">
             </div>
 
@@ -244,7 +253,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 7</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Number of Loans per Loan Amount</p>
               <img src="img/loan-prediction/fig7.png" alt="">
             </div>
 
@@ -260,7 +269,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 8</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Number of Fully Paid and Charged Off Loans per Sub Grade Category</p>
               <img src="img/loan-prediction/fig8.png" alt="">
             </div>
 
@@ -279,7 +288,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 9</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Number of Fully Paid and Charged Off Loans per F and G Sub Grade Categories</p>
               <img src="img/loan-prediction/fig9.png" alt="">
             </div>
 
@@ -316,7 +325,7 @@
 
             <div class="fig">
               <p class="fig-number">Figure 10</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Correlation of Numeric Features to Fully Paid Loan Status</p>
               <img src="img/loan-prediction/fig10.png" alt="">
             </div>
 
@@ -445,7 +454,7 @@
             </code></pre>
             <div class="fig">
               <p class="fig-number">Figure 11</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Total Number of Loans per Employment Length Category</p>
               <img src="img/loan-prediction/fig11.png" alt="">
             </div>
             <p>This graph shows that the 10+ years employment length group is the largest. This makes sense since if we assume that those who hav been working for a longer amount of time are more likely to have the financial means to take out a loan. Because of their personal situation, they may also be more likely to need to take out a loan (e.g. to pay for home repair).</p>
@@ -461,7 +470,7 @@
             </code></pre>
             <div class="fig">
               <p class="fig-number">Figure 12</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Number of Fully Paid and Charged Off Loans per Employment Length Category</p>
               <img src="img/loan-prediction/fig12.png" alt="">
             </div>
             <p>Based off this plot, it is difficult to judge if there is any significant relationship between loan status and employment length. We therefore decided to calculate the percent of charged off loans per employment length category.</p>
@@ -601,7 +610,7 @@
             </code></pre>
             <div class="fig">
               <p class="fig-number">Figure 13</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Percentage of Charged Off Loans per Employment Length Category</p>
               <img src="img/loan-prediction/fig13.png" alt="">
             </div>
             <p>In this graph we can clearly observe that there is only minimal variation between categories. This is somewhat surprising. Those who have worked more than 10 years have a slightly smaller charge off rate. However, the difference is not extreme enough to support keeping this feature. Therefore, because rates are so similar across all employment lengths, we decided to drop this feature.</p>
@@ -628,24 +637,79 @@
             <pre><code class="python">
               df['mort_acc'].value_counts()
             </code></pre>
-            <div class="table">
-              <h4>Table 8</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
-            </div>
             <p>We saw that the majority of people have 0 montage accounts. While there are extremes in this column (one individual with 34 montage accounts!), we decided that we could keep them without skewing our data.</p>
             <p>This column had a very high amount of missing values — almost 10% of the column. This meant we couldn’t drop those rows or else we would be dropping 10% of our data. We considered therefore dropping the feature. However, the number of mortgage accounts seemed intuitively significant to our label of loan status. Moreover, since we were dealing with a numeric feature and only 10% of data was missing, it would be possible to fill in the missing data with estimate values. We decided to peruse this option; it would turn out to be one of the most technically challenging aspects of the whole project.</p>
             <p>To fill in them missing values in the ‘mort_acc’ column, we began by looking at what features it was the most correlated with and find that a strong correlation with ‘total_acc,’ which stands for the total amount of accounts the person holds. This makes sense: the number of total accounts should be directly related to the number of mortgage accounts.</p>
             <pre><code class="python">
               df.corr()['mort_acc'].sort_values(ascending=True)
             </code></pre>
-            <div class="table">
-              <h4>Table 9</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
+            <div class="tab-fig-top">
+              <p class="fig-number">Table 8</p>
+              <p class="fig-title">Correlation between Number of Mortage Accounts and Numeric Features</p>
             </div>
+            <div style="overflow-x:auto;">
+              <table>
+                <tr>
+                  <th>Feature</th>
+                  <th>Correlation</th>
+                </tr>
+                <tr>
+                  <td>int_rate</td>
+                  <td>-0.082583</td>
+                </tr>
+                <tr>
+                  <td>dti</td>
+                  <td>-0.025439</td>
+                </tr>
+                <tr>
+                  <td>revol_util</td>
+                  <td>0.007514</td>
+                </tr>
+                <tr>
+                  <td>pub_rec</td>
+                  <td>0.011552</td>
+                </tr>
+                <tr>
+                  <td>pub_rec_bankruptcies</td>
+                  <td>0.027239</td>
+                </tr>
+                <tr>
+                  <td>loan_repaid</td>
+                  <td>0.073111</td>
+                </tr>
+                <tr>
+                  <td>open_acc</td>
+                  <td>0.109205</td>
+                </tr>
+                <tr>
+                  <td>installment</td>
+                  <td>0.193694</td>
+                </tr>
+                <tr>
+                  <td>revol_bal</td>
+                  <td>0.194925</td>
+                </tr>
+                <tr>
+                  <td>loan_amnt</td>
+                  <td>0.222315</td>
+                </tr>
+                <tr>
+                  <td>annual_inc</td>
+                  <td>0.236320</td>
+                </tr>
+                <tr>
+                  <td>total_acc</td>
+                  <td>0.381072</td>
+                </tr>
+                <tr>
+                  <td>mort_acc</td>
+                  <td>1.000000</td>
+                </tr>
+              </table>
+            </div>
+
+
+
             <p>To begin filling in the missing data, we grouped persons by total accounts and found the mean amount of mortgage accounts for each category. This provided us with an average that we could use to fill in the missing values. Once we had the mean mortgage account amount per total account amount, we created a function that would check to see if a row was missing a montage account value. If it did, it would find the mean mortgage account value for its total account value and then use this value to fill in the missing data. If the row already had a ‘mort_acc’ value, the function did nothing. After designing and testing our function to make sure it worked properly, we used a lambda expression to apply it to the two columns of our dataframe. This worked correctly, and we were able to fill in reasonable estimate values for about 10% of rows that were missing this data.</p>
             <pre><code class="python">
               total_acc_avg = df.groupby('total_acc').mean()['mort_acc']
@@ -673,12 +737,8 @@
             <pre><code class="python">
               list(df.select_dtypes(include=['object']).columns)
             </code></pre>
-            <div class="table">
-              <h4>Table 10</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
-            </div>
+
+            <p>This indicated the following columns contained categorical data: 'term','grade', 'sub_grade', 'home_ownership', 'verification_status', 'issue_d', 'loan_status', 'purpose', 'earliest_cr_line', 'initial_list_status', 'application_type', and'address'</p>
 
             <h4>2.2.1 Term</h4>
             <p>We began by looking at the ‘term’ feature and learned that this column shows the number of payments on the loan, which are listed as a string value of either ’36 months’ or ’60 months’. This was essentially already numeric data and we could easily convert this into a numeric variable: ’36 months’ would be become the integer 36, while ’60 months’ would become the integer 60. We made this change through the use of the .map() function.</p>
@@ -711,12 +771,43 @@
             <pre><code class="python">
               df['home_ownership'].value_counts()
             </code></pre>
-            <div class="table">
-              <h4>Table 11</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
+            <div class="tab-fig-top">
+              <p class="fig-number">Table 9</p>
+              <p class="fig-title">Value Counts for Unique Values in Home Ownership Column</p>
             </div>
+            <div style="overflow-x:auto;">
+              <table>
+                <tr>
+                  <th>Value</th>
+                  <th>Count</th>
+                </tr>
+                <tr>
+                  <td>MORTAGE</td>
+                  <td>198022</td>
+                </tr>
+                <tr>
+                  <td>RENT</td>
+                  <td>159395</td>
+                </tr>
+                <tr>
+                  <td>OWN</td>
+                  <td>37660</td>
+                </tr>
+                <tr>
+                  <td>OTHER</td>
+                  <td>110</td>
+                </tr>
+                <tr>
+                  <td>NONE</td>
+                  <td>29</td>
+                </tr>
+                <tr>
+                  <td>ANY</td>
+                  <td>3</td>
+                </tr>
+              </table>
+            </div>
+
             <p>Therefore, we used the .replace() function to merge these last three categories into one.  This left us with 4 categories: ‘MORTAGE’, ‘RENT’, ‘OWN’, and ‘OTHER’. We then proceeded to create dummy variables, concatenate them to the data frame, and drop the original categorical data.</p>
             <pre><code class="python">
               home_ownership_dummies = pd.get_dummies(df['home_ownership'].replace(['NONE','ANY'],'OTHER'),drop_first=True)
@@ -729,12 +820,6 @@
             <pre><code class="python">
               df['zip_code'].value_counts()
             </code></pre>
-            <div class="table">
-              <h4>Table 12</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
-            </div>
             <pre><code class="python">
               # We extract the zip code from the address feature.
               df['zip_code'] = df['address'].apply(lambda x: x.split()[-1])
@@ -826,18 +911,12 @@
               model_loss = pd.DataFrame(model.history.history)
               model_loss
             </code></pre>
-            <div class="table">
-              <h4>Table 13</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
-            </div>
             <pre><code class="python">
               model_loss.plot(figsize=(15,6))
             </code></pre>
             <div class="fig">
               <p class="fig-number">Figure 14</p>
-              <p class='fig-title'>Title of Figure</p>
+              <p class='fig-title'>Validaton Loss and Training Loss</p>
               <img src="img/loan-prediction/fig14.png" alt="">
             </div>
             <p>We then proceeded to create predictions from our X_test set.</p>
@@ -849,17 +928,75 @@
               print('\n')
               print(confusion_matrix(y_test,predictions))
             </code></pre>
-            <div class="table">
-              <h4>Table 14</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
+            <div class="tab-fig-top">
+              <p class="fig-number">Table 10</p>
+              <p class="fig-title">Classifcation Report</p>
             </div>
-            <div class="table">
-              <h4>Table 15</h4>
-              <p>Title of Table</p>
-              <p>FILL IN WITH TABLE LATER</p>
-              <p>A note if it is needed.</p>
+            <div style="overflow-x:auto;">
+              <table>
+                <tr>
+                  <th></th>
+                  <th>precision</th>
+                  <th>recall</th>
+                  <th>f1-score</th>
+                  <th>support</th>
+                </tr>
+                <tr>
+                  <td><strong>0</strong></td>
+                  <td>0.98</td>
+                  <td>0.44</td>
+                  <td>0.61</td>
+                  <td>15658</td>
+                </tr>
+                <tr>
+                  <td><strong>1</strong></td>
+                  <td>0.88</td>
+                  <td>1.00</td>
+                  <td>0.93</td>
+                  <td>63386</td>
+                </tr>
+                <tr>
+                  <td><strong>accuracy</strong></td>
+                  <td></td>
+                  <td></td>
+                  <td>0.89</td>
+                  <td>79044</td>
+                </tr>
+                <tr>
+                  <td><strong>macro avg</strong></td>
+                  <td>0.93</td>
+                  <td>0.72</td>
+                  <td>0.77</td>
+                  <td>79044</td>
+                </tr>
+                <tr>
+                  <td><strong>weighted avg</strong></td>
+                  <td>0.90</td>
+                  <td>0.89</td>
+                  <td>0.87</td>
+                  <td>79044</td>
+                </tr>
+              </table>
+            </div>
+            <div class="tab-fig-top">
+              <p class="fig-number">Table 11</p>
+              <p class="fig-title">Confusion Matrix</p>
+            </div>
+            <div style="overflow-x:auto;">
+              <table>
+                <tr>
+                  <th></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>6899</td>
+                  <td>8759</td>
+                </tr>
+                <tr>
+                  <td>150</td>
+                  <td>63236</td>
+                </tr>
+              </table>
             </div>
             <p>Here, accuracy represents the actual percent that our model correctly predicted. We have about a 90% accuracy. However, this is an unbalanced dataset, with much more loans being fully paid versus being charged off. If we had created a very simple model that predicted that any loan would be repaid, it would still be about 80% accurate. Our 89% accuracy is ok but not excellent. It presents only a 9% avantage over a simple model that predicts that all loans will be repaid. A better metric here is our model’s precision and recall, as well as the f1-score, which takes the harmonic mean of precision and recall. We see for example that our model is correctly predicting that a loan will be charged off 44% of the time.</p>
             <p> It’s possible that our model could be improved by changing some of its parameters. We might try adding more neurons or layers, for example. We could also try more feature engineering. One column we could not use was employment title. It would be labor intensive, but it might be possible to feature engineer dummy variables if were could categorize job titles based on an estimated average salary. However, this would be very speculative and might not be the best option considering the amount of time it would likely require.</p>

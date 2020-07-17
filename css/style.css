@@ -15,7 +15,7 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #c7cef0;
+  --clr-accent: #e1e7f2;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -399,7 +399,7 @@ header {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px,400px));
 }
 
 .portfolio__item {
@@ -411,7 +411,6 @@ header {
   transition:
   transform 750ms cubic-bezier(.5, 0, .5, 1),
   opacity 250ms linear;
-
 }
 
 .portfolio__item:focus {
