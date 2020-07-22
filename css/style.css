@@ -417,7 +417,7 @@ header {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   opacity: 1;
-  -webkit-transform: scale(1.02);
+  -webkit-transform: scale(1.02g);
   -ms-transform: scale(1.02);
   transform: scale(1.02);
   transition: 1s ease;
