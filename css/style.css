@@ -348,6 +348,14 @@ header {
     }
 }
 
+.resume {
+  text-align: center;
+  display: block;
+  padding-top: 1.5em;
+  position: relative;
+}
+
+/* ABOUT ME */
 
 .about-me {
     max-width: 1000px;
