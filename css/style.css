@@ -355,6 +355,9 @@ header {
   position: relative;
 }
 
+.list-services{
+  text-align: left;
+}
 /* ABOUT ME */
 
 .about-me {
