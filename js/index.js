@@ -1,21 +1,36 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link')
+// Mobile navigation toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 
-navToggle.addEventListener('click', () => {
-  document.body.classList.toggle('nav-open')
-});
+if (mobileMenuToggle) {
+  mobileMenuToggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+  });
+}
 
+// Close mobile menu when clicking on nav links
+const navLinks = document.querySelectorAll('.header__nav a');
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
     document.body.classList.remove('nav-open');
-  })
+  });
 });
 
-function showHide() {
-  var x = document.getElementById("src-code");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+
+    // Don't prevent default for links that just reference #
+    if (href === '#') return;
+
+    e.preventDefault();
+    const target = document.querySelector(href);
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});

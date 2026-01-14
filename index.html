@@ -1,158 +1,116 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derek Whitaker Portfolio Website</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derek Whitaker - UX Designer & Strategist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-
-    <!-- Update these with your own fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-  </head>
-
-  <body>
-
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img src="img/logo.png" alt="">
-        </a>
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#services" class="nav__link">What I do</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-          <li class="nav__item"><a href="DerekWhitaker-resume.pdf" class="nav__link">My Resumé</a></li>
-        </ul>
-      </nav>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <span class="logo__text">Derek Whitaker</span>
+                <span class="logo__subtitle">Researcher | Designer | Strategist</span>
+            </a>
+        </div>
+        <nav class="header__nav">
+            <a href="#work" class="nav__link">Work</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="#contact" class="btn btn--primary">Contact me</a>
+        </nav>
+        <button class="mobile-menu-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
     </header>
 
-    <!-- INTRODUCTION -->
-    <section class="intro" id="home">
-      <h1 class="section__title section__title--intro">
-        Hi, I am <strong>Derek Whitaker</strong>
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">UX Designer & Strategist</p>
-      <img src="img/profile_picture_scaled.jpg" alt="a picture of Derek Whitaker smiling" class="intro__img">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero__title">
+            Hi, I'm Derek — UX designer, researcher, and strategist. Trained in anthropology and driven to create transformative experiences.
+        </h1>
     </section>
 
-
-    <!-- What I do -->
-    <section class="my-services" id="services">
-      <h2 class="section__title section__title--services">What I do</h2>
-      <div class="services">
-        <div class="service">
-          <h3>User Experience Design & Strategy</h3>
-          <p>
-            I use my background in ethnography to design intuitive and engaging digital experiences, guided by user-centered principles and strategic insights. My approach ensures that every product aligns with both business objectives and user needs.
-          </p>
-          <ul class="list-services">
-            <li>User Research & Usability Testing</li>
-            <li>Wireframing & Prototyping</li>
-            <li>Interaction Design (IxD)</li>
-            <li>Information Architecture (IA)</li>
-            <li>Journey Mapping & Persona Development</li>
-          </ul>
-        </div> <!-- / service -->
-        <div class="service">
-          <h3>Product Management & UX Leadership</h3>
-          <p>
-            I bridge the gap between design and business, driving cross-functional collaboration to deliver impactful products. My experience includes leading teams, defining product strategies, and delivering solutions that meet stakeholder and user expectations.
-          </p>
-          <ul class="list-services">
-            <li>Product Roadmap Development</li>
-            <li>Stakeholder & Team Collaboration</li>
-            <li>Metrics-Driven Decision Making</li>
-            <li>Agile & Scrum Methodologies</li>
-            <li>MVP Definition & Delivery</li>
-            <li>Design Facilitation & Workshops</li>
-          </ul>
-        </div> <!-- / service -->
-      </div> <!-- / serviceS -->
-
-      <a href="#work" class="btn">My Work</a>
-    </section>
-
-
-
-    <!-- MY WORK -->
-    <section class="my-work" id="work">
-      <h2 class="section__title section__title--work">My work</h2>
-      <p class="section__subtitle section__subtitle--work">A selection of my research projects</p>
-      <div class="portfolio">
-        <!-- Project #1 -->
-        <a href="loan-prediction.html" id="link-project">
-          <div class="card">
-           <img src="img/lending-card.jpg" alt="Avatar" style="width:100%">
-           <div class="container">
-             <h4><b>LendingClub Borrower Analysis</b></h4>
-             <p>Predicting Financial Risk Using Deep Learning</p>
-           </div>
-          </div>
-        </a>
-
-         <!-- Project #2 -->
-         <a href="thesis.html" id="link-project">
-           <div class="card">
-            <img src="img/thesis-card.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h4><b>Dwelling in Monastic Space</b></h4>
-              <p>An Ethnography of the Benedictine Monastery</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about__container">
+            <div class="about__image">
+                <img src="img/profile_picture_scaled.jpg" alt="Derek Whitaker">
             </div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- ABOUT ME -->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">About me</h2>
-      <p class="section__subtitle section__subtitle--about">UX designer & strategist based in Washington D.C.</p>
-
-      <div class="about-me__body">
-        <p>
-          I am an anthropologist-turned-UX designer and strategist who leverages ethnographic methods and behavioral insights to create user-centered, impactful products and services and influence big-picture business strategies.
-        </p>
-        <p>
-          My graduate research explored the relationship between humans and their environments, with a special interest in how physical and cultural space is created and managed to influence persons and support particular ways of life.
-        </p>
-        <p>
-          Away from the world of research and design, you can find me hiking, gardening, playing soccer, or reading in a cozy café.
-        </p>
-        <div class="resume">
-          <a target="_blank" rel="noopener noreferrer" href="DerekWhitaker-resume.pdf" class="btn">My Resumé</a>
+            <div class="about__content">
+                <p class="about__text">
+                    I'm a designer with roots in the social sciences—an anthropologist by training who found a natural home in UX and product strategy. I believe good work requires understanding people deeply: their contexts, motivations, and unspoken needs. My practice moves fluidly between research, design, and business thinking, seeking after what's both meaningful and well-made.
+                </p>
+                <a href="about.html" class="btn btn--primary">About</a>
+            </div
         </div>
-      </div>
-
-      <img src="img/about-me-scaled.jpg" alt="Derek working at his desk" class="about-me__img">
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <a href="mailto:whitaker.derek@gmail.com" class="footer__link">whitaker.derek@gmail.com</a>
-        <ul class="social-list">
-          <li class="social-list__item">
-              <a class="social-list__link" href="https://github.com/derek-whitaker">
-                  <i class="fab fa-github"></i>
-              </a>
-          </li>
-          <li class="social-list__item">
-              <a class="social-list__link" href="https://www.linkedin.com/in/derek-whitaker/">
-                  <i class="fab fa-linkedin"></i>
-              </a>
-          </li>
-        </ul>
+    <!-- Recent Work Section -->
+    <section class="work" id="work">
+        <h2 class="work__title">Recent Work</h2>
+        
+        <div class="work__grid">
+            <!-- Project 1 - RAFT (Coming Soon) -->
+            <div class="work__card work__card--disabled">
+                <div class="work__card-image">
+                    <img src="img/raft-project.jpg" alt="Streamlining Defense Funding Requests">
+                </div>
+                <div class="work__card-content">
+                    <h3 class="work__card-title">Streamlining Defense Funding Requests</h3>
+                    <button class="btn btn--disabled" disabled>Coming Soon</button>
+                </div>
+            </div>
+
+            <!-- Project 2 - LendingClub -->
+            <a href="loan-prediction.html" class="work__card">
+                <div class="work__card-image">
+                    <img src="img/lending-card.jpg" alt="LendingClub Borrower Analysis">
+                </div>
+                <div class="work__card-content">
+                    <h3 class="work__card-title">LendingClub Borrower Analysis</h3>
+                    <button class="btn btn--card">View Work</button>
+                </div>
+            </a>
+
+            <!-- Project 3 - Thesis -->
+            <a href="thesis.html" class="work__card">
+                <div class="work__card-image">
+                    <img src="img/thesis-card.jpg" alt="Dwelling in Monastic Space">
+                </div>
+                <div class="work__card-content">
+                    <h3 class="work__card-title">Dwelling in Monastic Space</h3>
+                    <button class="btn btn--card">View Work</button>
+                </div>
+            </a>
+        </div>
+
+        <!-- See All Work Button -->
+        <div class="work__see-all">
+            <a href="#work" class="btn btn--dark">
+                See all work
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <p class="footer__email">whitaker.derek[at]gmail.com</p>
+        <div class="footer__social">
+            <a href="https://github.com/derek-whitaker" class="footer__link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/derek-whitaker/" class="footer__link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </footer>
 
     <script src="js/index.js"></script>
-
-  </body>
+</body>
 </html>
