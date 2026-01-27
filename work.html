@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Derek Whitaker</title>
+    <title>Work - Derek Whitaker</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -28,32 +28,43 @@
         </button>
     </header>
 
-    <!-- About Hero -->
-    <section class="about-hero">
-        <h1 class="about-hero__title">About me</h1>
-        <p class="about-hero__subtitle">UX designer, researcher, & strategist based in Washington D.C.</p>
-    </section>
+    <!-- Work Section -->
+    <section class="work">
+        <h2 class="work__title">Featured Work</h2>
 
-    <!-- About Content -->
-    <section class="about-content">
-        <div class="about-content__container">
-            <div class="about-content__image">
-                <img src="img/about-me-scaled.jpg" alt="Derek Whitaker">
+        <div class="work__grid">
+            <!-- Project 1 - RAFT (Coming Soon) -->
+            <div class="work__card work__card--disabled">
+                <div class="work__card-image">
+                    <img src="img/raft-project.jpg" alt="Streamlining Defense Funding Requests">
+                </div>
+                <div class="work__card-content">
+                    <h3 class="work__card-title">Streamlining Defense Funding Requests</h3>
+                    <button class="btn btn--disabled" disabled>Coming Soon</button>
+                </div>
             </div>
-            <div class="about-content__text">
-                <p>
-                    I am an anthropologist-turned-UX designer and strategist who leverages ethnographic methods and behavioral insights to create user-centered, impactful products and services and influence big-picture business strategies.
-                </p>
-                <p>
-                    As a trained anthropologist who grew into UX design, research, and strategy, I bring a deep understanding of human behavior and culture to crafting intuitive, user-centered products. I bridge design and business with a strong knack for product management and strategic thinking. My work consistently delivers solutions that meet real user needs and stakeholder goals.
-                </p>
-                <p>
-                    My graduate research explored the relationship between humans and their environments, with a special interest in how physical and cultural space is created and managed to influence persons and support particular ways of life.
-                </p>
-                <p>
-                    Away from the world of research and design, you can find me hiking, gardening, playing soccer, or reading in a cozy café.
-                </p>
-            </div>
+
+            <!-- Project 2 - LendingClub -->
+            <a href="loan-prediction.html" class="work__card">
+                <div class="work__card-image">
+                    <img src="img/lending-card.jpg" alt="LendingClub Borrower Analysis">
+                </div>
+                <div class="work__card-content">
+                    <h3 class="work__card-title">LendingClub Borrower Analysis</h3>
+                    <button class="btn btn--card">View Work</button>
+                </div>
+            </a>
+
+            <!-- Project 3 - Thesis -->
+            <a href="thesis.html" class="work__card">
+                <div class="work__card-image">
+                    <img src="img/thesis-card.jpg" alt="Dwelling in Monastic Space">
+                </div>
+                <div class="work__card-content">
+                    <h3 class="work__card-title">Dwelling in Monastic Space</h3>
+                    <button class="btn btn--card">View Work</button>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -71,3 +82,5 @@
     </footer>
 
     <script src="js/index.js"></script>
+</body>
+</html>
