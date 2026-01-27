@@ -126,6 +126,13 @@ body:has(.case-study-hero) .header .nav__link {
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
+body:has(.case-study-hero) .header .hamburger,
+body:has(.case-study-hero) .header .hamburger::before,
+body:has(.case-study-hero) .header .hamburger::after {
+  background: var(--clr-white);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
 body:has(.case-study-hero) .header.scrolled {
   background: var(--clr-bg);
 }
@@ -135,6 +142,13 @@ body:has(.case-study-hero) .header.scrolled .logo__subtitle,
 body:has(.case-study-hero) .header.scrolled .nav__link {
   color: var(--clr-text-primary);
   text-shadow: none;
+}
+
+body:has(.case-study-hero) .header.scrolled .hamburger,
+body:has(.case-study-hero) .header.scrolled .hamburger::before,
+body:has(.case-study-hero) .header.scrolled .hamburger::after {
+  background: var(--clr-text-primary);
+  box-shadow: none;
 }
 
 .header__logo a {
@@ -675,7 +689,7 @@ body:has(.case-study-hero) .header.scrolled .nav__link {
 .case-study-hero {
   position: relative;
   width: 100%;
-  min-height: 75vh;
+  min-height: 93.75vh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
