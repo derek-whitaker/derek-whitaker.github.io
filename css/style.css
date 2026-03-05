@@ -900,6 +900,29 @@ th {
   margin-bottom: 0;
 }
 
+.case-study-overview__content h2 + p {
+  margin-top: 0;
+}
+
+.case-study-overview__content h2:not(:first-child) {
+  margin-top: var(--spacing-lg);
+}
+
+.case-study-overview__content ul {
+  margin: 0 0 var(--spacing-md) 0;
+  padding-left: 1.5rem;
+  line-height: 1.7;
+  color: var(--clr-text-primary);
+}
+
+.case-study-overview__content ul li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.case-study-overview__content ul li:last-child {
+  margin-bottom: 0;
+}
+
 /* Metadata Table */
 .case-study-meta {
   display: flex;
