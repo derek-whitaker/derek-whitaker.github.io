@@ -864,7 +864,7 @@ th {
 .case-study-body {
   max-width: 1400px;
   margin: 0 auto;
-  padding: calc(var(--spacing-lg) / 2) var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 /* Overview Section - Two Column Layout */
@@ -960,6 +960,54 @@ th {
 .case-study-meta__value {
   color: var(--clr-text-primary);
   text-align: right;
+}
+
+/* Horizontal Metadata Layout */
+.case-study-meta--horizontal {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-md);
+  border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  .case-study-meta--horizontal {
+    padding: var(--spacing-md) 0;
+  }
+}
+
+.case-study-meta--horizontal .case-study-meta__item {
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  border-bottom: none;
+  padding: var(--spacing-sm) 0;
+}
+
+.case-study-meta--horizontal .case-study-meta__item:first-child {
+  padding-top: 0;
+}
+
+.case-study-meta--horizontal .case-study-meta__item:last-child {
+  padding-bottom: 0;
+}
+
+.case-study-meta--horizontal .case-study-meta__label {
+  font-size: var(--fs-body-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.case-study-meta--horizontal .case-study-meta__value {
+  text-align: left;
+  font-weight: var(--fw-medium);
+}
+
+/* Single Column Overview */
+.case-study-overview--single-column {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 0;
 }
 
 /* Publications Section */
