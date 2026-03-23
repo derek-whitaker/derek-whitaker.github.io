@@ -1076,3 +1076,19 @@ th {
 .case-study-publications__info {
   display: block;
 }
+
+.case-study-publications__link {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: var(--clr-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.case-study-publications__link:hover {
+  text-decoration: underline;
+}
+
+.case-study-publications__link i {
+  margin-right: 0.3em;
+}
