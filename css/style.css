@@ -159,8 +159,21 @@ body:has(.case-study-hero) .header.scrolled .hamburger::after {
 
 .header__logo a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
   color: var(--clr-text-primary);
+}
+
+.logo__image {
+  height: 2.75rem;
+  width: auto;
+  border-radius: 8px;
+}
+
+.logo__text-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo__text {
