@@ -632,7 +632,7 @@ body:has(.case-study-hero) .header.scrolled .hamburger::after {
 /* ==================== */
 
 .about-hero {
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md);
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -640,7 +640,7 @@ body:has(.case-study-hero) .header.scrolled .hamburger::after {
 
 @media (min-width: 768px) {
   .about-hero {
-    padding: var(--spacing-xl) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-lg);
   }
 }
 
@@ -678,7 +678,7 @@ body:has(.case-study-hero) .header.scrolled .hamburger::after {
 
 @media (min-width: 768px) {
   .about-content__container {
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 450px 1fr;
     gap: var(--spacing-xl);
   }
 }
