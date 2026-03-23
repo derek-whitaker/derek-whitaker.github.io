@@ -557,8 +557,19 @@ body:has(.case-study-hero) .header.scrolled .hamburger::after {
   color: var(--clr-white);
   font-size: var(--fs-h3);
   font-weight: var(--fw-bold);
-  margin: 0 0 var(--spacing-md) 0;
+  margin: 0 0 var(--spacing-xs) 0;
   letter-spacing: -0.01em;
+  max-width: 50%;
+}
+
+.work__card-subtitle {
+  color: var(--clr-white);
+  font-size: 1.125rem;
+  font-weight: var(--fw-regular);
+  margin: 0 0 var(--spacing-md) 0;
+  max-width: 50%;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
 @media (min-width: 768px) {
