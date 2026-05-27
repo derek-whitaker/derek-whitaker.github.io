@@ -35,8 +35,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Header scroll effect for case study pages
-if (document.querySelector('.case-study-hero')) {
+// Header scroll effect for case study and about pages
+if (document.querySelector('.case-study-hero') || document.querySelector('.about-hero')) {
   const header = document.querySelector('.header');
 
   window.addEventListener('scroll', () => {
