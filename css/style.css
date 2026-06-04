@@ -939,6 +939,20 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
   margin-right: auto;
 }
 
+.case-study-preamble {
+  max-width: 800px;
+  margin: 1.5em auto 2em;
+  padding: 1.25em 1.5em;
+  border-left: 4px solid var(--clr-accent);
+  background-color: rgba(0, 0, 0, 0.04);
+  font-style: italic;
+  color: var(--clr-fg-muted, #555);
+}
+
+.case-study-preamble p {
+  margin: 0;
+}
+
 .fig {
   max-width: 800px;
   margin-left: auto;
