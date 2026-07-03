@@ -25,11 +25,23 @@
   --clr-dark: #141414;
   --clr-white: #FFFFFF;
   
-  --fs-h1: 2.5rem;
-  --fs-h2: 2.5rem;
-  --fs-h3: 1.5rem;
-  --fs-body: 1.125rem;
-  --fs-small: 0.875rem;
+  /* Type scale — major thirds (×1.25, base 1rem = 16px) */
+  --fs-xs:   0.64rem;
+  --fs-sm:   0.8rem;
+  --fs-base: 1rem;
+  --fs-md:   1.25rem;
+  --fs-lg:   1.563rem;
+  --fs-xl:   1.953rem;
+  --fs-2xl:  2.441rem;
+  --fs-3xl:  3.052rem;
+  --fs-4xl:  3.815rem;
+
+  /* Semantic aliases */
+  --fs-body:  var(--fs-base);
+  --fs-small: var(--fs-sm);
+  --fs-h3:    var(--fs-lg);
+  --fs-h2:    var(--fs-xl);
+  --fs-h1:    var(--fs-2xl);
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -40,10 +52,8 @@
 
 @media (min-width: 768px) {
   :root {
-    --fs-h1: 3.5rem;
-    --fs-h2: 3rem;
-    --fs-h3: 1.75rem;
-    --fs-body: 1.125rem;
+    --fs-h1: var(--fs-3xl);
+    --fs-h2: var(--fs-2xl);
     --spacing-lg: 6rem;
     --spacing-xl: 10rem;
   }
@@ -51,7 +61,8 @@
 
 @media (min-width: 1024px) {
   :root {
-    --fs-h1: 4rem;
+    --fs-h1: var(--fs-4xl);
+    --fs-h2: var(--fs-3xl);
   }
 }
 
@@ -217,7 +228,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
 }
 
 .logo__text {
-  font-size: 1.25rem;
+  font-size: var(--fs-md);
   font-weight: var(--fw-bold);
   line-height: 1.2;
 }
@@ -388,7 +399,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
   background: var(--clr-dark);
   color: var(--clr-white);
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: var(--fs-base);
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -509,13 +520,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
   color: var(--clr-text-primary);
   line-height: 1.7;
   margin: 0;
-  font-size: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .about__text {
-    font-size: 1.375rem;
-  }
+  font-size: var(--fs-md);
 }
 
 /* ==================== */
@@ -537,7 +542,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
 .work__title {
   font-size: var(--fs-h2);
   font-weight: var(--fw-black);
-  margin: 0 0 calc(var(--spacing-lg) * 0.25) 0;
+  margin: 0 0 var(--spacing-md) 0;
   color: var(--clr-text-primary);
   letter-spacing: -0.02em;
 }
@@ -545,7 +550,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
 .work__grid {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing-lg) * 0.25);
+  gap: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
 }
 
@@ -616,7 +621,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
 
 .work__card-subtitle {
   color: var(--clr-white);
-  font-size: 1.125rem;
+  font-size: var(--fs-base);
   font-weight: var(--fw-regular);
   margin: 0 0 var(--spacing-md) 0;
   line-height: 1.4;
@@ -676,7 +681,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
   }
 
   .work__card-title {
-    font-size: 2rem;
+    font-size: var(--fs-xl);
     max-width: 50%;
   }
 
@@ -698,7 +703,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
 }
 
 .work__see-all .btn--dark {
-  font-size: 1.125rem;
+  font-size: var(--fs-md);
   padding: 1.25rem 2.5rem;
 }
 
@@ -885,7 +890,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
 }
 
 .case-study-hero__title {
-  font-size: 2.5rem;
+  font-size: var(--fs-h1);
   font-weight: var(--fw-black);
   line-height: 1.1;
   color: var(--clr-white);
@@ -895,20 +900,8 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-@media (min-width: 768px) {
-  .case-study-hero__title {
-    font-size: 3.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .case-study-hero__title {
-    font-size: 4rem;
-  }
-}
-
 .case-study-hero__subtitle {
-  font-size: 1.25rem;
+  font-size: var(--fs-md);
   color: var(--clr-white);
   margin: 0;
   font-weight: var(--fw-regular);
@@ -919,7 +912,7 @@ body:has(.about-hero) .header.scrolled .hamburger::after {
 
 @media (min-width: 768px) {
   .case-study-hero__subtitle {
-    font-size: 1.5rem;
+    font-size: var(--fs-lg);
   }
 }
 
@@ -1133,7 +1126,7 @@ th {
 }
 
 .case-study-meta--horizontal .case-study-meta__label {
-  font-size: var(--fs-body-sm);
+  font-size: var(--fs-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
