@@ -41,9 +41,10 @@
 
         <section class="case-study-hero">
             <div class="case-study-hero__image">
-                <img src="img/defense.jpg" alt="Streamlining Defense Funding Requests">
+                <img src="img/case-studies/funding/funding-card.jpg" alt="">
             </div>
-            <div class="case-study-hero__content">
+            <div class="case-study-hero__content case-study-hero__content--mockup">
+                <img src="img/case-studies/funding/funding-mockup.png" alt="" class="case-study-hero__mockup">
                 <h1 class="case-study-hero__title">
                     Streamlining Defense Funding Requests
                 </h1>
@@ -52,6 +53,7 @@
         </section>
 
         <!-- Case Study Meta - Horizontal Layout -->
+        <!-- TODO: Separate task: reconcile Team and Timeline in this header. -->
         <section class="case-study-meta case-study-meta--horizontal">
           <div class="case-study-meta__item">
             <span class="case-study-meta__label">Role</span>
@@ -72,21 +74,336 @@
         </section>
 
         <section class="case-study-body">
+          <!-- Problem Section -->
+          <!-- TODO: Sanitize every quote and diagram: no agency names, seals, office names, or program acronyms. -->
+          <section class="cs-section">
+            <div class="cs-block">
+              <h2 class="cs-section__title">A multibillion-dollar process running on email</h2>
+              <p class="cs-lead">A Department of Defense (DoD) agency that distributes tens of billions of dollars a year to support national security and foreign policy was struggling with one of its core processes.</p>
+              <p class="cs-role">My role: conducted design research &amp; synthesis during product discovery.</p>
+              <ul class="stat-bar">
+                <li class="stat-bar__item">
+                  <span class="stat-bar__figure">Tens of billions</span>
+                  <span class="stat-bar__label">distributed per year</span>
+                </li>
+                <li class="stat-bar__item">
+                  <span class="stat-bar__figure">3</span>
+                  <span class="stat-bar__label">annual review processes</span>
+                </li>
+                <li class="stat-bar__item">
+                  <span class="stat-bar__figure">20+</span>
+                  <span class="stat-bar__label">submitting organizations</span>
+                </li>
+                <li class="stat-bar__item">
+                  <span class="stat-bar__figure">$160B+</span>
+                  <span class="stat-bar__label">in sales and partner programs overseen</span>
+                </li>
+              </ul>
+            </div>
+
+            <section class="cs-block">
+              <h3 class="cs-block__title">How funding requests work</h3>
+              <p class="cs-text">The agency doesn’t carry out most of its programs itself. It funds implementing agencies, such as the military departments and other defense organizations, that do the work. When an implementing agency runs into a need its budget doesn’t cover, such as a requirement that went unfunded or costs above its allocation, it submits a funding request. The agency runs three separate annual processes, depending on the funding type, to review these requests and decide which to fund.</p>
+              <div class="scroll-x">
+                <ol class="process-flow">
+                  <li class="process-flow__step">
+                    <span class="eyebrow">Step 1</span>
+                    <span>Agency funds implementing agencies</span>
+                  </li>
+                  <li class="process-flow__step">
+                    <span class="eyebrow">Step 2</span>
+                    <span>A need comes up that its budget doesn’t cover</span>
+                  </li>
+                  <li class="process-flow__step">
+                    <span class="eyebrow">Step 3</span>
+                    <span>It submits a funding request</span>
+                  </li>
+                  <li class="process-flow__step">
+                    <span class="eyebrow">Step 4</span>
+                    <span>Review in one of three annual processes</span>
+                  </li>
+                  <li class="process-flow__step process-flow__step--final">
+                    <span class="eyebrow">Step 5</span>
+                    <span>Funding decision</span>
+                  </li>
+                </ol>
+              </div>
+              <figure class="pull-quote">
+                <p class="pull-quote__lead-in">When requests stall, the cost is real: money can arrive too late in the year to spend.</p>
+                <blockquote class="pull-quote__quote">“If you give me money at the middle of August, I’m pushing it in trying to get it awarded before 30 September.”</blockquote>
+                <figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
+              </figure>
+            </section>
+
+            <section class="cs-block">
+              <h3 class="cs-block__title">What the client asked for</h3>
+              <p class="cs-text">The agency brought in our team to help it improve these processes. During our initial interviews and workshops with our client, we discovered that their primary frustrations were:</p>
+              <!-- TODO: Confirm the "Portal fix" footers on these cards (optional; may be cut). -->
+              <ul class="card-grid">
+                <li class="card">
+                  <h4 class="card__title">Poor-quality submissions</h4>
+                  <p class="card__text">Submissions were frequently incomplete, completed incorrectly, contained inaccuracies, or attached superfluous information. This led to chasing details, requesting rewrites, and asking due diligence questions, like “Was this reviewed by your Office of General Counsel?”</p>
+                  <p class="card__footer">Portal fix: required fields, requested information only</p>
+                </li>
+                <li class="card">
+                  <h4 class="card__title">Late submissions</h4>
+                  <p class="card__text">Submissions arrived after the deadline, which could cause delays and upend review steps like the prioritization of submissions.</p>
+                  <p class="card__footer">Portal fix: an enforced deadline</p>
+                </li>
+                <li class="card">
+                  <h4 class="card__title">Too many requests</h4>
+                  <p class="card__text">Many weren’t properly vetted before submission, which added to the review burden.</p>
+                  <p class="card__footer">Portal fix: none directly</p>
+                </li>
+                <li class="card">
+                  <h4 class="card__title">No system of record</h4>
+                  <p class="card__text">The whole process was conducted over email with a mix of Word documents, Excel spreadsheets, and PDFs. This often led to data loss, and the lack of a single repository made analytics virtually impossible.</p>
+                  <p class="card__footer">Portal fix: a single repository</p>
+                </li>
+              </ul>
+              <div class="callout">
+                <p class="eyebrow">The ask</p>
+                <p class="callout__title">A submission portal</p>
+                <p class="callout__text">They therefore requested that we build them a submission portal that would require submitters to fill out all fields, only enter the requested information, and respect a submission deadline, all the while creating a single repository for all submission files.</p>
+              </div>
+            </section>
+
+            <section class="cs-block">
+              <h3 class="cs-block__title">Going to the source</h3>
+              <div class="split">
+                <p class="cs-text">Suspecting that this was only part of the problem, we requested and obtained permission to speak with submitters to conduct additional discovery. We asked about tasks, desired outcomes, information needs, frustrations, and roles, then synthesized the findings using Goal-Directed Design, capturing user needs as job stories.</p>
+                <figure class="donut">
+                  <div class="donut__body">
+                    <div class="donut__chart">
+                      <!-- Segments use pathLength="34" (total interviews), so each dash length and offset is a raw interview count -->
+                      <svg class="donut__svg" viewBox="0 0 200 200" role="img" aria-label="Donut chart of 34 interviews by stakeholder group: client analysts 14, implementing agencies 9, client IT office 5, partner programs office 3, subject-matter reviewers 3">
+                        <path class="donut__segment" pathLength="34" stroke-dasharray="14 34" stroke-dashoffset="0" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
+                        <path class="donut__segment" pathLength="34" stroke-dasharray="9 34" stroke-dashoffset="-14" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
+                        <path class="donut__segment" pathLength="34" stroke-dasharray="5 34" stroke-dashoffset="-23" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
+                        <path class="donut__segment" pathLength="34" stroke-dasharray="3 34" stroke-dashoffset="-28" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
+                        <path class="donut__segment" pathLength="34" stroke-dasharray="3 34" stroke-dashoffset="-31" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
+                      </svg>
+                      <p class="donut__center">
+                        <span class="donut__total">34</span>
+                        <span class="donut__center-label">interviews</span>
+                      </p>
+                    </div>
+                    <!-- TODO: Confirm the sanitized labels (Client analysts, Implementing agencies, Client IT office, Partner programs office, Subject-matter reviewers). -->
+                    <ul class="donut__legend">
+                      <li class="donut__legend-item">
+                        <span class="donut__swatch"></span>
+                        <span class="donut__label">Client analysts</span>
+                        <span class="donut__value">14</span>
+                      </li>
+                      <li class="donut__legend-item">
+                        <span class="donut__swatch"></span>
+                        <span class="donut__label">Implementing agencies</span>
+                        <span class="donut__value">9</span>
+                      </li>
+                      <li class="donut__legend-item">
+                        <span class="donut__swatch"></span>
+                        <span class="donut__label">Client IT office</span>
+                        <span class="donut__value">5</span>
+                      </li>
+                      <li class="donut__legend-item">
+                        <span class="donut__swatch"></span>
+                        <span class="donut__label">Partner programs office</span>
+                        <span class="donut__value">3</span>
+                      </li>
+                      <li class="donut__legend-item">
+                        <span class="donut__swatch"></span>
+                        <span class="donut__label">Subject-matter reviewers</span>
+                        <span class="donut__value">3</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="donut__stats">
+                    <li class="donut__stat">
+                      <span class="donut__stat-figure">33</span>
+                      <span class="donut__stat-label">people</span>
+                    </li>
+                    <li class="donut__stat">
+                      <span class="donut__stat-figure">29</span>
+                      <span class="donut__stat-label">hours of interviews</span>
+                    </li>
+                  </ul>
+                  <figcaption class="cs-caption">34 interviews, 29 hours, and 33 people across five stakeholder groups, from the client’s analysts to submitters.</figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <section class="cs-block">
+              <h3 class="cs-block__title">The other side of the process</h3>
+              <p class="cs-text">The client had never interviewed submitters this way, and talking to them showed us the other side of the process. Some of their pains mirrored the client’s, while others never came up in our conversations with the client:</p>
+              <div class="card-tier">
+                <p class="eyebrow" id="tier-shared">Shared with the client</p>
+                <ul class="card-grid" aria-labelledby="tier-shared">
+                  <li class="card">
+                    <h4 class="card__title">No visibility into the process</h4>
+                    <p class="card__text">Once a request was submitted, submitters had no way to track the progress or know how close it was to being adjudicated.</p>
+                  </li>
+                  <li class="card">
+                    <h4 class="card__title">No record of historical data</h4>
+                    <p class="card__text">Like our client, submitters had no straightforward way of performing analytics on past- or current-year submissions and review outcomes. Even finding records of previous-year submissions was difficult.</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-tier card-tier--emphasis">
+                <p class="eyebrow" id="tier-submitters">Raised only by submitters</p>
+                <ul class="card-grid card-grid--3" aria-labelledby="tier-submitters">
+                  <li class="card card--emphasis">
+                    <h4 class="card__title">A perceived lack of coordination from the reviewers</h4>
+                    <p class="card__text">Submitters complained, for example, of having to respond to many of the same questions multiple times from different reviewers.</p>
+                  </li>
+                  <li class="card card--emphasis">
+                    <h4 class="card__title">Slow timelines</h4>
+                    <p class="card__text">The long time from submission to review decision often delayed funding, even to the point of having difficulty executing funds within a fiscal year.</p>
+                  </li>
+                  <!-- TODO: Confirm that "Form confusion" belongs in the "Raised only by submitters" row. -->
+                  <li class="card card--emphasis">
+                    <h4 class="card__title">Form confusion</h4>
+                    <p class="card__text">Submitters did not understand how to correctly fill in the request, including confusion on the meaning of terminology used in the form.</p>
+                  </li>
+                </ul>
+              </div>
+              <figure class="pull-quote">
+                <blockquote class="pull-quote__quote">“I don’t want to document the same stuff 10 times. Just tell me what info you need and then route that info internally to all the correct people.”</blockquote>
+                <figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
+              </figure>
+            </section>
+
+            <section class="cs-block">
+              <h3 class="cs-block__title">Why reviews were so time- and labor-intensive</h3>
+              <p class="cs-text">The most widespread pain, the review burden, traced back to upstream causes: unclear guidance on how to justify a request, an inadequate template, and too little vetting before submission.</p>
+              <div class="scroll-x">
+                <div class="cause-chain">
+                  <div class="cause-chain__causes">
+                    <p class="eyebrow" id="root-causes">Root causes</p>
+                    <ul class="cause-chain__list" aria-labelledby="root-causes">
+                      <li class="cause-chain__cause">Unclear guidance on justifying requests</li>
+                      <li class="cause-chain__cause">Inadequate template</li>
+                      <li class="cause-chain__cause">Too little vetting before submission</li>
+                    </ul>
+                  </div>
+                  <ol class="process-flow">
+                    <li class="process-flow__step">Low-quality requests</li>
+                    <li class="process-flow__step">Reviewers can’t make a decision</li>
+                    <li class="process-flow__step process-flow__step--final">Back-and-forth over email</li>
+                  </ol>
+                </div>
+              </div>
+              <figure class="pull-quote pull-quote--compact">
+                <blockquote class="pull-quote__quote">“Sometimes it’s the same [request] has gone back and forth about 5, 10 times before we can get the right information.”</blockquote>
+                <figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
+              </figure>
+              <button type="button" class="text-link" data-lightbox="pain-point-analysis" aria-haspopup="dialog">
+                View the full pain point analysis
+                <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8 L13 8"/><path d="M9 4 L13 8 L9 12"/></svg>
+              </button>
+              <dialog class="lightbox" id="pain-point-analysis" aria-label="Full pain point analysis">
+                <div class="lightbox__inner">
+                  <form method="dialog">
+                    <button class="lightbox__close" aria-label="Close" autofocus>
+                      <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 3 L13 13"/><path d="M13 3 L3 13"/></svg>
+                    </button>
+                  </form>
+                  <!-- TODO: Replace this placeholder with the sanitized full pain point analysis image. -->
+                  <div class="lightbox__placeholder">Pain point analysis image placeholder</div>
+                </div>
+              </dialog>
+            </section>
+
+            <section class="cs-block">
+              <h3 class="cs-block__title">Rethinking the solution</h3>
+              <p class="cs-text">Given what we learned from submitters, we knew we would need to reframe the required solution. Many of the issues in the process were systemic. A submission portal would only treat some of the symptoms, not the root causes. Worse, a portal could become a new chokepoint. It would enforce the client’s requirements at the moment of submission without supporting how submitters actually write, review, and route requests beforehand.</p>
+              <p class="cs-text">Therefore, we needed to solve not just for the symptoms experienced by our client, but for the whole process, beginning to end. This meant solving for drafting, coordination, and review, in addition to submission.</p>
+              <figure class="stage-strip">
+                <div class="scroll-x">
+                  <div class="stage-strip__inner">
+                    <div class="stage-strip__curve">
+                      <!-- TODO: Replace the illustrative severity curve with one re-plotted from the research chart. -->
+                      <svg viewBox="0 0 1000 160" preserveAspectRatio="none" role="img" aria-label="Illustrative pain severity across process stages, low in drafting, high in review and rework on both sides of submission, falling at decision">
+                        <path class="stage-strip__curve-fill" d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146 L1000 160 L0 160 Z"/>
+                        <path class="stage-strip__curve-line" d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146" vector-effect="non-scaling-stroke"/>
+                      </svg>
+                      <span class="eyebrow stage-strip__curve-label">Pain severity (illustrative)</span>
+                    </div>
+                    <ol class="stage-strip__stages">
+                      <li class="stage-strip__stage">
+                        <span class="stage-strip__name">Drafting</span>
+                        <span class="stage-strip__actor">Implementing agency</span>
+                      </li>
+                      <li class="stage-strip__stage">
+                        <span class="stage-strip__name">Internal review &amp; routing</span>
+                        <span class="stage-strip__actor">Implementing agency</span>
+                      </li>
+                      <li class="stage-strip__stage">
+                        <span class="stage-strip__name">Submission</span>
+                        <span class="stage-strip__actor">Handoff to client</span>
+                      </li>
+                      <li class="stage-strip__stage">
+                        <span class="stage-strip__name">Client review</span>
+                        <span class="stage-strip__actor">Client and subject-matter reviewers</span>
+                      </li>
+                      <li class="stage-strip__stage">
+                        <span class="stage-strip__name">Decision</span>
+                        <span class="stage-strip__actor">Client</span>
+                      </li>
+                    </ol>
+                    <div class="stage-strip__brackets">
+                      <div class="stage-strip__bracket stage-strip__bracket--portal">
+                        <span class="stage-strip__bracket-label">Submission portal</span>
+                      </div>
+                      <div class="stage-strip__bracket stage-strip__bracket--tool">
+                        <span class="stage-strip__bracket-label">Coordination tool</span>
+                        <span class="stage-strip__bracket-note">Drafting, coordination, review, and submission</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <figcaption class="cs-caption">A portal would have covered one step, ignoring pain points that affect the rest of the process.</figcaption>
+              </figure>
+            </section>
+
+            <section class="cs-block">
+              <h3 class="cs-block__title">What we recommended</h3>
+              <p class="cs-text">We presented our research findings to the client, emphasizing the need for a systems view of the problem and therefore a coordination tool as our primary solution. The coordination tool would keep the portal’s core strengths, like a standardized digital form with built-in guidance, and extend support across the rest of the process. We recommended the following high-level design decisions:</p>
+              <!-- TODO: The "Instead of" footers on these cards are optional. -->
+              <ul class="card-grid card-grid--3">
+                <li class="card">
+                  <span class="eyebrow">Decision 1</span>
+                  <h4 class="card__title">Responsive form</h4>
+                  <p class="card__text">A digital form that shows only the fields relevant to each request, replacing the myriad Word and Excel templates.</p>
+                  <p class="card__footer">Instead of: a limited form with attachments</p>
+                </li>
+                <li class="card">
+                  <span class="eyebrow">Decision 2</span>
+                  <h4 class="card__title">Dynamic workflows</h4>
+                  <p class="card__text">Roles defined by the situation and guided by user knowledge, instead of fixed paths, so each organization could route requests its own way.</p>
+                  <p class="card__footer">Instead of: static workflows with prescribed paths</p>
+                </li>
+                <li class="card">
+                  <span class="eyebrow">Decision 3</span>
+                  <h4 class="card__title">Unified tool</h4>
+                  <p class="card__text">One tool for all three request processes, streamlining the work and centralizing the data.</p>
+                  <p class="card__footer">Instead of: three separate systems</p>
+                </li>
+              </ul>
+              <figure class="vision-panel">
+                <figcaption class="eyebrow">The vision we presented</figcaption>
+                <blockquote class="vision-panel__quote">“The new design of the funding request processes will lower the overall workload of requirement owners and reviewing officials. By providing enhanced and dynamic funding request templates, it will improve the quality of submissions and reduce the amount of necessary reworks. By providing a centralized workflow, it will streamline the funding request processes and increase visibility into the current status of submissions, which will lower the burden of manual coordination. In addition, because funding requests of all types will be created and shared in a central location, it will establish a repository of records that increases information accessibility.”</blockquote>
+              </figure>
+            </section>
+
+            <div class="cs-block">
+              <p class="closing-callout">The client was persuaded by the research findings and design vision, and enthusiastically agreed to pivot from a submission portal to a workflow coordination tool.</p>
+            </div>
+          </section>
+
           <!-- Overview Section -->
           <div class="case-study-overview case-study-overview--single-column">
             <div class="case-study-overview__content">
-              <h2>The Challenge</h2>
-              <p>
-                A Department of Defense agency responsible for distributing critical financial resources to support national security and foreign policy initiatives was drowning in operational chaos. Their entire funding request process—from submission to approval—ran through email.
-              </p>
-              <p>
-                This resulted in anxiety, frustration, duplicated efforts, frequent data loss, and insufficient accountability. Poor coordination rippled across the security cooperation and security assistance agencies. As one stakeholder put it: "The center of the funnel is starting to break."
-              </p>
-
               <h2>The Solution</h2>
-              <p>
-                Working with finance and policy personnel from 14 DoD agencies, our team used Agile and Human-Centered Design practices to investigate coordination issues, validate user needs, and rapidly iterate toward a solution. While the organization originally requested a simple drop box for funding requests, our research uncovered that the coordination issues were systemic and that a broader, more ambitious solution was required.
-              </p>
               <p>
                 Through further product discovery and stakeholder collaboration, we developed a comprehensive workflow model to centralize and manage the entire request lifecycle—from creation to approval.
               </p>

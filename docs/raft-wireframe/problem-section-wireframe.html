@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAFT case study: problem section wireframe (reference spec)</title>
+<!--
+  WIREFRAME REFERENCE ONLY. See BUILD-BRIEF.md.
+  Final: structure, order, and copy.
+  Not final: grayscale colors, Inter font, inline styles, uppercase labels. Match the site's existing styles instead.
+  "COMPONENT:" comments name the reusable component each block becomes.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1A1A1A}a:hover{color:#595959}
+</style>
+</head>
+<body>
+<div style="font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1A1A1A; background: #FFFFFF; font-size: 17px; line-height: 1.6;">
+
+<!-- EXISTING PAGE HEADER: reference only. Already on defense-funding.html; do not rebuild. -->
+<header style="background: #FAFAFA; border-bottom: 1px solid #E2E2E2;">
+<div style="max-width: 1040px; margin: 0 auto; padding: 20px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+<div style="display: flex; flex-direction: column; line-height: 1.3;"><span style="font-weight: 600; font-size: 16px;">Derek Whitaker</span><span style="font-size: 13px; color: #595959;">Researcher | Designer | Strategist</span></div>
+<nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="#">Work</a><a href="#">About</a><a href="#">Resume</a><a href="#">Contact me</a></nav>
+</div>
+<div style="max-width: 1040px; margin: 0 auto; padding: 8px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px;">
+<!-- COMPONENT: EXISTING PAGE HEADER · UNCHANGED (RECONCILE TEAM AND TIMELINE LATER) -->
+<div style="height: 200px; border-radius: 8px; background: #E2E2E2; display: flex; align-items: center; justify-content: center; color: #595959; font-size: 14px;">Hero image</div>
+<h1 style="margin: 8px 0 0; font-size: 40px; line-height: 1.15; font-weight: 700;">Streamlining Defense Funding Requests</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #333333; max-width: 720px;">Transformed a struggling email-based funding process into a unified digital tool now used by 20+ Department of Defense agencies.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 40px; font-size: 14px; line-height: 1.4;">
+<div style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Role</span><span>UX Researcher &amp; Designer</span></div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Responsibilities</span><span>Design Research, Interaction Design, Wireframing &amp; Prototyping, Rollout &amp; Adoption Support</span></div>
+<div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Team</span><span>Product Manager, 2 Designers, 2 Engineers</span></div>
+<div style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Timeline</span><span>Dec 2020 – Jan 2022</span></div>
+</div>
+</div>
+</header>
+<!-- END EXISTING PAGE HEADER -->
+
+<!-- NEW PROBLEM SECTION: replaces “The Challenge” on defense-funding.html -->
+<main style="max-width: 1040px; margin: 0 auto; padding: 72px 32px 120px; box-sizing: border-box; display: flex; flex-direction: column; gap: 88px;">
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SECTION HEADER (H2) · LEAD PARAGRAPH -->
+<h2 style="margin: 0; font-size: 36px; line-height: 1.2; font-weight: 700; max-width: 820px;">A multibillion-dollar process running on email</h2>
+<p style="margin: 0; font-size: 22px; line-height: 1.5; max-width: 760px;">A Department of Defense (DoD) agency that distributes tens of billions of dollars a year to support national security and foreign policy was struggling with one of its core processes.</p>
+<p style="margin: 0; font-size: 15px; color: #595959; max-width: 720px;">My role: conducted design research &amp; synthesis during product discovery.</p>
+<!-- COMPONENT: STAT BAR · CONTEXT -->
+<div style="display: flex; flex-wrap: wrap; border-top: 1px solid #C9C9C9; border-bottom: 1px solid #C9C9C9;">
+<div style="flex: 1 1 200px; min-width: 0; padding: 24px 24px 24px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 30px; font-weight: 700; line-height: 1.2;">Tens of billions</span><span style="font-size: 14px; line-height: 1.4; color: #595959;">distributed per year</span></div>
+<div style="flex: 1 1 200px; min-width: 0; padding: 24px 24px 24px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 30px; font-weight: 700; line-height: 1.2;">3</span><span style="font-size: 14px; line-height: 1.4; color: #595959;">annual review processes</span></div>
+<div style="flex: 1 1 200px; min-width: 0; padding: 24px 24px 24px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 30px; font-weight: 700; line-height: 1.2">20+</span><span style="font-size: 14px; line-height: 1.4; color: rgb(89, 89, 89)">submitting organizations</span></div>
+<div style="flex: 1 1 200px; min-width: 0; padding: 24px 24px 24px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 30px; font-weight: 700; line-height: 1.2">$160B+</span><span style="font-size: 14px; line-height: 1.4; color: rgb(89, 89, 89)">in sales and partner programs overseen</span></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SUBHEAD (H3) · BODY -->
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">How funding requests work</h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">The agency doesn’t carry out most of its programs itself. It funds implementing agencies, such as the military departments and other defense organizations, that do the work. When an implementing agency runs into a need its budget doesn’t cover, such as a requirement that went unfunded or costs above its allocation, it submits a funding request. The agency runs three separate annual processes, depending on the funding type, to review these requests and decide which to fund.</p>
+<!-- COMPONENT: GRAPHIC · PROCESS FLOW (HTML/CSS ROW) -->
+<div style="overflow-x: auto;">
+<div style="display: flex; align-items: stretch; gap: 12px; min-width: 900px;">
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 1</span><span>Agency funds implementing agencies</span></div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 2</span><span>A need comes up that its budget doesn’t cover</span></div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 3</span><span>It submits a funding request</span></div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 4</span><span>Review in one of three annual processes</span></div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 2px solid #1A1A1A; border-radius: 8px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 5</span><span>Funding decision</span></div>
+</div>
+</div>
+<!-- COMPONENT: PULL QUOTE · STAKES -->
+<figure style="margin: 0; padding: 32px 0; border-top: 1px solid #C9C9C9; border-bottom: 1px solid #C9C9C9; display: flex; flex-direction: column; gap: 16px; max-width: 820px;">
+<p style="margin: 0; font-size: 15px; line-height: 1.5; font-weight: 600; color: #595959;">When requests stall, the cost is real: money can arrive too late in the year to spend.</p>
+<blockquote style="margin: 0; font-size: 26px; line-height: 1.4; font-weight: 500;">“If you give me money at the middle of August, I’m pushing it in trying to get it awarded before 30 September.”</blockquote>
+<figcaption style="font-size: 14px; color: #595959;">Submitter, implementing agency</figcaption>
+</figure>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SUBHEAD (H3) · BODY -->
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">What the client asked for</h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">The agency brought in our team to help it improve these processes. During our initial interviews and workshops with our client, we discovered that their primary frustrations were:</p>
+<!-- COMPONENT: CARD GRID 2×2 · “PORTAL FIX” FOOTERS OPTIONAL -->
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 400px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">Poor-quality submissions</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Submissions were frequently incomplete, completed incorrectly, contained inaccuracies, or attached superfluous information. This led to chasing details, requesting rewrites, and asking due diligence questions, like “Was this reviewed by your Office of General Counsel?”</span>
+<span style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #C9C9C9; font-size: 13px; line-height: 1.4; color: #595959;">Portal fix: required fields, requested information only</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">Late submissions</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Submissions arrived after the deadline, which could cause delays and upend review steps like the prioritization of submissions.</span>
+<span style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #C9C9C9; font-size: 13px; line-height: 1.4; color: #595959;">Portal fix: an enforced deadline</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">Too many requests</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Many weren’t properly vetted before submission, which added to the review burden.</span>
+<span style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #C9C9C9; font-size: 13px; line-height: 1.4; color: #595959;">Portal fix: none directly</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">No system of record</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">The whole process was conducted over email with a mix of Word documents, Excel spreadsheets, and PDFs. This often led to data loss, and the lack of a single repository made analytics virtually impossible.</span>
+<span style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #C9C9C9; font-size: 13px; line-height: 1.4; color: #595959;">Portal fix: a single repository</span>
+</div>
+</div>
+<!-- COMPONENT: CALLOUT · THE ASK -->
+<div style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 8px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">The ask</span>
+<span style="font-size: 22px; font-weight: 600; line-height: 1.3;">A submission portal</span>
+<span style="font-size: 16px; line-height: 1.55; color: #333333; max-width: 760px;">They therefore requested that we build them a submission portal that would require submitters to fill out all fields, only enter the requested information, and respect a submission deadline, all the while creating a single repository for all submission files.</span>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SUBHEAD (H3) · TWO-COLUMN: TEXT + DONUT CHART (SVG) -->
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">Going to the source</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+<div style="flex: 1 1 380px; min-width: 0;">
+<p style="margin: 0; color: #333333;">Suspecting that this was only part of the problem, we requested and obtained permission to speak with submitters to conduct additional discovery. We asked about tasks, desired outcomes, information needs, frustrations, and roles, then synthesized the findings using Goal-Directed Design, capturing user needs as job stories.</p>
+</div>
+<figure style="flex: 1 1 440px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+<div style="position: relative; width: 200px; height: 200px; flex: 0 0 200px;">
+<svg role="img" aria-label="Donut chart of 34 interviews by stakeholder group" width="200" height="200" viewBox="0 0 200 200" style="display: block;">
+<g transform="rotate(-90 100 100)" style="fill: none; stroke-width: 28;">
+<circle cx="100" cy="100" r="70" stroke-dasharray="179.1 439.82" stroke-dashoffset="0" style="stroke: #1A1A1A;"></circle>
+<circle cx="100" cy="100" r="70" stroke-dasharray="114.4 439.82" stroke-dashoffset="-181.1" style="stroke: #4D4D4D;"></circle>
+<circle cx="100" cy="100" r="70" stroke-dasharray="62.7 439.82" stroke-dashoffset="-297.5" style="stroke: #7A7A7A;"></circle>
+<circle cx="100" cy="100" r="70" stroke-dasharray="36.8 439.82" stroke-dashoffset="-362.2" style="stroke: #A6A6A6;"></circle>
+<circle cx="100" cy="100" r="70" stroke-dasharray="36.8 439.82" stroke-dashoffset="-401" style="stroke: #CFCFCF;"></circle>
+</g>
+</svg>
+<div style="position: absolute; left: 0; top: 0; width: 200px; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1;"><span style="font-size: 36px; font-weight: 700;">34</span><span style="font-size: 13px; color: #595959;">interviews</span></div>
+</div>
+<div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.4;">
+<div style="display: flex; align-items: center; gap: 10px;"><span style="flex: 0 0 12px; width: 12px; height: 12px; border-radius: 3px; background: #1A1A1A;"></span><span style="flex: 1 1 auto;">Client analysts</span><span style="font-weight: 600;">14</span></div>
+<div style="display: flex; align-items: center; gap: 10px;"><span style="flex: 0 0 12px; width: 12px; height: 12px; border-radius: 3px; background: #4D4D4D;"></span><span style="flex: 1 1 auto;">Implementing agencies</span><span style="font-weight: 600;">9</span></div>
+<div style="display: flex; align-items: center; gap: 10px;"><span style="flex: 0 0 12px; width: 12px; height: 12px; border-radius: 3px; background: #7A7A7A;"></span><span style="flex: 1 1 auto;">Client IT office</span><span style="font-weight: 600;">5</span></div>
+<div style="display: flex; align-items: center; gap: 10px;"><span style="flex: 0 0 12px; width: 12px; height: 12px; border-radius: 3px; background: #A6A6A6;"></span><span style="flex: 1 1 auto;">Partner programs office</span><span style="font-weight: 600;">3</span></div>
+<div style="display: flex; align-items: center; gap: 10px;"><span style="flex: 0 0 12px; width: 12px; height: 12px; border-radius: 3px; background: #CFCFCF; box-sizing: border-box; border: 1px solid #8C8C8C;"></span><span style="flex: 1 1 auto;">Subject-matter reviewers</span><span style="font-weight: 600;">3</span></div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px;">
+<div style="display: flex; flex-direction: column; line-height: 1.2;"><span style="font-size: 24px; font-weight: 700;">33</span><span style="font-size: 13px; color: #595959;">people</span></div>
+<div style="display: flex; flex-direction: column; line-height: 1.2;"><span style="font-size: 24px; font-weight: 700;">29</span><span style="font-size: 13px; color: #595959;">hours of interviews</span></div>
+</div>
+<figcaption style="font-size: 14px; line-height: 1.5; color: #595959;">34 interviews, 29 hours, and 33 people across five stakeholder groups, from the client’s analysts to submitters.</figcaption>
+</figure>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SUBHEAD (H3) · LEAD-IN · TWO-TIER CARD ROWS (MATCH PAIN DIAGRAM KEY COLORS IN FINAL) -->
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">The other side of the process</h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">The client had never interviewed submitters this way, and talking to them showed us the other side of the process. Some of their pains mirrored the client’s, while others never came up in our conversations with the client:</p>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Shared with the client</span>
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 400px; min-width: 0; background: #FFFFFF; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">No visibility into the process</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Once a request was submitted, submitters had no way to track the progress or know how close it was to being adjudicated.</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; background: #FFFFFF; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">No record of historical data</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Like our client, submitters had no straightforward way of performing analytics on past- or current-year submissions and review outcomes. Even finding records of previous-year submissions was difficult.</span>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1A1A1A;">Raised only by submitters</span>
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 280px; min-width: 0; background: #F4F4F4; border: 2px solid #1A1A1A; border-radius: 8px; padding: 23px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">A perceived lack of coordination from the reviewers</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Submitters complained, for example, of having to respond to many of the same questions multiple times from different reviewers.</span>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; background: #F4F4F4; border: 2px solid #1A1A1A; border-radius: 8px; padding: 23px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">Slow timelines</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">The long time from submission to review decision often delayed funding, even to the point of having difficulty executing funds within a fiscal year.</span>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; background: #F4F4F4; border: 2px solid #1A1A1A; border-radius: 8px; padding: 23px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 18px; font-weight: 600; line-height: 1.3;">Form confusion</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Submitters did not understand how to correctly fill in the request, including confusion on the meaning of terminology used in the form.</span>
+<!-- COMPONENT: CONFIRM THIS ROW -->
+</div>
+</div>
+</div>
+<!-- COMPONENT: PULL QUOTE -->
+<figure style="margin: 0; padding: 32px 0; border-top: 1px solid #C9C9C9; border-bottom: 1px solid #C9C9C9; display: flex; flex-direction: column; gap: 16px; max-width: 820px;">
+<blockquote style="margin: 0; font-size: 26px; line-height: 1.4; font-weight: 500;">“I don’t want to document the same stuff 10 times. Just tell me what info you need and then route that info internally to all the correct people.”</blockquote>
+<figcaption style="font-size: 14px; color: #595959;">Submitter, implementing agency</figcaption>
+</figure>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SUBHEAD (H3) · BODY · GRAPHIC · ROOT CAUSE CHAIN (HTML/CSS ROW) -->
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">Why reviews were so time- and labor-intensive</h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">The most widespread pain, the review burden, traced back to upstream causes: unclear guidance on how to justify a request, an inadequate template, and too little vetting before submission.</p>
+<div style="overflow-x: auto;">
+<div style="display: flex; align-items: center; gap: 12px; min-width: 900px;">
+<div style="flex: 1.4 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Root causes</span>
+<div style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 6px; padding: 10px 14px; box-sizing: border-box; font-size: 14px; line-height: 1.4;">Unclear guidance on justifying requests</div>
+<div style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 6px; padding: 10px 14px; box-sizing: border-box; font-size: 14px; line-height: 1.4;">Inadequate template</div>
+<div style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 6px; padding: 10px 14px; box-sizing: border-box; font-size: 14px; line-height: 1.4;">Too little vetting before submission</div>
+</div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; font-size: 15px; line-height: 1.4; text-align: center;">Low-quality requests</div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; font-size: 15px; line-height: 1.4; text-align: center;">Reviewers can’t make a decision</div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 2px solid #1A1A1A; border-radius: 8px; padding: 15px; box-sizing: border-box; font-size: 15px; line-height: 1.4; text-align: center; font-weight: 600;">Back-and-forth over email</div>
+</div>
+</div>
+<figure style="margin: 0; max-width: 760px; display: flex; flex-direction: column; gap: 8px;">
+<blockquote style="margin: 0; font-size: 20px; line-height: 1.45; font-weight: 500;">“Sometimes it’s the same [request] has gone back and forth about 5, 10 times before we can get the right information.”</blockquote>
+<figcaption style="font-size: 14px; color: #595959;">Submitter, implementing agency</figcaption>
+</figure>
+<!-- COMPONENT: LINK · OPENS SANITIZED FULL DIAGRAM IN A LIGHTBOX -->
+<a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600;">View the full pain point analysis<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M3 8 L13 8"></path><path d="M9 4 L13 8 L9 12"></path></svg></a>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SUBHEAD (H3) · BODY -->
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">Rethinking the solution</h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">Given what we learned from submitters, we knew we would need to reframe the required solution. Many of the issues in the process were systemic. A submission portal would only treat some of the symptoms, not the root causes. Worse, a portal could become a new chokepoint. It would enforce the client’s requirements at the moment of submission without supporting how submitters actually write, review, and route requests beforehand.</p>
+<p style="margin: 0; max-width: 720px; color: #333333;">Therefore, we needed to solve not just for the symptoms experienced by our client, but for the whole process, beginning to end. This meant solving for drafting, coordination, and review, in addition to submission.</p>
+<!-- COMPONENT: GRAPHIC · STAGE STRIP, SECTION CENTERPIECE · CURVE IS ILLUSTRATIVE, RE-PLOT FROM RESEARCH CHART -->
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px;">
+<div style="overflow-x: auto;">
+<div style="min-width: 820px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 8px; row-gap: 12px;">
+<div style="grid-column: 1 / -1; position: relative; height: 160px;">
+<svg role="img" aria-label="Illustrative pain severity across process stages, low in drafting, high in review and rework on both sides of submission, falling at decision" width="1000" height="160" viewBox="0 0 1000 160" preserveAspectRatio="none" style="display: block; width: 100%; height: 160px;">
+<path d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146 L1000 160 L0 160 Z" style="fill: #E2E2E2; stroke: none;"></path>
+<path d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146" vector-effect="non-scaling-stroke" style="fill: none; stroke: #595959; stroke-width: 2;"></path>
+</svg>
+<span style="position: absolute; left: 0; top: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Pain severity (illustrative)</span>
+</div>
+<div style="border: 1px solid #C9C9C9; border-radius: 8px; padding: 14px 12px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; gap: 2px; font-size: 15px; line-height: 1.35;"><span style="font-weight: 600;">Drafting</span><span style="font-size: 13px; color: #595959;">Implementing agency</span></div>
+<div style="border: 1px solid #C9C9C9; border-radius: 8px; padding: 14px 12px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; gap: 2px; font-size: 15px; line-height: 1.35;"><span style="font-weight: 600;">Internal review &amp; routing</span><span style="font-size: 13px; color: #595959;">Implementing agency</span></div>
+<div style="border: 1px solid #C9C9C9; border-radius: 8px; padding: 14px 12px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; gap: 2px; font-size: 15px; line-height: 1.35;"><span style="font-weight: 600;">Submission</span><span style="font-size: 13px; color: #595959;">Handoff to client</span></div>
+<div style="border: 1px solid #C9C9C9; border-radius: 8px; padding: 14px 12px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; gap: 2px; font-size: 15px; line-height: 1.35;"><span style="font-weight: 600;">Client review</span><span style="font-size: 13px; color: #595959;">Client and subject-matter reviewers</span></div>
+<div style="border: 1px solid #C9C9C9; border-radius: 8px; padding: 14px 12px; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; gap: 2px; font-size: 15px; line-height: 1.35;"><span style="font-weight: 600;">Decision</span><span style="font-size: 13px; color: #595959;">Client</span></div>
+<div style="grid-column: 3 / 4; display: flex; flex-direction: column; gap: 6px;">
+<div style="height: 14px; border: 2px dashed #595959; border-top: none; box-sizing: border-box;"></div>
+<span style="text-align: center; font-size: 14px; line-height: 1.35; font-weight: 600; color: #595959;">Submission portal</span>
+</div>
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px;">
+<div style="height: 14px; border: 2px solid #1A1A1A; border-top: none; box-sizing: border-box;"></div>
+<span style="text-align: center; font-size: 15px; line-height: 1.35; font-weight: 700;">Coordination tool</span>
+<span style="text-align: center; font-size: 13px; line-height: 1.35; color: #595959;">Drafting, coordination, review, and submission</span>
+</div>
+</div>
+</div>
+<figcaption style="font-size: 14px; line-height: 1.5; color: #595959; max-width: 720px;">A portal would have covered one step, ignoring pain points that affect the rest of the process.</figcaption>
+</figure>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: SUBHEAD (H3) · BODY · DECISION CARDS (“INSTEAD OF” FOOTERS OPTIONAL) -->
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">What we recommended</h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">We presented our research findings to the client, emphasizing the need for a systems view of the problem and therefore a coordination tool as our primary solution. The coordination tool would keep the portal’s core strengths, like a standardized digital form with built-in guidance, and extend support across the rest of the process. We recommended the following high-level design decisions:</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 280px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Decision 1</span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1.3;">Responsive form</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">A digital form that shows only the fields relevant to each request, replacing the myriad Word and Excel templates.</span>
+<span style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #C9C9C9; font-size: 13px; line-height: 1.4; color: #595959;">Instead of: a limited form with attachments</span>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Decision 2</span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1.3;">Dynamic workflows</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Roles defined by the situation and guided by user knowledge, instead of fixed paths, so each organization could route requests its own way.</span>
+<span style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #C9C9C9; font-size: 13px; line-height: 1.4; color: #595959;">Instead of: static workflows with prescribed paths</span>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Decision 3</span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1.3;">Unified tool</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">One tool for all three request processes, streamlining the work and centralizing the data.</span>
+<span style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #C9C9C9; font-size: 13px; line-height: 1.4; color: #595959;">Instead of: three separate systems</span>
+</div>
+</div>
+<!-- COMPONENT: VISION PANEL · PERIOD DOCUMENT, SMALLER TYPE -->
+<div style="background: #F4F4F4; border-radius: 8px; padding: 28px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; max-width: 820px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">The vision we presented</span>
+<blockquote style="margin: 0; font-size: 15px; line-height: 1.65; color: #333333;">“The new design of the funding request processes will lower the overall workload of requirement owners and reviewing officials. By providing enhanced and dynamic funding request templates, it will improve the quality of submissions and reduce the amount of necessary reworks. By providing a centralized workflow, it will streamline the funding request processes and increase visibility into the current status of submissions, which will lower the burden of manual coordination. In addition, because funding requests of all types will be created and shared in a central location, it will establish a repository of records that increases information accessibility.”</blockquote>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<!-- COMPONENT: CLOSING CALLOUT · LEADS INTO NEXT SECTION -->
+<p style="margin: 0; padding-top: 32px; border-top: 2px solid #1A1A1A; font-size: 24px; line-height: 1.45; font-weight: 600; max-width: 820px;">The client was persuaded by the research findings and design vision, and enthusiastically agreed to pivot from a submission portal to a workflow coordination tool.</p>
+<!-- BUILD NOTE: Existing “The Solution” section follows. Cut its first paragraph until the new solution section ships. -->
+</section>
+
+</main>
+<!-- END NEW PROBLEM SECTION -->
+</div>
+</body>
+</html>

@@ -47,3 +47,26 @@ if (document.querySelector('.case-study-hero') || document.querySelector('.about
     }
   });
 }
+
+// Lightbox dialogs for case study figures
+document.querySelectorAll('[data-lightbox]').forEach(trigger => {
+  const dialog = document.getElementById(trigger.dataset.lightbox);
+
+  if (!dialog) return;
+
+  trigger.addEventListener('click', () => {
+    dialog.showModal();
+  });
+
+  // Close when clicking the backdrop
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) {
+      dialog.close();
+    }
+  });
+
+  // Return focus to the trigger
+  dialog.addEventListener('close', () => {
+    trigger.focus();
+  });
+});
