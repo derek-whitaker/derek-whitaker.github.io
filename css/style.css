@@ -1393,7 +1393,7 @@ th {
 /* Stat Bar */
 .stat-bar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--clr-border);
@@ -1404,13 +1404,36 @@ th {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-left: 1px solid var(--clr-border);
+  padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 0;
 }
 
-.stat-bar__item:first-child {
-  padding-left: 0;
-  border-left: 0;
+/* One row with dividers once every figure fits side by side */
+@media (min-width: 768px) {
+  .stat-bar {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+
+  .stat-bar__item {
+    padding-left: var(--spacing-sm);
+    border-left: 1px solid var(--clr-border);
+  }
+
+  .stat-bar__item:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stat-bar__item {
+    padding-right: var(--spacing-md);
+  }
+
+  .stat-bar__item:not(:first-child) {
+    padding-left: var(--spacing-md);
+  }
 }
 
 .stat-bar__figure {
@@ -3512,4 +3535,55 @@ body:has(.lightbox[open]) {
 
 .lanes__handoff-label {
   color: var(--clr-raft-900);
+}
+
+/* ==========================================================================
+   Case study on small screens
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  /* Process flows and the cause chain stack, with chevrons pointing down */
+  .process-flow,
+  .cause-chain {
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .cause-chain {
+    align-items: stretch;
+  }
+
+  .process-flow__step,
+  .cause-chain__causes,
+  .cause-chain .process-flow {
+    flex: none;
+  }
+
+  .process-flow__step + .process-flow__step::before,
+  .cause-chain .process-flow__step:first-child::before {
+    top: calc(var(--chevron-gap) / -2);
+    left: 50%;
+    transform: translate(-50%, -70%) rotate(135deg);
+  }
+
+  /* Open steps line up their chevrons under the step icons */
+  .process-flow--open .process-flow__step + .process-flow__step::before {
+    top: calc(var(--chevron-gap) / -2);
+    left: 0.6875rem;
+  }
+
+  /* Diagrams that still need their width scroll edge to edge, under a hint */
+  .case-study-body .scroll-x {
+    margin-inline: calc(-1 * var(--spacing-md));
+    padding-inline: var(--spacing-md);
+  }
+
+  .case-study-body .scroll-x:not(:has(> .process-flow, > .cause-chain))::before {
+    content: 'Swipe to see more \2192';
+    content: 'Swipe to see more \2192' / '';
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--fs-sm);
+    color: var(--clr-text-secondary);
+  }
 }
