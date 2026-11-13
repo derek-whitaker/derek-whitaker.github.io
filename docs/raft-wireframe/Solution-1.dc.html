@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAFT solution section wireframe, part 1</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1A1A1A}a:hover{color:#595959}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1A1A1A; background: #FFFFFF; font-size: 17px; line-height: 1.6;">
+
+<sc-if value="{{showAnnotations}}" hint-placeholder-val="{{ true }}"><div style="background: #EAF0FD; color: #2F5FD0; font-size: 13px; line-height: 1.5; font-weight: 600; padding: 12px 32px; text-align: center;">Section 2 of 3 · Solution, part 1: opener to challenge index · Replaces the old “The Solution” section</div></sc-if>
+
+<main style="max-width: 1040px; margin: 0 auto; padding: 72px 32px 120px; box-sizing: border-box; display: flex; flex-direction: column; gap: 88px;">
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<sc-if value="{{showAnnotations}}" hint-placeholder-val="{{ true }}"><span style="display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.04em; color: #2F5FD0; background: #EAF0FD; padding: 4px 8px; border-radius: 4px;">SECTION HEADER (H2) · LEAD · THREE COLUMNS · SVG ICON + TITLE + TEXT · NO BORDERS</span></sc-if>
+<h2 style="margin: 0; font-size: 36px; line-height: 1.2; font-weight: 700; max-width: 860px;">One tool flexible enough for two dozen agencies and simple enough for occasional users</h2>
+<p style="margin: 0; font-size: 20px; line-height: 1.5; max-width: 760px;">Following our research, we moved into design with three constraints:</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 40px; padding-top: 8px;">
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 12px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="26" height="26" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg></span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1.3;">Cover the full journey</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Support drafting, coordination, and review across three separate processes for non-linear workflows where roles shift contextually.</span>
+</div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 12px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="26" height="26" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1.3;">Agency autonomy</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">While our client would own the tool, dozens of independent agencies would be using it too, and they didn’t want the client seeing “how the sausage is made.”</span>
+</div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 12px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="26" height="26" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1.3;">Simplicity</span>
+<span style="font-size: 15px; line-height: 1.55; color: #333333;">Many users would touch the tool only once or a few times a year, so it had to be easy to pick back up.</span>
+</div>
+</div>
+<sc-if value="{showAnnotations}" hint-placeholder-val="{ true }"><span style="display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.04em; color: #2F5FD0; background: #EAF0FD; padding: 4px 8px; border-radius: 4px;">2×2 PROCESS DIAGNOSIS · EXPLAINS TWO OF THE THREE CONSTRAINTS · EXAMPLES ARE DRAFT COPY</span></sc-if>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px;">
+<div style="overflow-x: auto;">
+<div style="min-width: 640px; display: grid; grid-template-columns: 180px repeat(2, minmax(0, 1fr)); gap: 8px;">
+<div></div>
+<div style="padding: 8px 12px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 15px; font-weight: 600;">Linear</span><span style="font-size: 13px; line-height: 1.4; color: #595959;">One route, regardless of circumstances. Can be automated.</span></div>
+<div style="padding: 8px 12px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 15px; font-weight: 600;">Non-linear</span><span style="font-size: 13px; line-height: 1.4; color: #595959;">Many routes, depending on circumstances. A human decides.</span></div>
+<div style="padding: 8px 12px; display: flex; flex-direction: column; justify-content: center; gap: 2px;"><span style="font-size: 15px; font-weight: 600;">Concentrated</span><span style="font-size: 13px; line-height: 1.4; color: #595959;">One person or group controls the whole process.</span></div>
+<div style="min-height: 110px; border: 1px dashed #C9C9C9; border-radius: 8px; padding: 14px 16px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 4px;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Example</span><span style="font-size: 14px; line-height: 1.45; color: #333333;">A monthly payroll run: one team, the same steps every time.</span></div>
+<div style="min-height: 110px; border: 1px dashed #C9C9C9; border-radius: 8px; padding: 14px 16px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 4px;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Example</span><span style="font-size: 14px; line-height: 1.45; color: #333333;">A support ticket: one agent decides the next step, case by case.</span></div>
+<div style="padding: 8px 12px; display: flex; flex-direction: column; justify-content: center; gap: 2px;"><span style="font-size: 15px; font-weight: 600;">Distributed</span><span style="font-size: 13px; line-height: 1.4; color: #595959;">Different people or groups control different parts.</span></div>
+<div style="min-height: 110px; border: 1px dashed #C9C9C9; border-radius: 8px; padding: 14px 16px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 4px;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Example</span><span style="font-size: 14px; line-height: 1.45; color: #333333;">An assembly line: each station owns its step, always in the same order.</span></div>
+<div style="min-height: 110px; border: 2px solid #1A1A1A; border-radius: 8px; background: #F4F4F4; padding: 16px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 10px;"><span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: #1A1A1A; flex: 0 0 14px;"></span><span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 15px; font-weight: 600;">The funding request process</span><span style="font-size: 13px; color: #595959;">Many routes, many owners</span></span></div>
+</div>
+</div>
+<figcaption style="font-size: 14px; line-height: 1.5; color: #595959; max-width: 720px;">The process was non-linear and distributed: no single route, and no single owner. That’s why the full journey needed roles that shift with the situation, and why agency autonomy mattered.</figcaption>
+</figure>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<sc-if value="{{showAnnotations}}" hint-placeholder-val="{{ true }}"><span style="display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.04em; color: #2F5FD0; background: #EAF0FD; padding: 4px 8px; border-radius: 4px;">SUBHEAD (H3, PLACEHOLDER) · BODY · GOALS × ROLES GRID (HTML TABLE, NOT AN IMAGE)</span></sc-if>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;"><span class=""><span data-comment-text="" class="break-words whitespace-pre-wrap">Uncovering shared jobs made one tool possible</span></span></h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">One research insight gave us confidence that all three would be achievable: once we abstracted dozens of job titles and responsibilities down to job stories, we found a striking amount of overlap and commonality.</p>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px;">
+<div style="overflow-x: auto;">
+<table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px; line-height: 1.4;">
+<thead>
+<tr>
+<th style="text-align: left; padding: 10px 12px; border-bottom: 2px solid #1A1A1A; font-size: 13px; font-weight: 600;">Goal</th>
+<th style="text-align: center; padding: 10px 12px; border-bottom: 2px solid #1A1A1A; font-size: 13px; font-weight: 600;">Client analyst</th>
+<th style="text-align: center; padding: 10px 12px; border-bottom: 2px solid #1A1A1A; font-size: 13px; font-weight: 600;">Agency reviewer</th>
+<th style="text-align: center; padding: 10px 12px; border-bottom: 2px solid #1A1A1A; font-size: 13px; font-weight: 600;">Request author</th>
+<th style="text-align: center; padding: 10px 12px; border-bottom: 2px solid #1A1A1A; font-size: 13px; font-weight: 600;">Subject-matter reviewer</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="5" style="padding: 16px 12px 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Generate</td></tr>
+<tr style="background: #F4F4F4;"><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Guide</span><span style="display: block; font-size: 13px; color: #595959;">Ensure processes are followed</span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Evaluate</span><span style="display: block; font-size: 13px; color: #595959;">Determine if a request is needed</span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Draft</span><span style="display: block; font-size: 13px; color: #595959;">Write the request</span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><td colspan="5" style="padding: 16px 12px 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Review</td></tr>
+<tr style="background: #F4F4F4;"><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Assess</span><span style="display: block; font-size: 13px; color: #595959;">Understand the received request</span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td></tr>
+<tr style="background: #F4F4F4;"><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Gather</span><span style="display: block; font-size: 13px; color: #595959;">Collect the perspectives and information needed</span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td></tr>
+<tr style="background: #F4F4F4;"><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Rework</span><span style="display: block; font-size: 13px; color: #595959;">Improve the quality of a request</span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr style="background: #F4F4F4;"><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Recommend</span><span style="display: block; font-size: 13px; color: #595959;">Fund or deny a request</span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td></tr>
+<tr><td colspan="5" style="padding: 16px 12px 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">Communicate</td></tr>
+<tr style="background: #F4F4F4;"><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Present</span><span style="display: block; font-size: 13px; color: #595959;">Bring a recommendation to leadership</span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><td style="padding: 10px 12px; border-bottom: 1px solid #E2E2E2;"><span style="display: block; font-weight: 600;">Share</span><span style="display: block; font-size: 13px; color: #595959;">Communicate the decision to stakeholders</span></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;"><span role="img" aria-label="Yes" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1A1A1A;"></span></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+</tbody>
+</table>
+</div>
+<figcaption style="font-size: 14px; line-height: 1.5; color: #595959; max-width: 720px;">Four roles, nine goals. Six of the nine goals are shared by two or more roles (shaded), which meant one tool could serve them all.</figcaption>
+</figure>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 16px;">
+<sc-if value="{{showAnnotations}}" hint-placeholder-val="{{ true }}"><span style="display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.04em; color: #2F5FD0; background: #EAF0FD; padding: 4px 8px; border-radius: 4px;">HOW WE WORKED · BODY TEXT ONLY</span></sc-if>
+<p style="margin: 0; max-width: 720px; color: #333333;">As we left behind our early research phase, we entered into a recurring tempo of weekly syncs with our main client points of contact, and regular meetings with additional stakeholders for co-creation and validation (roughly a few times a month).</p>
+
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<sc-if value="{{showAnnotations}}" hint-placeholder-val="{{ true }}"><span style="display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.04em; color: #2F5FD0; background: #EAF0FD; padding: 4px 8px; border-radius: 4px;">SUBHEAD (H3, PLACEHOLDER) · BODY · FOUR STEPS (REUSES THE NUMBERED PROCESS FLOW)</span></sc-if>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.3; font-weight: 600;">Designing for simplicity through semantic interaction design</h3>
+<p style="margin: 0; max-width: 720px; color: #333333;">To keep the tool simple, we used semantic interaction design, an approach from Daniel Rosenberg’s UX Magic that treats a system like a language. It posits that the fewer objects and actions users have to learn, the lower the cognitive load. We built a conceptual model grammar matrix in four steps:</p>
+<div style="overflow-x: auto;">
+<div style="display: flex; align-items: stretch; gap: 12px; min-width: 860px;">
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 1</span><span>Write job stories for your system’s requirements.</span></div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 2</span><span>Distill the job stories into the fewest objects and actions.</span></div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 3</span><span>Enumerate the attributes for every object.</span></div>
+<div style="flex: 0 0 auto; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 0; min-width: 0; border: 2px solid #1A1A1A; border-radius: 8px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.4;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">Step 4</span><span>Prioritize the object-action pairs.</span></div>
+</div>
+</div>
+
+<sc-if value="{{showAnnotations}}" hint-placeholder-val="{{ true }}"><span style="display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.04em; color: #2F5FD0; background: #EAF0FD; padding: 4px 8px; border-radius: 4px;">GRAPHIC · MATRIX PROGRESSION · SIMPLE GRIDS FOR EARLIER VERSIONS, FULL TABLE FOR THE FINAL · PROGRESSIVE FADE · NOTES FROM THE ORIGINAL BOARD</span></sc-if>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px;">
+<div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">An early version</span>
+<span style="font-size: 32px; font-weight: 700; line-height: 1.1; color: #8C8C8C;">112</span>
+<span style="font-size: 13px; line-height: 1.4; color: #595959;">8 objects × 14 actions</span>
+<div aria-hidden="true" style="height: 150px; border: 1px solid #E2E2E2; border-radius: 4px; background-color: #FAFAFA; background-image: linear-gradient(#E6E6E6 1px, transparent 1px), linear-gradient(90deg, #E6E6E6 1px, transparent 1px); background-size: calc(100% / 14) calc(100% / 8);"></div>
+</div>
+<div style="flex: 0 0 auto; align-self: flex-start; margin-top: 163px; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;">A later version</span>
+<span style="font-size: 32px; font-weight: 700; line-height: 1.1; color: #595959;">35</span>
+<span style="font-size: 13px; line-height: 1.4; color: #595959;">5 objects × 7 actions</span>
+<div aria-hidden="true" style="height: 150px; border: 1px solid #C9C9C9; border-radius: 4px; background-color: #F4F4F4; background-image: linear-gradient(#BDBDBD 1px, transparent 1px), linear-gradient(90deg, #BDBDBD 1px, transparent 1px); background-size: calc(100% / 7) calc(100% / 5);"></div>
+</div>
+<div style="flex: 0 0 auto; align-self: flex-start; margin-top: 163px; display: flex; align-items: center;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" style="fill: none; stroke: #595959; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M6 3 L11 8 L6 13"></path></svg></div>
+<div style="flex: 2 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #1A1A1A;">Final</span>
+<span style="font-size: 32px; font-weight: 700; line-height: 1.1;">30</span>
+<span style="font-size: 13px; line-height: 1.4; color: #595959;">6 objects × 5 actions</span>
+<div style="overflow-x: auto;">
+<table style="width: 100%; min-width: 400px; border-collapse: collapse; font-size: 13px; line-height: 1.3; border: 2px solid #1A1A1A;">
+<thead>
+<tr>
+<th style="text-align: left; padding: 8px; border-bottom: 2px solid #1A1A1A; font-weight: 600;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Object</span></th>
+<th style="padding: 8px; border-bottom: 2px solid #1A1A1A; font-weight: 600;">Create / Add</th>
+<th style="padding: 8px; border-bottom: 2px solid #1A1A1A; font-weight: 600;">Delete</th>
+<th style="padding: 8px; border-bottom: 2px solid #1A1A1A; font-weight: 600;">Complete</th>
+<th style="padding: 8px; border-bottom: 2px solid #1A1A1A; font-weight: 600;">Edit</th>
+<th style="padding: 8px; border-bottom: 2px solid #1A1A1A; font-weight: 600;">Accept / Deny</th>
+</tr>
+</thead>
+<tbody>
+<tr><th style="text-align: left; padding: 8px; border-bottom: 1px solid #E2E2E2; font-weight: 600;">Funding Requests</th><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><th style="text-align: left; padding: 8px; border-bottom: 1px solid #E2E2E2; font-weight: 600;">Taskers</th><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td></tr>
+<tr><th style="text-align: left; padding: 8px; border-bottom: 1px solid #E2E2E2; font-weight: 600;">Reviews / Decisions</th><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><th style="text-align: left; padding: 8px; border-bottom: 1px solid #E2E2E2; font-weight: 600;">Groups</th><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><th style="text-align: left; padding: 8px; border-bottom: 1px solid #E2E2E2; font-weight: 600;">Users</th><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="border-bottom: 1px solid #E2E2E2;"></td><td style="text-align: center; border-bottom: 1px solid #E2E2E2;">×</td><td style="border-bottom: 1px solid #E2E2E2;"></td></tr>
+<tr><th style="text-align: left; padding: 8px; font-weight: 600;">Documents</th><td style="text-align: center;">×</td><td style="text-align: center;">×</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">EXAMPLE SIMPLIFICATIONS</span>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.5; color: #333333; max-width: 760px;">
+<li><strong style="font-weight: 600;">Rework and review requests</strong> merged into one object: the tasker.</li>
+<li><strong style="font-weight: 600;">Notifications</strong> cut: not an object, just a way of displaying information.</li>
+<li><strong style="font-weight: 600">Assignment and tags</strong> became attributes that are edited, not distinct actions and objects.</li>
+<li><strong style="font-weight: 600;">Cancel</strong> cut: redundant with Accept / Deny.</li>
+<li><strong style="font-weight: 600">Track</strong> cut: a proxy action, not a transactional one.</li>
+</ul>
+</div>
+<figcaption style="font-size: 14px; line-height: 1.5; color: #595959; max-width: 720px;">From 112 possible object-action combinations to 30.</figcaption>
+</figure>
+<p style="margin: 0; max-width: 720px; color: #333333;">Over several months, we compressed it from 112 possible object-action combinations to 30: six objects and five actions. Along the way, separate review and rework requests merged into a single object, the tasker, which became the tool’s core unit of coordination.</p>
+<p style="margin: 0; max-width: 720px; color: #333333;">We also separated transactional actions, which change data, from non-transactional ones like search, filter, sort, and export, which only change what you see. Only transactional actions went into the matrix, keeping it focused on how the system’s data actually changes.</p>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595959;">The final set</span>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+<span style="flex: 0 0 72px; font-size: 14px; font-weight: 600;">Objects</span>
+<span style="border: 1px solid #1A1A1A; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Funding Requests</span>
+<span style="border: 1px solid #1A1A1A; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Taskers</span>
+<span style="border: 1px solid #1A1A1A; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Reviews / Decisions</span>
+<span style="border: 1px solid #1A1A1A; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Groups</span>
+<span style="border: 1px solid #1A1A1A; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Users</span>
+<span style="border: 1px solid #1A1A1A; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Documents</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+<span style="flex: 0 0 72px; font-size: 14px; font-weight: 600;">Actions</span>
+<span style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Create / Add</span>
+<span style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Delete</span>
+<span style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Complete</span>
+<span style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Edit</span>
+<span style="background: #F4F4F4; border: 1px solid #C9C9C9; border-radius: 999px; padding: 4px 12px; font-size: 14px; line-height: 1.4;">Accept / Deny</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<p style="margin: 0; color: #333333;">Starting from this model let us:</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #333333; max-width: 760px;">
+<li>Determine at a high level how the system would work without getting bogged down in particular design patterns.</li>
+<li>Articulate the tool’s objects and actions, and intentionally work to reduce them to an optimal minimum.</li>
+<li>Prioritize system interactions.</li>
+<li>Ensure more consistency in visual representations and UI design patterns.</li>
+</ul>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px;">
+<p style="margin: 0; max-width: 720px; color: #333333;">With that foundation formed, we systematically worked through several core design challenges.</p>
+<sc-if value="{{showAnnotations}}" hint-placeholder-val="{{ true }}"><span style="display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.04em; color: #2F5FD0; background: #EAF0FD; padding: 4px 8px; border-radius: 4px;">CHALLENGE INDEX · SEVEN EQUAL TILES · EACH ICON REPEATS ON ITS CHALLENGE BLOCK · ANCHOR LINKS · SUMMARIES ARE DRAFT COPY</span></sc-if>
+<nav aria-label="Design challenges" style="display: flex; flex-wrap: wrap; gap: 16px;">
+<a href="#self-governance" style="flex: 1 1 220px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A;"><span aria-hidden="true" style="width: 40px; height: 40px; margin-bottom: 6px; border-radius: 10px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></span><span style="font-size: 17px; font-weight: 600; line-height: 1.3;">Self-governance</span><span style="font-size: 14px; line-height: 1.45; color: #595959;">Each agency runs its own structure, users, and groups.</span></a>
+<a href="#visibility" style="flex: 1 1 220px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A;"><span aria-hidden="true" style="width: 40px; height: 40px; margin-bottom: 6px; border-radius: 10px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></span><span style="font-size: 17px; font-weight: 600; line-height: 1.3;">Visibility</span><span style="font-size: 14px; line-height: 1.45; color: #595959;">Need-to-know access that follows the group.</span></a>
+<a href="#permissions" style="flex: 1 1 220px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A;"><span aria-hidden="true" style="width: 40px; height: 40px; margin-bottom: 6px; border-radius: 10px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><circle cx="7.5" cy="15.5" r="5.5"></circle><path d="m21 2-9.6 9.6"></path><path d="m15.5 7.5 3 3L22 7l-3-3"></path></svg></span><span style="font-size: 17px; font-weight: 600; line-height: 1.3;">Permissions</span><span style="font-size: 14px; line-height: 1.45; color: #595959;">Roles that follow the request, not the org chart.</span></a>
+<a href="#reviews-and-taskers" style="flex: 1 1 220px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A;"><span aria-hidden="true" style="width: 40px; height: 40px; margin-bottom: 6px; border-radius: 10px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg></span><span style="font-size: 17px; font-weight: 600; line-height: 1.3;">Reviews and taskers</span><span style="font-size: 14px; line-height: 1.45; color: #595959;">One unit of coordination, with a full history.</span></a>
+<a href="#non-linear-workflows" style="flex: 1 1 220px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A;"><span aria-hidden="true" style="width: 40px; height: 40px; margin-bottom: 6px; border-radius: 10px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><path d="M16 3h5v5"></path><path d="M8 3H3v5"></path><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"></path><path d="m15 9 6-6"></path></svg></span><span style="font-size: 17px; font-weight: 600; line-height: 1.3;">Non-linear workflows</span><span style="font-size: 14px; line-height: 1.45; color: #595959;">Any request can go to anyone, with suggestions to guide it.</span></a>
+<a href="#form-confusion" style="flex: 1 1 220px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A;"><span aria-hidden="true" style="width: 40px; height: 40px; margin-bottom: 6px; border-radius: 10px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span><span style="font-size: 17px; font-weight: 600; line-height: 1.3;">Form confusion</span><span style="font-size: 14px; line-height: 1.45; color: #595959;">Validated guidance, right where it’s needed.</span></a>
+<a href="#historical-record" style="flex: 1 1 220px; min-width: 0; border: 1px solid #C9C9C9; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1A1A1A;"><span aria-hidden="true" style="width: 40px; height: 40px; margin-bottom: 6px; border-radius: 10px; background: #F4F4F4; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" style="fill: none; stroke: #1A1A1A; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg></span><span style="font-size: 17px; font-weight: 600; line-height: 1.3;">Historical record</span><span style="font-size: 14px; line-height: 1.45; color: #595959;">Past requests, searchable within your visibility.</span></a>
+</nav>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAnnotations":{"editor":"boolean","default":true,"section":"Wireframe"},"$preview":{"width":1280,"height":5200}}'>
+class Component extends DCLogic {
+renderVals() {
+return { showAnnotations: this.props.showAnnotations ?? true };
+}
+}
+</script>
+</body>
+</html>

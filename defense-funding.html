@@ -74,352 +74,1079 @@
         </section>
 
         <section class="case-study-body">
-          <!-- Problem Section -->
-          <!-- TODO: Sanitize every quote and diagram: no agency names, seals, office names, or program acronyms. -->
-          <section class="cs-section">
-            <div class="cs-block">
-              <h2 class="cs-section__title">A multibillion-dollar process running on email</h2>
-              <p class="cs-lead">A Department of Defense (DoD) agency that distributes tens of billions of dollars a year to support national security and foreign policy was struggling with one of its core processes.</p>
-              <p class="cs-role">My role: conducted design research &amp; synthesis during product discovery.</p>
-              <ul class="stat-bar">
-                <li class="stat-bar__item">
-                  <span class="stat-bar__figure">Tens of billions</span>
-                  <span class="stat-bar__label">distributed per year</span>
-                </li>
-                <li class="stat-bar__item">
-                  <span class="stat-bar__figure">3</span>
-                  <span class="stat-bar__label">annual review processes</span>
-                </li>
-                <li class="stat-bar__item">
-                  <span class="stat-bar__figure">20+</span>
-                  <span class="stat-bar__label">submitting organizations</span>
-                </li>
-                <li class="stat-bar__item">
-                  <span class="stat-bar__figure">$160B+</span>
-                  <span class="stat-bar__label">in sales and partner programs overseen</span>
-                </li>
-              </ul>
-            </div>
+<section class="cs-section">
+<div class="cs-block">
+<h2 class="cs-section__title">Hundreds of millions in defense funding, stuck in email</h2>
+<p class="cs-lead">A Department of Defense (DoD) agency that distributes tens of billions of dollars a year to support national security and foreign policy was struggling with one of its core processes.</p>
+<ul class="stat-bar">
+<li class="stat-bar__item">
+<span class="stat-bar__figure">$10B+</span>
+<span class="stat-bar__label">distributed per year</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">3</span>
+<span class="stat-bar__label">annual review processes</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">20+</span>
+<span class="stat-bar__label">submitting organizations</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">$160B+</span>
+<span class="stat-bar__label">in sales and partner programs overseen</span>
+</li>
+</ul>
+</div>
+<section class="cs-block">
+<h3 class="cs-block__title">How funding requests work</h3>
+<p class="cs-text">The agency doesn’t carry out most of its programs itself. It funds implementing agencies, such as the military departments and other defense organizations, that do the work. When an implementing agency runs into a need its budget doesn’t cover, such as a requirement that went unfunded or costs above its allocation, it submits a funding request. The agency runs three separate annual processes, depending on the funding type, to review these requests and decide which to fund.</p>
+<div class="scroll-x">
+<ol class="process-flow process-flow--open">
+<li class="process-flow__step">
+<span class="process-flow__head"><span class="process-flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 22h18"></path><path d="M6 18v-7"></path><path d="M10 18v-7"></path><path d="M14 18v-7"></path><path d="M18 18v-7"></path><path d="M12 2 20 7H4z"></path></svg></span>
+<span class="eyebrow">Step 1</span></span>
+<span>Agency funds implementing agencies</span>
+</li>
+<li class="process-flow__step">
+<span class="process-flow__head"><span class="process-flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg></span>
+<span class="eyebrow">Step 2</span></span>
+<span>A need comes up that its budget doesn’t cover</span>
+</li>
+<li class="process-flow__step">
+<span class="process-flow__head"><span class="process-flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M9 15h6"></path><path d="M12 18v-6"></path></svg></span>
+<span class="eyebrow">Step 3</span></span>
+<span>It submits a funding request</span>
+</li>
+<li class="process-flow__step">
+<span class="process-flow__head"><span class="process-flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></span>
+<span class="eyebrow">Step 4</span></span>
+<span>Review in one of three annual processes</span>
+</li>
+<li class="process-flow__step process-flow__step--final">
+<span class="process-flow__head"><span class="process-flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span>
+<span class="eyebrow">Step 5</span></span>
+<span>Funding decision</span>
+</li>
+</ol>
+</div>
+<figure class="pull-quote">
+<p class="pull-quote__lead-in">When requests stall, the cost is real: money can arrive too late in the year to spend.</p>
+<blockquote class="pull-quote__quote">“If you give me money at the middle of August, I’m pushing it in trying to get it awarded before 30 September.”</blockquote>
+<figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
+</figure>
+</section>
+<section class="cs-block">
+<h3 class="cs-block__title">The client’s problems</h3>
+<p class="cs-text">The agency brought in our team to help it improve these processes. During our initial interviews and workshops with our client, we discovered that their primary frustrations were:</p>
+<ul class="card-grid">
+<li class="card">
+<h4 class="card__title card__title--icon"><span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m14.5 12.5-5 5"></path><path d="m9.5 12.5 5 5"></path></svg></span>Poor-quality submissions</h4>
+<p class="card__text">Submissions were frequently incomplete, completed incorrectly, contained inaccuracies, or attached superfluous information. This led to chasing details, requesting rewrites, and asking due diligence questions, like “Was this reviewed by your Office of General Counsel?”</p>
+</li>
+<li class="card">
+<h4 class="card__title card__title--icon"><span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></span>Late submissions</h4>
+<p class="card__text">Submissions arrived after the deadline, which could cause delays and upend review steps like the prioritization of submissions.</p>
+</li>
+<li class="card">
+<h4 class="card__title card__title--icon"><span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></span>Too many requests</h4>
+<p class="card__text">Many weren’t properly vetted before submission, which added to the review burden.</p>
+</li>
+<li class="card">
+<h4 class="card__title card__title--icon"><span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span>No system of record</h4>
+<p class="card__text">The whole process was conducted over email with a mix of Word documents, Excel spreadsheets, and PDFs. This often led to data loss, and the lack of a single repository made analytics virtually impossible.</p>
+</li>
+</ul>
+<div class="callout">
+<p class="eyebrow">The ask</p>
+<p class="callout__title">A submission portal</p>
+<p class="callout__text">They therefore requested that we build them a submission portal that would require submitters to fill out all fields, only enter the requested information, and respect a submission deadline, all the while creating a single repository for all submission files.</p>
+</div>
+</section>
+<section class="cs-block">
+<h3 class="cs-block__title">Discovering ground truth</h3>
+<div class="split">
+<p class="cs-text">Suspecting that this was only part of the problem, we requested and obtained permission to speak with submitters to conduct additional discovery. We asked about tasks, desired outcomes, information needs, frustrations, and roles, then synthesized the findings using Goal-Directed Design, capturing user needs as job stories.</p>
+<figure class="donut">
+<div class="donut__body">
+<div class="donut__chart">
+<!-- Segments use pathLength="34" (total interviews), so each dash length and offset is a raw interview count -->
+<svg aria-label="Donut chart of 34 interviews by stakeholder group: client analysts 14, implementing agencies 9, client IT office 5, partner programs office 3, subject-matter reviewers 3" class="donut__svg" role="img" viewBox="0 0 200 200">
+<path class="donut__segment" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140" pathLength="34" stroke-dasharray="14 34" stroke-dashoffset="0"></path>
+<path class="donut__segment" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140" pathLength="34" stroke-dasharray="9 34" stroke-dashoffset="-14"></path>
+<path class="donut__segment" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140" pathLength="34" stroke-dasharray="5 34" stroke-dashoffset="-23"></path>
+<path class="donut__segment" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140" pathLength="34" stroke-dasharray="3 34" stroke-dashoffset="-28"></path>
+<path class="donut__segment" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140" pathLength="34" stroke-dasharray="3 34" stroke-dashoffset="-31"></path>
+</svg>
+<p class="donut__center">
+<span class="donut__total">34</span>
+<span class="donut__center-label">interviews</span>
+</p>
+</div>
+<!-- TODO: Confirm the sanitized labels (Client analysts, Implementing agencies, Client IT office, Partner programs office, Subject-matter reviewers). -->
+<ul class="donut__legend">
+<li class="donut__legend-item">
+<span class="donut__swatch"></span>
+<span class="donut__label">Client analysts</span>
+<span class="donut__value">14</span>
+</li>
+<li class="donut__legend-item">
+<span class="donut__swatch"></span>
+<span class="donut__label">Implementing agencies</span>
+<span class="donut__value">9</span>
+</li>
+<li class="donut__legend-item">
+<span class="donut__swatch"></span>
+<span class="donut__label">Client IT office</span>
+<span class="donut__value">5</span>
+</li>
+<li class="donut__legend-item">
+<span class="donut__swatch"></span>
+<span class="donut__label">Partner programs office</span>
+<span class="donut__value">3</span>
+</li>
+<li class="donut__legend-item">
+<span class="donut__swatch"></span>
+<span class="donut__label">Subject-matter reviewers</span>
+<span class="donut__value">3</span>
+</li>
+</ul>
+</div>
+<ul class="donut__stats">
+<li class="donut__stat">
+<span class="donut__stat-figure">33</span>
+<span class="donut__stat-label">people</span>
+</li>
+<li class="donut__stat">
+<span class="donut__stat-figure">29</span>
+<span class="donut__stat-label">hours of interviews</span>
+</li>
+</ul>
+<figcaption class="cs-caption">34 interviews, 29 hours, and 33 people across five stakeholder groups, from the client’s analysts to submitters.</figcaption>
+</figure>
+</div>
+<section class="cs-block">
+<h3 class="cs-block__title">The other side of the process</h3>
+<p class="cs-text">The client had never interviewed submitters this way, and talking to them showed us the other side of the process. Some of their pains mirrored the client’s, while others never came up in our conversations with the client:</p>
+<div class="card-tier">
+<p class="eyebrow" id="tier-shared">Shared with the client</p>
+<ul aria-labelledby="tier-shared" class="card-grid">
+<li class="card">
+<h4 class="card__title">No visibility into the process</h4>
+<p class="card__text">Once a request was submitted, submitters had no way to track the progress or know how close it was to being adjudicated.</p>
+</li>
+<li class="card">
+<h4 class="card__title">No record of historical data</h4>
+<p class="card__text">Like our client, submitters had no straightforward way of performing analytics on past- or current-year submissions and review outcomes. Even finding records of previous-year submissions was difficult.</p>
+</li>
+</ul>
+</div>
+<div class="card-tier card-tier--emphasis">
+<p class="eyebrow" id="tier-submitters">Raised only by submitters</p>
+<ul aria-labelledby="tier-submitters" class="card-grid card-grid--3">
+<li class="card card--emphasis">
+<h4 class="card__title">A perceived lack of coordination from the reviewers</h4>
+<p class="card__text">Submitters complained, for example, of having to respond to many of the same questions multiple times from different reviewers.</p>
+</li>
+<li class="card card--emphasis">
+<h4 class="card__title">Slow timelines</h4>
+<p class="card__text">The long time from submission to review decision often delayed funding, even to the point of having difficulty executing funds within a fiscal year.</p>
+</li>
+<!-- TODO: Confirm that "Form confusion" belongs in the "Raised only by submitters" row. -->
+<li class="card card--emphasis">
+<h4 class="card__title">Form confusion</h4>
+<p class="card__text">Submitters did not understand how to correctly fill in the request, including confusion on the meaning of terminology used in the form.</p>
+</li>
+</ul>
+</div>
+<figure class="pull-quote">
+<p class="pull-quote__lead-in">Reviewers worked in parallel with no shared record, so submitters answered the same questions again and again.</p>
+<blockquote class="pull-quote__quote">“I don’t want to document the same stuff 10 times. Just tell me what info you need and then route that info internally to all the correct people.”</blockquote>
+<figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
+</figure>
+</section>
+<section class="cs-block">
+<h3 class="cs-block__title">Why reviews were so time- and labor-intensive</h3>
+<p class="cs-text">The most widespread pain, the review burden, traced back to upstream causes: unclear guidance on how to justify a request, an inadequate template, and too little vetting before submission.</p>
+<div class="scroll-x">
+<div class="cause-chain">
+<div class="cause-chain__causes">
+<p class="eyebrow" id="root-causes">Root causes</p>
+<ul aria-labelledby="root-causes" class="cause-chain__list">
+<li class="cause-chain__cause">Unclear guidance on justifying requests</li>
+<li class="cause-chain__cause">Inadequate template</li>
+<li class="cause-chain__cause">Too little vetting before submission</li>
+</ul>
+</div>
+<ol class="process-flow">
+<li class="process-flow__step">Low-quality requests</li>
+<li class="process-flow__step">Reviewers can’t make a decision</li>
+<li class="process-flow__step process-flow__step--final">Back-and-forth over email</li>
+</ol>
+</div>
+</div>
+<figure class="pull-quote pull-quote--compact">
+<p class="pull-quote__lead-in">The result: a single request could bounce between reviewers and submitters again and again before it was ready for a decision.</p>
+<blockquote class="pull-quote__quote">“Sometimes it’s the same [request] has gone back and forth about 5, 10 times before we can get the right information.”</blockquote>
+<figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
+</figure>
+</section>
+<section class="cs-block">
+<h3 class="cs-block__title">Rethinking the solution</h3>
+<p class="cs-text">Given what we learned from submitters, we knew we would need to reframe the required solution. Many of the issues in the process were systemic. A submission portal would only treat some of the symptoms, not the root causes. Worse, a portal could become a new chokepoint. It would enforce the client’s requirements at the moment of submission without supporting how submitters actually write, review, and route requests beforehand.</p>
+<p class="cs-text">Therefore, we needed to solve not just for the symptoms experienced by our client, but for the whole process, beginning to end. This meant solving for drafting, coordination, and review, in addition to submission.</p>
+<figure class="stage-strip">
+<div class="scroll-x">
+<div class="stage-strip__inner">
+<div class="stage-strip__curve">
+<!-- TODO: Replace the illustrative severity curve with one re-plotted from the research chart. -->
+<svg aria-label="Illustrative pain severity across process stages, low in drafting, high in review and rework on both sides of submission, falling at decision" preserveAspectRatio="none" role="img" viewBox="0 0 1000 160">
+<path class="stage-strip__curve-fill" d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146 L1000 160 L0 160 Z"></path>
+<path class="stage-strip__curve-line" d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146" vector-effect="non-scaling-stroke"></path>
+</svg>
+<span class="eyebrow stage-strip__curve-label">Pain severity (illustrative)</span>
+</div>
+<ol class="stage-strip__stages">
+<li class="stage-strip__stage">
+<span class="stage-strip__name">Drafting</span>
+<span class="stage-strip__actor">Implementing agency</span>
+</li>
+<li class="stage-strip__stage">
+<span class="stage-strip__name">Internal review &amp; routing</span>
+<span class="stage-strip__actor">Implementing agency</span>
+</li>
+<li class="stage-strip__stage">
+<span class="stage-strip__name">Submission</span>
+<span class="stage-strip__actor">Handoff to client</span>
+</li>
+<li class="stage-strip__stage">
+<span class="stage-strip__name">Client review</span>
+<span class="stage-strip__actor">Client and subject-matter reviewers</span>
+</li>
+<li class="stage-strip__stage">
+<span class="stage-strip__name">Decision</span>
+<span class="stage-strip__actor">Client</span>
+</li>
+</ol>
+<div class="stage-strip__brackets">
+<div class="stage-strip__bracket stage-strip__bracket--portal">
+<span class="stage-strip__bracket-label">Submission portal</span>
+</div>
+<div class="stage-strip__bracket stage-strip__bracket--tool">
+<span class="stage-strip__bracket-label">Coordination tool</span>
+<span class="stage-strip__bracket-note">Drafting, coordination, review, and submission</span>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="cs-caption">A portal would have covered one step, ignoring pain points that affect the rest of the process.</figcaption>
+</figure>
+</section>
+<section class="cs-block">
+<h3 class="cs-block__title">What we recommended</h3>
+<p class="cs-text">We presented our research findings to the client, emphasizing the need for a systems view of the problem and therefore a coordination tool as our primary solution. The coordination tool would keep the portal’s core strengths, like a standardized digital form with built-in guidance, and extend support across the rest of the process. We recommended the following high-level design decisions:</p>
+<ul class="card-grid card-grid--3">
+<li class="card">
+<span class="eyebrow">Decision 1</span>
+<h4 class="card__title">Responsive form</h4>
+<p class="card__text">A digital form that shows only the fields relevant to each request, replacing the myriad Word and Excel templates.</p>
+</li>
+<li class="card">
+<span class="eyebrow">Decision 2</span>
+<h4 class="card__title">Dynamic workflows</h4>
+<p class="card__text">Roles defined by the situation and guided by user knowledge, instead of fixed paths, so each organization could route requests its own way.</p>
+</li>
+<li class="card">
+<span class="eyebrow">Decision 3</span>
+<h4 class="card__title">Unified tool</h4>
+<p class="card__text">One tool for all three request processes, streamlining the work and centralizing the data.</p>
+</li>
+</ul>
+<figure class="vision-panel">
+<figcaption class="eyebrow">The vision we presented</figcaption>
+<blockquote class="vision-panel__quote">“The new design of the funding request processes will lower the overall workload of requirement owners and reviewing officials. By providing enhanced and dynamic funding request templates, it will improve the quality of submissions and reduce the amount of necessary reworks. By providing a centralized workflow, it will streamline the funding request processes and increase visibility into the current status of submissions, which will lower the burden of manual coordination. In addition, because funding requests of all types will be created and shared in a central location, it will establish a repository of records that increases information accessibility.”</blockquote>
+</figure>
+</section>
+<div class="cs-block">
+<p class="closing-callout">The client was persuaded by the research findings and design vision, and enthusiastically agreed to pivot from a submission portal to a workflow coordination tool.</p>
+</div>
+</section>
+<section class="cs-section">
+<div class="cs-block">
+<h2 class="cs-section__title">One tool flexible enough for two dozen agencies and simple enough for occasional users</h2>
+<p class="cs-lead">Following our research, we moved into design with three constraints:</p>
+<ul class="feature-grid">
+<li class="feature-grid__item">
+<div class="feature-grid__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg></span>
+<h3 class="feature-grid__title">Cover the full journey</h3></div>
+<p class="feature-grid__text">Support drafting, coordination, and review across three separate processes for non-linear workflows where roles shift contextually.</p>
+</li>
+<li class="feature-grid__item">
+<div class="feature-grid__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></span>
+<h3 class="feature-grid__title">Agency autonomy</h3></div>
+<p class="feature-grid__text">While our client would own the tool, dozens of independent agencies would be using it too, and they didn’t want the client seeing “how the sausage is made.”</p>
+</li>
+<li class="feature-grid__item">
+<div class="feature-grid__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></span>
+<h3 class="feature-grid__title">Simplicity</h3></div>
+<p class="feature-grid__text">Many users would touch the tool only once or a few times a year, so it had to be easy to pick back up.</p>
+</li>
+</ul>
+<figure class="quadrant">
+<div class="scroll-x">
+<!-- TODO: The three example quadrants are draft copy. -->
+<table class="quadrant__table">
+<thead>
+<tr>
+<td></td>
+<th scope="col"><span class="quadrant__axis">Linear</span><span class="quadrant__axis-note">One route, regardless of circumstances. Can be automated.</span></th>
+<th scope="col"><span class="quadrant__axis">Non-linear</span><span class="quadrant__axis-note">Many routes, depending on circumstances. A human decides.</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><span class="quadrant__axis">Concentrated</span><span class="quadrant__axis-note">One person or group controls the whole process.</span></th>
+<td class="quadrant__cell"><span class="eyebrow">Example</span>A monthly payroll run: one team, the same steps every time.</td>
+<td class="quadrant__cell"><span class="eyebrow">Example</span>A support ticket: one agent decides the next step, case by case.</td>
+</tr>
+<tr>
+<th scope="row"><span class="quadrant__axis">Distributed</span><span class="quadrant__axis-note">Different people or groups control different parts.</span></th>
+<td class="quadrant__cell"><span class="eyebrow">Example</span>An assembly line: each station owns its step, always in the same order.</td>
+<td class="quadrant__cell quadrant__cell--highlight"><span class="quadrant__title">The funding request process</span>Many routes, many owners</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="cs-caption">The process was non-linear and distributed: no single route, and no single owner. That’s why the full journey needed roles that shift with the situation, and why agency autonomy mattered.</figcaption>
+</figure>
+</div>
+<section class="cs-block">
+<h3 class="cs-block__title">Uncovering shared jobs made one tool possible</h3>
+<p class="cs-text">One research insight gave us confidence that all three would be achievable: once we abstracted dozens of job titles and responsibilities down to job stories, we found a striking amount of overlap and commonality.</p>
+<figure class="role-matrix">
+<div class="scroll-x">
+<table class="role-matrix__table">
+<thead>
+<tr>
+<th scope="col">Goal</th>
+<th scope="col">Client analyst</th>
+<th scope="col">Agency reviewer</th>
+<th scope="col">Request author</th>
+<th scope="col">Subject-matter reviewer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="role-matrix__group"><th colspan="5" scope="rowgroup">Generate</th></tr>
+<tr class="role-matrix__row--shared"><th scope="row"><span class="role-matrix__goal">Guide</span><span class="role-matrix__desc">Ensure processes are followed</span></th><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td><td></td></tr>
+<tr><th scope="row"><span class="role-matrix__goal">Evaluate</span><span class="role-matrix__desc">Determine if a request is needed</span></th><td></td><td></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td></tr>
+<tr><th scope="row"><span class="role-matrix__goal">Draft</span><span class="role-matrix__desc">Write the request</span></th><td></td><td></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td></tr>
+</tbody>
+<tbody>
+<tr class="role-matrix__group"><th colspan="5" scope="rowgroup">Review</th></tr>
+<tr class="role-matrix__row--shared"><th scope="row"><span class="role-matrix__goal">Assess</span><span class="role-matrix__desc">Understand the received request</span></th><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td></tr>
+<tr class="role-matrix__row--shared"><th scope="row"><span class="role-matrix__goal">Gather</span><span class="role-matrix__desc">Collect the perspectives and information needed</span></th><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td></tr>
+<tr class="role-matrix__row--shared"><th scope="row"><span class="role-matrix__goal">Rework</span><span class="role-matrix__desc">Improve the quality of a request</span></th><td></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td></tr>
+<tr class="role-matrix__row--shared"><th scope="row"><span class="role-matrix__goal">Recommend</span><span class="role-matrix__desc">Fund or deny a request</span></th><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td></tr>
+</tbody>
+<tbody>
+<tr class="role-matrix__group"><th colspan="5" scope="rowgroup">Communicate</th></tr>
+<tr class="role-matrix__row--shared"><th scope="row"><span class="role-matrix__goal">Present</span><span class="role-matrix__desc">Bring a recommendation to leadership</span></th><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td><td></td></tr>
+<tr><th scope="row"><span class="role-matrix__goal">Share</span><span class="role-matrix__desc">Communicate the decision to stakeholders</span></th><td><span aria-label="Yes" class="role-matrix__dot" role="img"></span></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<figcaption class="cs-caption">Four roles, nine goals. Six of the nine goals are shared by two or more roles (shaded), which meant one tool could serve them all.</figcaption>
+</figure>
+</section>
+<div class="cs-block">
+<p class="cs-text">As we left behind our early research phase, we entered into a recurring tempo of weekly syncs with our main client points of contact, and regular meetings with additional stakeholders for co-creation and validation (roughly a few times a month).</p>
+</div>
+<section class="cs-block">
+<h3 class="cs-block__title">Designing for simplicity through semantic interaction design</h3>
+<p class="cs-text">To keep the tool simple, we used semantic interaction design, an approach from Daniel Rosenberg’s UX Magic that treats a system like a language. It posits that the fewer objects and actions users have to learn, the lower the cognitive load. We built a conceptual model grammar matrix in four steps:</p>
+<div class="scroll-x">
+<ol class="process-flow">
+<li class="process-flow__step">
+<span class="eyebrow">Step 1</span>
+<span>Write job stories for your system’s requirements.</span>
+</li>
+<li class="process-flow__step">
+<span class="eyebrow">Step 2</span>
+<span>Distill the job stories into the fewest objects and actions.</span>
+</li>
+<li class="process-flow__step">
+<span class="eyebrow">Step 3</span>
+<span>Enumerate the attributes for every object.</span>
+</li>
+<li class="process-flow__step">
+<span class="eyebrow">Step 4</span>
+<span>Prioritize the object-action pairs.</span>
+</li>
+</ol>
+</div>
+<figure class="matrix-steps">
+<ol class="matrix-steps__list">
+<li class="matrix-steps__stage matrix-steps__stage--early">
+<span class="eyebrow">An early version</span>
+<span class="matrix-steps__count">112</span>
+<span class="matrix-steps__dims">8 objects × 14 actions</span>
+<span aria-hidden="true" class="matrix-steps__grid" style="--cols: 14; --rows: 8"></span>
+</li>
+<li class="matrix-steps__stage matrix-steps__stage--later">
+<span class="eyebrow">A later version</span>
+<span class="matrix-steps__count">35</span>
+<span class="matrix-steps__dims">5 objects × 7 actions</span>
+<span aria-hidden="true" class="matrix-steps__grid" style="--cols: 7; --rows: 5"></span>
+</li>
+<li class="matrix-steps__stage matrix-steps__stage--final">
+<span class="eyebrow">Final</span>
+<span class="matrix-steps__count">30</span>
+<span class="matrix-steps__dims">6 objects × 5 actions</span>
+<div class="scroll-x">
+<table class="grammar-table">
+<thead>
+<tr>
+<td></td>
+<th scope="col">Create / Add</th>
+<th scope="col">Delete</th>
+<th scope="col">Complete</th>
+<th scope="col">Edit</th>
+<th scope="col">Accept / Deny</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row">Funding Requests</th><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td></td></tr>
+<tr><th scope="row">Taskers</th><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td></tr>
+<tr><th scope="row">Reviews / Decisions</th><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td></td></tr>
+<tr><th scope="row">Groups</th><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td></td><td><span aria-label="Yes" role="img">×</span></td><td></td></tr>
+<tr><th scope="row">Users</th><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td></td><td><span aria-label="Yes" role="img">×</span></td><td></td></tr>
+<tr><th scope="row">Documents</th><td><span aria-label="Yes" role="img">×</span></td><td><span aria-label="Yes" role="img">×</span></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</li>
+</ol>
+<div class="matrix-steps__notes">
+<p class="eyebrow">Example simplifications</p>
+<ul class="cs-list cs-list--small">
+<li><strong>Rework and review requests</strong> merged into one object: the tasker.</li>
+<li><strong>Notifications</strong> cut: not an object, just a way of displaying information.</li>
+<li><strong>Assignment and tags</strong> became attributes that are edited, not distinct actions and objects.</li>
+<li><strong>Cancel</strong> cut: redundant with Accept / Deny.</li>
+<li><strong>Track</strong> cut: a proxy action, not a transactional one.</li>
+</ul>
+</div>
+<figcaption class="cs-caption">From 112 possible object-action combinations to 30.</figcaption>
+</figure>
+<p class="cs-text">Over several months, we compressed it from 112 possible object-action combinations to 30: six objects and five actions. Along the way, separate review and rework requests merged into a single object, the tasker, which became the tool’s core unit of coordination.</p>
+<p class="cs-text">We also separated transactional actions, which change data, from non-transactional ones like search, filter, sort, and export, which only change what you see. Only transactional actions went into the matrix, keeping it focused on how the system’s data actually changes.</p>
+<div class="chip-set">
+<p class="eyebrow">The final set</p>
+<div class="chip-set__row">
+<span class="chip-set__label" id="final-objects">Objects</span>
+<ul aria-labelledby="final-objects" class="chip-set__chips">
+<li class="chip">Funding Requests</li>
+<li class="chip">Taskers</li>
+<li class="chip">Reviews / Decisions</li>
+<li class="chip">Groups</li>
+<li class="chip">Users</li>
+<li class="chip">Documents</li>
+</ul>
+</div>
+<div class="chip-set__row">
+<span class="chip-set__label" id="final-actions">Actions</span>
+<ul aria-labelledby="final-actions" class="chip-set__chips">
+<li class="chip chip--muted">Create / Add</li>
+<li class="chip chip--muted">Delete</li>
+<li class="chip chip--muted">Complete</li>
+<li class="chip chip--muted">Edit</li>
+<li class="chip chip--muted">Accept / Deny</li>
+</ul>
+</div>
+</div>
+<p class="cs-text">Starting from this model let us:</p>
+<ul class="cs-list">
+<li>Determine at a high level how the system would work without getting bogged down in particular design patterns.</li>
+<li>Articulate the tool’s objects and actions, and intentionally work to reduce them to an optimal minimum.</li>
+<li>Prioritize system interactions.</li>
+<li>Ensure more consistency in visual representations and UI design patterns.</li>
+</ul>
+</section>
+<div class="cs-block">
+<p class="cs-text">With that foundation formed, we systematically worked through several core design challenges.</p>
+<!-- TODO: The challenge summaries are draft copy. -->
+<nav aria-label="Design challenges">
+<ul class="challenge-index">
+<li class="challenge-index__item">
+<a class="challenge-index__link" href="#self-governance">
+<span class="challenge-index__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><rect height="6" rx="1" width="6" x="16" y="16"></rect><rect height="6" rx="1" width="6" x="2" y="16"></rect><rect height="6" rx="1" width="6" x="9" y="2"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></span>
+<span class="challenge-index__title">Self-governance</span></span>
+<span class="challenge-index__text">Each agency runs its own structure, users, and groups.</span>
+</a>
+</li>
+<li class="challenge-index__item">
+<a class="challenge-index__link" href="#visibility">
+<span class="challenge-index__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+<span class="challenge-index__title">Visibility</span></span>
+<span class="challenge-index__text">Need-to-know access that follows the group.</span>
+</a>
+</li>
+<li class="challenge-index__item">
+<a class="challenge-index__link" href="#permissions">
+<span class="challenge-index__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"></circle><path d="m21 2-9.6 9.6"></path><path d="m15.5 7.5 3 3L22 7l-3-3"></path></svg></span>
+<span class="challenge-index__title">Permissions</span></span>
+<span class="challenge-index__text">Roles that follow the request, not the org chart.</span>
+</a>
+</li>
+<li class="challenge-index__item">
+<a class="challenge-index__link" href="#reviews-and-taskers">
+<span class="challenge-index__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><rect height="4" rx="1" width="8" x="8" y="2"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg></span>
+<span class="challenge-index__title">Reviews and taskers</span></span>
+<span class="challenge-index__text">One unit of coordination, with a full history.</span>
+</a>
+</li>
+<li class="challenge-index__item">
+<a class="challenge-index__link" href="#non-linear-workflows">
+<span class="challenge-index__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M16 3h5v5"></path><path d="M8 3H3v5"></path><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"></path><path d="m15 9 6-6"></path></svg></span>
+<span class="challenge-index__title">Non-linear workflows</span></span>
+<span class="challenge-index__text">Any request can go to anyone, with suggestions to guide it.</span>
+</a>
+</li>
+<li class="challenge-index__item">
+<a class="challenge-index__link" href="#form-confusion">
+<span class="challenge-index__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span>
+<span class="challenge-index__title">Form confusion</span></span>
+<span class="challenge-index__text">Validated guidance, right where it’s needed.</span>
+</a>
+</li>
+<li class="challenge-index__item">
+<a class="challenge-index__link" href="#historical-record">
+<span class="challenge-index__head"><span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg></span>
+<span class="challenge-index__title">Historical record</span></span>
+<span class="challenge-index__text">Past requests, searchable within your visibility.</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<section class="cs-block challenge" id="self-governance">
+<div class="challenge__header">
+<span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><rect height="6" rx="1" width="6" x="16" y="16"></rect><rect height="6" rx="1" width="6" x="2" y="16"></rect><rect height="6" rx="1" width="6" x="9" y="2"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></span>
+<h3 class="cs-block__title">Solving for self-governance</h3>
+</div>
+<div class="challenge__columns">
+<div class="challenge__column">
+<p class="eyebrow">The challenge</p>
+<ul class="cs-list">
+<li>Many independent organizations would adopt the tool.</li>
+<li>The client didn’t want a big administrative burden for managing the tool, and they didn’t have any IT support staff to delegate the task to.</li>
+<li>Adopting organizations didn’t want to depend on the client for changes, or give the client too much control over their internal processes.</li>
+<li>Re-orgs in the federal space are very common (expected every few years) so anything hard-coded would become obsolete quickly.</li>
+</ul>
+</div>
+<div class="challenge__column">
+<p class="eyebrow">Our approach</p>
+<ol class="marker-list">
+<li>A two-tier structure. Each adopting organization gets a “Community,” run by its own admins, who can create and rearrange their own “Workflow Groups.”</li>
+<li>Group managers handle membership within a group.</li>
+<li>Each organization governs itself without the system administrators getting involved.</li>
+</ol>
+</div>
+</div>
+<figure class="nest">
+<div class="nest__box">
+<div class="nest__header">
+<span class="nest__title">Community: one per adopting organization</span>
+<span class="nest__note">Run by community admins</span>
+</div>
+<ul class="nest__items">
+<li class="nest__item">
+<span class="nest__item-title">Workflow Group</span>
+<span class="nest__item-note">Group manager and members</span>
+<span aria-hidden="true" class="nest__people"><span class="nest__person nest__person--lead"></span><span class="nest__person"></span><span class="nest__person"></span><span class="nest__person"></span></span>
+</li>
+<li class="nest__item">
+<span class="nest__item-title">Workflow Group</span>
+<span class="nest__item-note">Group manager and members</span>
+<span aria-hidden="true" class="nest__people"><span class="nest__person nest__person--lead"></span><span class="nest__person"></span><span class="nest__person"></span></span>
+</li>
+<li class="nest__item">
+<span class="nest__item-title">Workflow Group</span>
+<span class="nest__item-note">Group manager and members</span>
+<span aria-hidden="true" class="nest__people"><span class="nest__person nest__person--lead"></span><span class="nest__person"></span><span class="nest__person"></span><span class="nest__person"></span><span class="nest__person"></span></span>
+</li>
+</ul>
+</div>
+<figcaption class="cs-caption">System admins only create Communities. Everything inside a Community is the agency’s to manage.</figcaption>
+</figure>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: group management page" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: group management page</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 14%; --y: 18%">1</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 62%; --y: 46%">2</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+-->
+</section>
+<section class="cs-block challenge" id="visibility">
+<div class="challenge__header">
+<span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+<h3 class="cs-block__title">Solving for visibility</h3>
+</div>
+<div class="challenge__columns">
+<div class="challenge__column">
+<p class="eyebrow">The challenge</p>
+<ul class="cs-list">
+<li>Information needs to be protected on a need-to-know basis, but this evolves over time.</li>
+<li>Who needs to see things is more often determined at an organizational rather than individual level. If I send a request to my point of contact at a budget office, that person may review, or it may get passed on to another analyst.</li>
+<li>Having visibility on the request doesn’t mean I should have visibility on every piece of data related to the request.</li>
+<li>Moreover, submitters need to maintain visibility on the status of their requests after submission.</li>
+</ul>
+</div>
+<div class="challenge__column">
+<p class="eyebrow">Our approach</p>
+<ol class="marker-list">
+<li>Sending a request to someone in a group allows that user’s peers to view and therefore collaborate.</li>
+<li>Compartmentalize visibility on the request so I can share information only with people who have the need-to-know or to protect organizational integrity.</li>
+<li>Request drafters and submitters can maintain visibility on the overall form content and its status (e.g., approved or denied), while reviewers’ comments are only shown to those with a need-to-know, to protect the integrity of the review process.</li>
+</ol>
+</div>
+</div>
+<figure class="nest">
+<div class="nest__box">
+<div class="nest__header">
+<span class="nest__title">A funding request</span>
+</div>
+<div class="nest__items">
+<div class="nest__item">
+<p class="eyebrow">Shared with everyone on the request</p>
+<ul class="nest__list">
+<li>Form content</li>
+<li>Status, e.g., approved or denied</li>
+</ul>
+</div>
+<div class="nest__item nest__item--restricted">
+<p class="eyebrow">Need-to-know only</p>
+<ul class="nest__list">
+<li>Reviewers’ comments</li>
+<li>Tasker comments and responses, e.g., an information request</li>
+</ul>
+</div>
+</div>
+</div>
+</figure>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<div class="screen-pair">
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: share visibility control" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: share visibility control</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 12%; --y: 20%">1</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 58%; --y: 62%">2</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: tracking dashboard, submitter view" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: tracking dashboard, submitter view</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 70%; --y: 24%">3</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+</div>
+-->
+</section>
+<section class="cs-block challenge" id="permissions">
+<div class="challenge__header">
+<span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"></circle><path d="m21 2-9.6 9.6"></path><path d="m15.5 7.5 3 3L22 7l-3-3"></path></svg></span>
+<h3 class="cs-block__title">Solving for permissions</h3>
+</div>
+<div class="challenge__columns">
+<div class="challenge__column">
+<p class="eyebrow">The challenge</p>
+<ul class="cs-list">
+<li>Because workflows are non-linear and personnel will wear different hats at different parts of the process, permissions cannot be determined ahead of time, once and for all.</li>
+<li>Moreover, a user’s permissions may only be temporary.</li>
+</ul>
+</div>
+<div class="challenge__column">
+<p class="eyebrow">Our approach</p>
+<ol class="marker-list">
+<li>Coordinator role — who currently holds the request, distinct from the original creator — given full permissions. The form creator is the original Coordinator.</li>
+<li>Coordinator can send taskers to other users, temporarily giving them additional permissions on the request, for example, make edits or append a review.</li>
+<li>Transfer tasker changes the Coordinator role.</li>
+</ol>
+</div>
+</div>
+<figure class="lanes">
+<div class="scroll-x">
+<div class="lanes__grid">
+<span></span>
+<div class="lanes__stage"><span class="eyebrow">Drafting</span><span class="lanes__stage-note">Author starts the request</span></div>
+<div class="lanes__stage"><span class="eyebrow">Coordination</span><span class="lanes__stage-note">Coordinator sends taskers as needed</span></div>
+<div class="lanes__stage"><span class="eyebrow">Handoff</span><span class="lanes__stage-note">Coordinator sends a transfer tasker</span></div>
+<div class="lanes__stage"><span class="eyebrow">Next stage</span><span class="lanes__stage-note">Work continues with the new coordinator</span></div>
+<div class="lanes__role"><span class="lanes__role-name">Author</span><span class="lanes__role-note">First coordinator</span></div>
+<div class="lanes__cell lanes__cell--span-2"><span class="lanes__bar">Coordinator: full permissions</span></div>
+<div class="lanes__cell lanes__handoff">
+<span class="lanes__handoff-label"><svg aria-hidden="true" class="lanes__icon" viewBox="0 0 24 24"><path d="m8 3-4 4 4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg>Transfer tasker</span>
+<span class="lanes__handoff-note">Passes the coordinator role</span>
+</div>
+<div class="lanes__cell"></div>
+<div class="lanes__role"><span class="lanes__role-name">Colleague</span><span class="lanes__role-note">Asked for information</span></div>
+<div class="lanes__cell"></div>
+<div class="lanes__cell"><span class="lanes__tasker"><span class="lanes__tasker-name">Information tasker</span>Can respond to the request for information</span></div>
+<div class="lanes__cell lanes__cell--line"></div>
+<div class="lanes__cell"></div>
+<div class="lanes__role"><span class="lanes__role-name">Drafter or submitter</span><span class="lanes__role-note">Asked for changes</span></div>
+<div class="lanes__cell"></div>
+<div class="lanes__cell"><span class="lanes__tasker"><span class="lanes__tasker-name">Rework tasker</span>Can edit the request or add information</span></div>
+<div class="lanes__cell lanes__cell--line"></div>
+<div class="lanes__cell"></div>
+<div class="lanes__role"><span class="lanes__role-name">Reviewer</span><span class="lanes__role-note">Asked for a review</span></div>
+<div class="lanes__cell"></div>
+<div class="lanes__cell"><span class="lanes__tasker"><span class="lanes__tasker-name">Review tasker</span>Can add a review</span></div>
+<div class="lanes__cell lanes__cell--line lanes__cell--line-end"></div>
+<div class="lanes__cell"></div>
+<div class="lanes__role"><span class="lanes__role-name">Next coordinator</span><span class="lanes__role-note">Whoever it’s transferred to</span></div>
+<div class="lanes__cell"></div>
+<div class="lanes__cell"></div>
+<div class="lanes__cell lanes__cell--span-2"><span class="lanes__bar">Coordinator: full permissions</span></div>
+</div>
+</div>
+<ul class="legend">
+<li class="legend__item"><span aria-hidden="true" class="legend__swatch legend__swatch--coordinator"></span>Coordinator: full permissions, held by one person at a time</li>
+<li class="legend__item"><span aria-hidden="true" class="legend__swatch legend__swatch--tasker"></span>Temporary permissions, granted by a tasker and ended when it’s complete</li>
+<li class="legend__item"><svg aria-hidden="true" class="lanes__icon" viewBox="0 0 24 24"><path d="m8 3-4 4 4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg>Transfer tasker: hands the coordinator role to someone else</li>
+</ul>
+<figcaption class="cs-caption">Permissions follow the request, not the job title. Roles are illustrative: any user can receive any tasker, and a request can be transferred to anyone.</figcaption>
+</figure>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: funding request with coordinator and send-tasker panel" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: funding request with coordinator and send-tasker panel</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 10%; --y: 14%">1</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 72%; --y: 30%">2</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 72%; --y: 66%">3</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+-->
+</section>
+<section class="cs-block challenge" id="reviews-and-taskers">
+<div class="challenge__header">
+<span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><rect height="4" rx="1" width="8" x="8" y="2"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg></span>
+<h3 class="cs-block__title">Solving for reviews and taskers</h3>
+</div>
+<div class="challenge__columns">
+<div class="challenge__column">
+<p class="eyebrow">The challenge</p>
+<ul class="cs-list">
+<li>Duplicate questions often went back and forth over email, leaving no centralized, easily accessible record of reviews and coordination.</li>
+<li>No one could see what was still open: questions and rework requests sat in inboxes with no status, owner, or due date, so tracking them meant chasing people.</li>
+</ul>
+</div>
+<div class="challenge__column">
+<p class="eyebrow">Our approach</p>
+<ol class="marker-list">
+<li>Reviews and taskers act as sub-objects of the Funding Request object.</li>
+<li>
+                      The tasker is the single unit of coordination, with four types:
+                      <ul class="chip-set__chips">
+<li class="chip chip--small">Information</li>
+<li class="chip chip--small">Review</li>
+<li class="chip chip--small">Rework</li>
+<li class="chip chip--small">Transfer</li>
+</ul>
+</li>
+<li>Taskers and resultant reviews create a coordination history that can be viewed.</li>
+<li>Group and individual dashboards allow for tracking of workloads.</li>
+</ol>
+</div>
+</div>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<div class="screen-pair">
+<figure class="screen">
+<p class="eyebrow">Before</p>
+TODO: Redraw the email illustration from the demo deck.
+<button aria-haspopup="dialog" aria-label="Enlarge illustration: email threads funneling into one request" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Illustration: email threads funneling into one request covered in question marks</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+<figure class="screen">
+<p class="eyebrow eyebrow--strong">After</p>
+<button aria-haspopup="dialog" aria-label="Enlarge screen: coordination history on a funding request" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: coordination history on a funding request</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 10%; --y: 16%">1</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 62%; --y: 58%">3</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+</div>
+-->
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: tasker dashboard" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: tasker dashboard (My Taskers / Group Taskers)</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 16%; --y: 20%">2</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 64%; --y: 20%">4</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+-->
+<figure class="pull-quote">
+<p class="pull-quote__lead-in">Over email, every reviewer’s questions became another thread, and sometimes all that effort went into a request that wasn’t valid.</p>
+<blockquote class="pull-quote__quote">“After we receive the funding request, sometimes we ask like a hundred questions… after we have all the information, the funding request may not even be a valid requirement. There’s a lot of those.”</blockquote>
+<figcaption class="pull-quote__cite">Reviewer, implementing agency</figcaption>
+</figure>
+<section class="cs-block challenge" id="non-linear-workflows">
+<div class="challenge__header">
+<span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M16 3h5v5"></path><path d="M8 3H3v5"></path><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"></path><path d="m15 9 6-6"></path></svg></span>
+<h3 class="cs-block__title">Solving for non-linear workflows</h3>
+</div>
+<div class="challenge__columns">
+<div class="challenge__column">
+<p class="eyebrow">The challenge</p>
+<ul class="cs-list">
+<li>The workflows are fluid depending on the request in question. One request may need a review from a weapons specialist, another from the office of general counsel.</li>
+<li>People also often change positions, so it can’t be assumed that last year’s point of contact is still this year’s.</li>
+</ul>
+</div>
+<div class="challenge__column">
+<p class="eyebrow">Our approach</p>
+<ol class="marker-list">
+<li>Allow for flexible routing of funding requests. Workflows are not automated or set in stone; requests can be sent to any user at any time.</li>
+<li>Workflow Group managers can create suggestions that guide users on who to send requests to.</li>
+</ol>
+</div>
+</div>
+<figure class="loop">
+<div class="scroll-x">
+<div class="loop__grid">
+<span class="loop__stage">Guide</span>
+<span aria-hidden="true" class="loop__chevron"></span>
+<span class="loop__stage">Assess</span>
+<span aria-hidden="true" class="loop__chevron"></span>
+<span class="loop__stage">Recommend</span>
+<span aria-hidden="true" class="loop__chevron"></span>
+<span class="loop__stage">Present</span>
+<span aria-hidden="true" class="loop__chevron"></span>
+<span class="loop__stage">Share</span>
+<div class="loop__exchange">
+<span class="loop__exchange-arrow"><svg aria-hidden="true" class="loop__arrow" viewBox="0 0 12 60"><path d="M6 2 V56"></path><path d="M2 51 L6 57 L10 51"></path></svg>Questions</span>
+<span class="loop__exchange-arrow"><svg aria-hidden="true" class="loop__arrow" viewBox="0 0 12 60"><path d="M6 58 V4"></path><path d="M2 9 L6 3 L10 9"></path></svg>Answers</span>
+</div>
+<span aria-hidden="true" class="loop__drop"></span>
+<span class="loop__stage loop__stage--gather">Gather</span>
+<div class="loop__return">
+<div class="loop__return-line">
+<svg aria-hidden="true" class="loop__arrowhead" viewBox="0 0 14 14"><path d="M9 2 L3 7 L9 12"></path></svg>
+<span class="loop__return-label">Leadership requests rework</span>
+</div>
+<span aria-hidden="true" class="loop__return-corner"></span>
+</div>
+<div class="loop__experts">
+<span aria-hidden="true" class="loop__stem"></span>
+<div class="loop__branches">
+<ul class="chip-set__chips">
+<li class="chip chip--dashed">Weapons specialist</li>
+<li class="chip chip--dashed">General counsel</li>
+<li class="chip chip--dashed">Policy office</li>
+<li class="chip chip--dashed">Other experts, as needed</li>
+</ul>
+</div>
+<span class="loop__experts-note">Who Gather reaches depends on the request</span>
+</div>
+</div>
+</div>
+<ul class="legend">
+<li class="legend__item"><span><strong>Assess → Recommend</strong> when no further information is needed</span></li>
+<li class="legend__item"><span><strong>Assess ↔ Gather</strong> for as many rounds of questions as it takes</span></li>
+<li class="legend__item"><span><strong>Present → Gather</strong> when leadership requests rework</span></li>
+</ul>
+<!-- <figcaption class="cs-caption">[Takeaway caption, e.g., One analyst’s path through a request: it loops back through Gather whenever questions come up, and each loop may reach a different expert.]</figcaption> -->
+</figure>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: send-to dialog with workflow suggestions" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: send-to dialog with workflow suggestions</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 14%; --y: 22%">1</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 60%; --y: 56%">2</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+-->
+</section>
+<section class="cs-block challenge" id="form-confusion">
+<div class="challenge__header">
+<span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span>
+<h3 class="cs-block__title">Solving for form confusion</h3>
+</div>
+<div class="challenge__columns">
+<div class="challenge__column">
+<p class="eyebrow">The challenge</p>
+<ul class="cs-list">
+<li>Confusion filling out requests led to poor-quality requests and rework.</li>
+</ul>
+</div>
+<div class="challenge__column">
+<p class="eyebrow">Our approach</p>
+<ol class="marker-list">
+<li>Embed clear, validated guidance contextually into the tool.</li>
+<li>Validate guidance with real submitters to ensure it’s easy to understand.</li>
+</ol>
+</div>
+</div>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: inline tooltip guidance on the request form" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: inline tooltip guidance on the request form</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 66%; --y: 30%">1</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+-->
+</section>
+<section class="cs-block challenge" id="historical-record">
+<div class="challenge__header">
+<span aria-hidden="true" class="icon-tile"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg></span>
+<h3 class="cs-block__title">Solving for historical record</h3>
+</div>
+<div class="challenge__columns">
+<div class="challenge__column">
+<p class="eyebrow">The challenge</p>
+<ul class="cs-list">
+<li>Both implementing agencies and the client need to reference past-year submissions, to better draft current-year submissions and make better adjudication decisions, respectively.</li>
+<li>This record needs to respect the same visibility constraints as current-year requests.</li>
+</ul>
+</div>
+<div class="challenge__column">
+<p class="eyebrow">Our approach</p>
+<ol class="marker-list">
+<li>A searchable database of prior-year submissions, limited to the ones your Community has visibility on.</li>
+<li>This same system of record powers an analytics dashboard that shows high-level statistics and trend analysis.</li>
+</ol>
+</div>
+</div>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+<div class="screen-pair">
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: request database" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: request database</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 14%; --y: 20%">1</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: analytics dashboard" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: analytics dashboard</span>
+<span aria-hidden="true" class="screen__marker" style="--x: 64%; --y: 22%">2</span>
+</button>
+<figcaption class="cs-caption">[Takeaway caption]</figcaption>
+</figure>
+</div>
+-->
+</section>
+<div class="cs-block">
+<figure class="pull-quote">
+<blockquote class="pull-quote__quote">“You captured all the things that we addressed when we had our original kickoff meeting. So it was great. It’s a very useful tool; it looks like it’s going to help tremendously with back-and-forth, and just being able to have a repository of all [funding requests]. It will be leaps and bounds above where we are now, without having to search through share drives and emails.”</blockquote>
+<figcaption class="pull-quote__cite">Implementing agency staff member, at a pre-launch demo</figcaption>
+</figure>
+</div>
+<div class="cs-block">
+<div class="launch">
+<p class="launch__date">
+<span class="eyebrow">Launched</span>
+<span class="launch__figure">December 2021</span>
+</p>
+<p class="cs-text">As we finalized designs, we had an important shift in the delivery method. We had originally planned to work with a government development shop to build and deploy the tool. However, its workload was so high that it was unclear when they would be able to begin work on it. Drawing on the strong working relationship we’d built, we pitched the client on taking on development ourselves. They agreed and funded our team to handle delivery, and the tool launched in December 2021.</p>
+</div>
+</div>
+</section>
+<section class="cs-section">
+<div class="cs-block">
+<h2 class="cs-section__title">Adopted by 24 agencies, 2 follow-on contracts</h2>
+<!-- SCREEN: hidden until assets are ready; uncomment to restore.
+TODO: Optional wide final screen; remove this figure if it isn't used.
+<figure class="screen">
+<button aria-haspopup="dialog" aria-label="Enlarge screen: final tool overview" class="screen__frame" data-lightbox="screen-lightbox" type="button">
+<span class="screen__placeholder">Screen: final tool overview</span>
+</button>
+</figure>
+-->
+</div>
+<div class="cs-block">
+<div class="stat-tiers">
+<p class="eyebrow">In the first two years following launch</p>
+<ul class="stat-bar stat-bar--feature">
+<li class="stat-bar__item">
+<span class="stat-bar__figure">$736M</span>
+<span class="stat-bar__label">in requested funds</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">24</span>
+<span class="stat-bar__label">adopting implementing agencies</span>
+</li>
+</ul>
+<ul class="stat-bar">
+<li class="stat-bar__item">
+<span class="stat-bar__figure">1,794</span>
+<span class="stat-bar__label">taskers created</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">586</span>
+<span class="stat-bar__label">funding request forms created</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">351</span>
+<span class="stat-bar__label">users onboarded</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">398</span>
+<span class="stat-bar__label">reviews posted</span>
+</li>
+<li class="stat-bar__item">
+<span class="stat-bar__figure">297</span>
+<span class="stat-bar__label">funding decisions made</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="cs-block">
+<p class="cs-lead">The clearest sign of success: the client hired us for two follow-on projects that I would lead:</p>
+<!-- TODO: Turn each card into a link once its case study is published. -->
+<ul class="card-grid">
+<li class="card">
+<span class="card__head"><span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 12h11"></path><path d="M10 18h11"></path><path d="M10 6h11"></path><path d="M4 10h2"></path><path d="M4 6h1v4"></path><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg></span>
+<span class="eyebrow">Follow-on project</span></span>
+<p class="card__text">Extending the tool to cover the requirements gathering and prioritization process.</p>
+<p class="card__footer">Case study coming soon</p>
+</li>
+<li class="card">
+<span class="card__head"><span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></span>
+<span class="eyebrow">Follow-on project</span></span>
+<p class="card__text">Adding features and capability to further streamline and support their funding request processes.</p>
+<p class="card__footer">Case study coming soon</p>
+</li>
+</ul>
+</div>
+<section class="cs-block">
+<h3 class="cs-block__title">Reflections</h3>
+<ul class="card-grid">
+<li class="card">
+<h4 class="card__title">Strong synthesis led to a confident pivot.</h4>
+<p class="card__text">Weeks of intense, rigorous research and synthesis gave us confidence to redirect the client from a submission portal to a coordination tool, providing them greater value and solving more of their problems.</p>
+</li>
+<li class="card">
+<h4 class="card__title">Have an engineer on the team from the beginning.</h4>
+<p class="card__text">We started without one, and de-risked designs through regular check-ins with the client’s lead developer. Once we had integrated developers towards the end of the project, we gained a lot of efficiencies and improved our technical de-risking.</p>
+</li>
+</ul>
+</section>
+</section>
 
-            <section class="cs-block">
-              <h3 class="cs-block__title">How funding requests work</h3>
-              <p class="cs-text">The agency doesn’t carry out most of its programs itself. It funds implementing agencies, such as the military departments and other defense organizations, that do the work. When an implementing agency runs into a need its budget doesn’t cover, such as a requirement that went unfunded or costs above its allocation, it submits a funding request. The agency runs three separate annual processes, depending on the funding type, to review these requests and decide which to fund.</p>
-              <div class="scroll-x">
-                <ol class="process-flow">
-                  <li class="process-flow__step">
-                    <span class="eyebrow">Step 1</span>
-                    <span>Agency funds implementing agencies</span>
-                  </li>
-                  <li class="process-flow__step">
-                    <span class="eyebrow">Step 2</span>
-                    <span>A need comes up that its budget doesn’t cover</span>
-                  </li>
-                  <li class="process-flow__step">
-                    <span class="eyebrow">Step 3</span>
-                    <span>It submits a funding request</span>
-                  </li>
-                  <li class="process-flow__step">
-                    <span class="eyebrow">Step 4</span>
-                    <span>Review in one of three annual processes</span>
-                  </li>
-                  <li class="process-flow__step process-flow__step--final">
-                    <span class="eyebrow">Step 5</span>
-                    <span>Funding decision</span>
-                  </li>
-                </ol>
-              </div>
-              <figure class="pull-quote">
-                <p class="pull-quote__lead-in">When requests stall, the cost is real: money can arrive too late in the year to spend.</p>
-                <blockquote class="pull-quote__quote">“If you give me money at the middle of August, I’m pushing it in trying to get it awarded before 30 September.”</blockquote>
-                <figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
-              </figure>
-            </section>
-
-            <section class="cs-block">
-              <h3 class="cs-block__title">The client’s problems</h3>
-              <p class="cs-text">The agency brought in our team to help it improve these processes. During our initial interviews and workshops with our client, we discovered that their primary frustrations were:</p>
-              <ul class="card-grid">
-                <li class="card">
-                  <h4 class="card__title">Poor-quality submissions</h4>
-                  <p class="card__text">Submissions were frequently incomplete, completed incorrectly, contained inaccuracies, or attached superfluous information. This led to chasing details, requesting rewrites, and asking due diligence questions, like “Was this reviewed by your Office of General Counsel?”</p>
-                </li>
-                <li class="card">
-                  <h4 class="card__title">Late submissions</h4>
-                  <p class="card__text">Submissions arrived after the deadline, which could cause delays and upend review steps like the prioritization of submissions.</p>
-                </li>
-                <li class="card">
-                  <h4 class="card__title">Too many requests</h4>
-                  <p class="card__text">Many weren’t properly vetted before submission, which added to the review burden.</p>
-                </li>
-                <li class="card">
-                  <h4 class="card__title">No system of record</h4>
-                  <p class="card__text">The whole process was conducted over email with a mix of Word documents, Excel spreadsheets, and PDFs. This often led to data loss, and the lack of a single repository made analytics virtually impossible.</p>
-                </li>
-              </ul>
-              <div class="callout">
-                <p class="eyebrow">The ask</p>
-                <p class="callout__title">A submission portal</p>
-                <p class="callout__text">They therefore requested that we build them a submission portal that would require submitters to fill out all fields, only enter the requested information, and respect a submission deadline, all the while creating a single repository for all submission files.</p>
-              </div>
-            </section>
-
-            <section class="cs-block">
-              <h3 class="cs-block__title">Going to the source</h3>
-              <div class="split">
-                <p class="cs-text">Suspecting that this was only part of the problem, we requested and obtained permission to speak with submitters to conduct additional discovery. We asked about tasks, desired outcomes, information needs, frustrations, and roles, then synthesized the findings using Goal-Directed Design, capturing user needs as job stories.</p>
-                <figure class="donut">
-                  <div class="donut__body">
-                    <div class="donut__chart">
-                      <!-- Segments use pathLength="34" (total interviews), so each dash length and offset is a raw interview count -->
-                      <svg class="donut__svg" viewBox="0 0 200 200" role="img" aria-label="Donut chart of 34 interviews by stakeholder group: client analysts 14, implementing agencies 9, client IT office 5, partner programs office 3, subject-matter reviewers 3">
-                        <path class="donut__segment" pathLength="34" stroke-dasharray="14 34" stroke-dashoffset="0" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
-                        <path class="donut__segment" pathLength="34" stroke-dasharray="9 34" stroke-dashoffset="-14" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
-                        <path class="donut__segment" pathLength="34" stroke-dasharray="5 34" stroke-dashoffset="-23" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
-                        <path class="donut__segment" pathLength="34" stroke-dasharray="3 34" stroke-dashoffset="-28" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
-                        <path class="donut__segment" pathLength="34" stroke-dasharray="3 34" stroke-dashoffset="-31" d="M100 30 a70 70 0 1 1 0 140 a70 70 0 1 1 0 -140"/>
-                      </svg>
-                      <p class="donut__center">
-                        <span class="donut__total">34</span>
-                        <span class="donut__center-label">interviews</span>
-                      </p>
-                    </div>
-                    <!-- TODO: Confirm the sanitized labels (Client analysts, Implementing agencies, Client IT office, Partner programs office, Subject-matter reviewers). -->
-                    <ul class="donut__legend">
-                      <li class="donut__legend-item">
-                        <span class="donut__swatch"></span>
-                        <span class="donut__label">Client analysts</span>
-                        <span class="donut__value">14</span>
-                      </li>
-                      <li class="donut__legend-item">
-                        <span class="donut__swatch"></span>
-                        <span class="donut__label">Implementing agencies</span>
-                        <span class="donut__value">9</span>
-                      </li>
-                      <li class="donut__legend-item">
-                        <span class="donut__swatch"></span>
-                        <span class="donut__label">Client IT office</span>
-                        <span class="donut__value">5</span>
-                      </li>
-                      <li class="donut__legend-item">
-                        <span class="donut__swatch"></span>
-                        <span class="donut__label">Partner programs office</span>
-                        <span class="donut__value">3</span>
-                      </li>
-                      <li class="donut__legend-item">
-                        <span class="donut__swatch"></span>
-                        <span class="donut__label">Subject-matter reviewers</span>
-                        <span class="donut__value">3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="donut__stats">
-                    <li class="donut__stat">
-                      <span class="donut__stat-figure">33</span>
-                      <span class="donut__stat-label">people</span>
-                    </li>
-                    <li class="donut__stat">
-                      <span class="donut__stat-figure">29</span>
-                      <span class="donut__stat-label">hours of interviews</span>
-                    </li>
-                  </ul>
-                  <figcaption class="cs-caption">34 interviews, 29 hours, and 33 people across five stakeholder groups, from the client’s analysts to submitters.</figcaption>
-                </figure>
-              </div>
-            </section>
-
-            <section class="cs-block">
-              <h3 class="cs-block__title">The other side of the process</h3>
-              <p class="cs-text">The client had never interviewed submitters this way, and talking to them showed us the other side of the process. Some of their pains mirrored the client’s, while others never came up in our conversations with the client:</p>
-              <div class="card-tier">
-                <p class="eyebrow" id="tier-shared">Shared with the client</p>
-                <ul class="card-grid" aria-labelledby="tier-shared">
-                  <li class="card">
-                    <h4 class="card__title">No visibility into the process</h4>
-                    <p class="card__text">Once a request was submitted, submitters had no way to track the progress or know how close it was to being adjudicated.</p>
-                  </li>
-                  <li class="card">
-                    <h4 class="card__title">No record of historical data</h4>
-                    <p class="card__text">Like our client, submitters had no straightforward way of performing analytics on past- or current-year submissions and review outcomes. Even finding records of previous-year submissions was difficult.</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="card-tier card-tier--emphasis">
-                <p class="eyebrow" id="tier-submitters">Raised only by submitters</p>
-                <ul class="card-grid card-grid--3" aria-labelledby="tier-submitters">
-                  <li class="card card--emphasis">
-                    <h4 class="card__title">A perceived lack of coordination from the reviewers</h4>
-                    <p class="card__text">Submitters complained, for example, of having to respond to many of the same questions multiple times from different reviewers.</p>
-                  </li>
-                  <li class="card card--emphasis">
-                    <h4 class="card__title">Slow timelines</h4>
-                    <p class="card__text">The long time from submission to review decision often delayed funding, even to the point of having difficulty executing funds within a fiscal year.</p>
-                  </li>
-                  <!-- TODO: Confirm that "Form confusion" belongs in the "Raised only by submitters" row. -->
-                  <li class="card card--emphasis">
-                    <h4 class="card__title">Form confusion</h4>
-                    <p class="card__text">Submitters did not understand how to correctly fill in the request, including confusion on the meaning of terminology used in the form.</p>
-                  </li>
-                </ul>
-              </div>
-              <figure class="pull-quote">
-                <blockquote class="pull-quote__quote">“I don’t want to document the same stuff 10 times. Just tell me what info you need and then route that info internally to all the correct people.”</blockquote>
-                <figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
-              </figure>
-            </section>
-
-            <section class="cs-block">
-              <h3 class="cs-block__title">Why reviews were so time- and labor-intensive</h3>
-              <p class="cs-text">The most widespread pain, the review burden, traced back to upstream causes: unclear guidance on how to justify a request, an inadequate template, and too little vetting before submission.</p>
-              <div class="scroll-x">
-                <div class="cause-chain">
-                  <div class="cause-chain__causes">
-                    <p class="eyebrow" id="root-causes">Root causes</p>
-                    <ul class="cause-chain__list" aria-labelledby="root-causes">
-                      <li class="cause-chain__cause">Unclear guidance on justifying requests</li>
-                      <li class="cause-chain__cause">Inadequate template</li>
-                      <li class="cause-chain__cause">Too little vetting before submission</li>
-                    </ul>
-                  </div>
-                  <ol class="process-flow">
-                    <li class="process-flow__step">Low-quality requests</li>
-                    <li class="process-flow__step">Reviewers can’t make a decision</li>
-                    <li class="process-flow__step process-flow__step--final">Back-and-forth over email</li>
-                  </ol>
-                </div>
-              </div>
-              <figure class="pull-quote pull-quote--compact">
-                <blockquote class="pull-quote__quote">“Sometimes it’s the same [request] has gone back and forth about 5, 10 times before we can get the right information.”</blockquote>
-                <figcaption class="pull-quote__cite">Submitter, implementing agency</figcaption>
-              </figure>
-            </section>
-
-            <section class="cs-block">
-              <h3 class="cs-block__title">Rethinking the solution</h3>
-              <p class="cs-text">Given what we learned from submitters, we knew we would need to reframe the required solution. Many of the issues in the process were systemic. A submission portal would only treat some of the symptoms, not the root causes. Worse, a portal could become a new chokepoint. It would enforce the client’s requirements at the moment of submission without supporting how submitters actually write, review, and route requests beforehand.</p>
-              <p class="cs-text">Therefore, we needed to solve not just for the symptoms experienced by our client, but for the whole process, beginning to end. This meant solving for drafting, coordination, and review, in addition to submission.</p>
-              <figure class="stage-strip">
-                <div class="scroll-x">
-                  <div class="stage-strip__inner">
-                    <div class="stage-strip__curve">
-                      <!-- TODO: Replace the illustrative severity curve with one re-plotted from the research chart. -->
-                      <svg viewBox="0 0 1000 160" preserveAspectRatio="none" role="img" aria-label="Illustrative pain severity across process stages, low in drafting, high in review and rework on both sides of submission, falling at decision">
-                        <path class="stage-strip__curve-fill" d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146 L1000 160 L0 160 Z"/>
-                        <path class="stage-strip__curve-line" d="M0 150 C80 148 150 140 200 128 C250 112 270 70 320 60 C370 52 430 58 480 68 C530 76 600 30 680 22 C740 16 780 60 820 110 C860 140 920 145 1000 146" vector-effect="non-scaling-stroke"/>
-                      </svg>
-                      <span class="eyebrow stage-strip__curve-label">Pain severity (illustrative)</span>
-                    </div>
-                    <ol class="stage-strip__stages">
-                      <li class="stage-strip__stage">
-                        <span class="stage-strip__name">Drafting</span>
-                        <span class="stage-strip__actor">Implementing agency</span>
-                      </li>
-                      <li class="stage-strip__stage">
-                        <span class="stage-strip__name">Internal review &amp; routing</span>
-                        <span class="stage-strip__actor">Implementing agency</span>
-                      </li>
-                      <li class="stage-strip__stage">
-                        <span class="stage-strip__name">Submission</span>
-                        <span class="stage-strip__actor">Handoff to client</span>
-                      </li>
-                      <li class="stage-strip__stage">
-                        <span class="stage-strip__name">Client review</span>
-                        <span class="stage-strip__actor">Client and subject-matter reviewers</span>
-                      </li>
-                      <li class="stage-strip__stage">
-                        <span class="stage-strip__name">Decision</span>
-                        <span class="stage-strip__actor">Client</span>
-                      </li>
-                    </ol>
-                    <div class="stage-strip__brackets">
-                      <div class="stage-strip__bracket stage-strip__bracket--portal">
-                        <span class="stage-strip__bracket-label">Submission portal</span>
-                      </div>
-                      <div class="stage-strip__bracket stage-strip__bracket--tool">
-                        <span class="stage-strip__bracket-label">Coordination tool</span>
-                        <span class="stage-strip__bracket-note">Drafting, coordination, review, and submission</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <figcaption class="cs-caption">A portal would have covered one step, ignoring pain points that affect the rest of the process.</figcaption>
-              </figure>
-            </section>
-
-            <section class="cs-block">
-              <h3 class="cs-block__title">What we recommended</h3>
-              <p class="cs-text">We presented our research findings to the client, emphasizing the need for a systems view of the problem and therefore a coordination tool as our primary solution. The coordination tool would keep the portal’s core strengths, like a standardized digital form with built-in guidance, and extend support across the rest of the process. We recommended the following high-level design decisions:</p>
-              <ul class="card-grid card-grid--3">
-                <li class="card">
-                  <span class="eyebrow">Decision 1</span>
-                  <h4 class="card__title">Responsive form</h4>
-                  <p class="card__text">A digital form that shows only the fields relevant to each request, replacing the myriad Word and Excel templates.</p>
-                </li>
-                <li class="card">
-                  <span class="eyebrow">Decision 2</span>
-                  <h4 class="card__title">Dynamic workflows</h4>
-                  <p class="card__text">Roles defined by the situation and guided by user knowledge, instead of fixed paths, so each organization could route requests its own way.</p>
-                </li>
-                <li class="card">
-                  <span class="eyebrow">Decision 3</span>
-                  <h4 class="card__title">Unified tool</h4>
-                  <p class="card__text">One tool for all three request processes, streamlining the work and centralizing the data.</p>
-                </li>
-              </ul>
-              <figure class="vision-panel">
-                <figcaption class="eyebrow">The vision we presented</figcaption>
-                <blockquote class="vision-panel__quote">“The new design of the funding request processes will lower the overall workload of requirement owners and reviewing officials. By providing enhanced and dynamic funding request templates, it will improve the quality of submissions and reduce the amount of necessary reworks. By providing a centralized workflow, it will streamline the funding request processes and increase visibility into the current status of submissions, which will lower the burden of manual coordination. In addition, because funding requests of all types will be created and shared in a central location, it will establish a repository of records that increases information accessibility.”</blockquote>
-              </figure>
-            </section>
-
-            <div class="cs-block">
-              <p class="closing-callout">The client was persuaded by the research findings and design vision, and enthusiastically agreed to pivot from a submission portal to a workflow coordination tool.</p>
-            </div>
-          </section>
-
-          <!-- Overview Section -->
-          <div class="case-study-overview case-study-overview--single-column">
-            <div class="case-study-overview__content">
-              <h2>The Solution</h2>
-              <p>
-                Through further product discovery and stakeholder collaboration, we developed a comprehensive workflow model to centralize and manage the entire request lifecycle—from creation to approval.
-              </p>
-              <p>
-                We delivered a customized tool that enables users to:
-              </p>
-              <ul>
-                <li>Create and submit funding requests with standardized templates</li>
-                <li>Coordinate and route requests through proper channels</li>
-                <li>Review, adjudicate, and track request status in real-time</li>
-                <li>Search historical requests and maintain centralized data</li>
-                <li>Configure custom workflows for different request types</li>
-              </ul>
-              <p>
-                The tool brought structure, transparency, and accountability to a process that had operated in the dark for years.
-              </p>
-
-              <h2>The Impact</h2>
-              <p>
-                Within one year of launch, the platform was adopted by more than 20 DoD agencies, marking the first successful digitalization of a process at this scale for the client.
-              </p>
-              <p>
-                The new system now:
-              </p>
-              <ul>
-                <li>Improves request quality through standardization and built-in guidance</li>
-                <li>Centralizes data and eliminates information silos</li>
-                <li>Enhances accessibility across the DoD community</li>
-                <li>Increases accountability and adherence to established protocols</li>
-                <li>Reduces coordination time and eliminates duplicate efforts</li>
-              </ul>
-              <p>
-                What started as a broken process became a model for how critical government processes can be modernized through thoughtful design and user-centered practices. Deeply satisfied with the work delivered, this DoD organization partnered with our team again to expand the scope and functionality of the tool for even greater impact.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer" id="contact">
+<footer class="footer" id="contact">
             <a href="mailto:whitaker.derek@gmail.com" class="footer__email">whitaker.derek@gmail.com</a>
             <div class="footer__social">
                 <a href="https://github.com/derek-whitaker" class="footer__link" aria-label="GitHub">
@@ -431,6 +1158,18 @@
             </div>
         </footer>
 
+
+      <!-- Shared lightbox: shows a copy of whichever screen opened it -->
+      <dialog class="lightbox" id="screen-lightbox" aria-label="Enlarged screen">
+        <div class="lightbox__inner">
+          <form method="dialog">
+            <button class="lightbox__close" aria-label="Close" autofocus>
+              <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 3 L13 13"/><path d="M13 3 L3 13"/></svg>
+            </button>
+          </form>
+          <div class="lightbox__slot"></div>
+        </div>
+      </dialog>
 
       <script src="js/index.js"></script>
     </body>

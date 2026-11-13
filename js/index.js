@@ -55,9 +55,19 @@ document.querySelectorAll('[data-lightbox]').forEach(trigger => {
   if (!dialog) return;
 
   trigger.addEventListener('click', () => {
+    // Shared dialogs show a copy of the trigger's contents
+    const slot = dialog.querySelector('.lightbox__slot');
+
+    if (slot) {
+      slot.replaceChildren(...[...trigger.children].map(child => child.cloneNode(true)));
+    }
+
+    dialog.returnFocus = trigger;
     dialog.showModal();
   });
+});
 
+document.querySelectorAll('.lightbox').forEach(dialog => {
   // Close when clicking the backdrop
   dialog.addEventListener('click', (e) => {
     if (e.target === dialog) {
@@ -67,6 +77,6 @@ document.querySelectorAll('[data-lightbox]').forEach(trigger => {
 
   // Return focus to the trigger
   dialog.addEventListener('close', () => {
-    trigger.focus();
+    dialog.returnFocus?.focus();
   });
 });
