@@ -1050,7 +1050,8 @@ th, td {
   font-size: 0.9em;
 }
 
-tr:hover {
+/* Case-study tables are static diagrams, so their rows don't highlight */
+tr:not(.case-study-body tr):hover {
   background-color: var(--clr-surface-hover);
 }
 
