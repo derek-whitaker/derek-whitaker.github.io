@@ -111,6 +111,15 @@
                 <li>Access the reports and recommendations that came out of an event</li>
                 <li>Experience a condensed and unclassified version of the War Room for those who couldn't attend in person</li>
               </ul>
+              <figure class="cs-screenshot">
+                <button type="button" class="screen__frame" data-lightbox="screen-lightbox" aria-haspopup="dialog" aria-label="Enlarge screen: WASSP Portal home page">
+                  <img src="img/case-studies/portal/portal-home.png" class="screen__image screen__image--wide" alt="The WASSP Portal home page, showing the WASSP mission and goals, recent portal updates, bi-weekly sync notes, important reference materials, a calendar, and registered and upcoming WASSP events with their registration status.">
+                  <span class="screen__zoom" aria-hidden="true">
+                    <svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 L14 14"/><path d="M7 5 V9"/><path d="M5 7 H9"/></svg>
+                  </span>
+                </button>
+                <figcaption class="cs-caption">The home page gathers key functionality the SYSCOM leads requested during discovery: the latest outcomes, key documents, and upcoming events and their registration status.</figcaption>
+              </figure>
 
               <h2>The Impact</h2>
               <p>
@@ -139,6 +148,18 @@
                 </a>
             </div>
         </footer>
+
+      <!-- Shared lightbox: shows a copy of whichever screen opened it -->
+      <dialog class="lightbox" id="screen-lightbox" aria-label="Enlarged screen">
+        <div class="lightbox__inner">
+          <form method="dialog">
+            <button class="lightbox__close" aria-label="Close" autofocus>
+              <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 3 L13 13"/><path d="M13 3 L3 13"/></svg>
+            </button>
+          </form>
+          <div class="lightbox__slot"></div>
+        </div>
+      </dialog>
 
       <script src="js/index.js"></script>
     </body>

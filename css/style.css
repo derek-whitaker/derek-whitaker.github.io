@@ -1354,6 +1354,62 @@ th {
   color: var(--clr-text-secondary);
 }
 
+/* Screenshot - a full-width product mockup with a caption */
+.cs-screenshot {
+  max-width: var(--width-content);
+  margin: var(--spacing-md) 0;
+}
+
+.cs-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+}
+
+.cs-screenshot .screen__frame {
+  border-radius: var(--radius-sm);
+}
+
+.cs-screenshot .cs-caption {
+  margin-top: var(--spacing-sm);
+}
+
+/* Enlarge badge - shows touch users the screenshot opens larger */
+.screen__zoom {
+  position: absolute;
+  right: var(--spacing-xs);
+  bottom: var(--spacing-xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--clr-white);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background-color var(--transition-base);
+}
+
+.screen__frame:hover .screen__zoom {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.screen__zoom svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.lightbox__slot .screen__zoom {
+  display: none;
+}
+
 .cs-list {
   max-width: var(--cs-measure);
   display: flex;
@@ -1908,12 +1964,15 @@ th {
 .lightbox {
   width: min(100% - 2rem, 70rem);
   max-height: calc(100% - 2rem);
+  max-height: calc(100dvh - 2rem);
   margin: auto;
   padding: 0;
   color: var(--clr-text-primary);
   background: var(--clr-white);
   border: none;
   border-radius: var(--radius-lg);
+  /* The slot scrolls instead, so the close button stays in view */
+  overflow: hidden;
 }
 
 .lightbox::backdrop {
@@ -1924,9 +1983,26 @@ body:has(.lightbox[open]) {
   overflow: hidden;
 }
 
+/* Column that fits the viewport; tall or wide figures scroll inside the slot */
 .lightbox__inner {
   position: relative;
-  padding: calc(var(--spacing-md) + 1rem) var(--spacing-md) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  padding: 3.25rem var(--spacing-xs) var(--spacing-xs);
+}
+
+@media (min-width: 768px) {
+  .lightbox__inner {
+    padding: calc(var(--spacing-md) + 1rem) var(--spacing-md) var(--spacing-md);
+  }
+}
+
+.lightbox__inner > .lightbox__slot {
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
 }
 
 .lightbox__close {
@@ -1957,6 +2033,18 @@ body:has(.lightbox[open]) {
 .lightbox img {
   width: 100%;
   height: auto;
+}
+
+/* Desktop-width screenshots: on phones, show them near readable size and let people pan */
+.lightbox .screen__image--wide {
+  width: 1000px;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .lightbox .screen__image--wide {
+    width: 100%;
+  }
 }
 
 .lightbox__placeholder {
