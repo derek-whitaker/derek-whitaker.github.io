@@ -3676,3 +3676,61 @@ body:has(.lightbox[open]) {
     color: var(--clr-text-secondary);
   }
 }
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+/* Hides content visually while keeping it available to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   Case study summary (TL;DR)
+   Sits directly under the meta block and shares its width and divider.
+   ========================================================================== */
+
+.cs-summary {
+  width: min(var(--width-wide), 100% - 2 * var(--spacing-md));
+  margin: 0 auto;
+  padding: var(--spacing-md) 0;
+  display: grid;
+  gap: var(--spacing-md);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.cs-summary__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Match the regular-weight meta labels directly above */
+.cs-summary .eyebrow {
+  font-weight: var(--fw-regular);
+}
+
+.cs-summary__item p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.cs-summary strong {
+  color: var(--clr-raft-900);
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: 768px) {
+  .cs-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
