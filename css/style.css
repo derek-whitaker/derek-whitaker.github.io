@@ -3475,15 +3475,14 @@ body:has(.lightbox[open]) {
 }
 
 /* Card icons: icon on the heading line, no container */
-.card__title--icon,
-.card__head {
+.card__title--icon {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* icon stays on the first line when a title wraps */
   gap: 0.5rem;
 }
 
-.card__head > * {
-  margin: 0;
+.card__title--icon .card__icon {
+  height: 1.3em; /* one line of .card__title (line-height: 1.3) */
 }
 
 .card__icon {
