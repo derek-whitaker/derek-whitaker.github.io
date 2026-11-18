@@ -1,0 +1,116 @@
+/* =============================================================
+   WASSP Portal prototype: design tokens
+   Source: pixel-sampled from Derek's Figma rebuild (Nov 2026).
+   Values marked "added" are not in the mockups; they cover
+   interaction states the static frames don't show.
+   Font: Barlow (Google Fonts), weights 400, 500, 600, 700.
+   Icons: Material Symbols Outlined (Google Fonts).
+   ============================================================= */
+
+:root {
+  /* ---------- Color: neutrals (navy family) ---------- */
+  --navy-900: #2B3764;  /* text, headings, labels, input borders, unselected radio ring, hero + footer bg */
+  --navy-600: #60698B;  /* helper text, placeholders, counters, file size, out-of-month calendar dates */
+  --navy-300: #959BB1;  /* disabled text */
+  --navy-100: #E5E6EC;  /* disabled button fill */
+  --white:    #FFFFFF;
+
+  /* ---------- Color: brand blues ---------- */
+  --blue-700: #3B4E91;  /* added: primary button hover/pressed */
+  --blue-600: #465CAA;  /* nav bar, primary button, links, accent headings, selected radio dot, chip text + border, icons */
+  --blue-500: #6377BD;  /* Registered status chip border */
+  --blue-300: #A6B3E2;  /* file card border (if used) */
+  --blue-250: #B9C1DF;  /* text-link underline */
+  --blue-200: #D0D8F3;  /* container borders: tables, cards, calendar panel, modal edge; selected calendar date fill */
+  --blue-100: #E9EDFB;  /* row dividers, chip fill, ghost button hover (added) */
+  --blue-50:  #F5F7FF;  /* ghost button fill, dropdown option hover (added) */
+  --blue-25:  #FAFBFF;  /* table header row, calendar panel fill */
+
+  /* ---------- Color: signal ---------- */
+  --gold-400: #FACD3F;  /* calendar "today" ring, Interest In Review chip border */
+  --gold-50:  #FDF5DA;  /* Interest In Review chip fill */
+  --gold-900: #63521E;  /* Interest In Review chip text */
+
+  /* ---------- Color: overlays (added) ---------- */
+  --scrim:    rgba(20, 26, 48, 0.55);  /* modal backdrop */
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* ---------- Spacing (4px base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-20: 80px;
+
+  /* ---------- Radius ---------- */
+  --radius-none: 0;      /* inputs, tables, cards, modal, drop zone */
+  --radius-xs: 2px;      /* buttons */
+  --radius-sm: 4px;      /* selected calendar date */
+  --radius-pill: 9999px; /* chips, today ring */
+
+  /* ---------- Sizes ---------- */
+  --size-nav: 72px;
+  --size-hero: 128px;
+  --size-row: 48px;          /* table rows + header */
+  --size-control-sm: 32px;   /* home buttons (Download File), status chips */
+  --size-input: 36px;        /* inputs + dropdowns */
+  --size-control-md: 40px;   /* modal buttons, ghost button, footer button */
+  --size-chip: 28px;         /* removable chips in the modal */
+  --size-cal-cell: 40px;
+  --size-radio: 16px;        /* selected: 12px dot */
+  --size-icon: 20px;         /* 16px inside chips */
+  --page-width: 1440px;
+  --col-main: 944px;
+  --col-rail: 384px;
+  --gutter: 48px;
+  --page-margin: 32px;
+  --modal-width: 660px;
+  --modal-padding: 32px;
+
+  /* ---------- Borders ---------- */
+  --border-hairline: 1px;
+  --border-ring: 2px;        /* today ring, focus ring */
+
+  /* ---------- Elevation ---------- */
+  --shadow-modal: 0 8px 32px rgba(43, 55, 100, 0.18);
+  --shadow-menu: 0 4px 16px rgba(43, 55, 100, 0.12);   /* added: dropdown menus */
+  --shadow-toast: 0 8px 24px rgba(20, 26, 48, 0.24);   /* added */
+
+  /* ---------- Focus (added) ---------- */
+  --focus-ring: 0 0 0 2px var(--white), 0 0 0 4px var(--blue-600);
+
+  /* ---------- Motion (added) ---------- */
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-base: 0ms; }
+}
+
+/* =============================================================
+   Type styles
+   Uppercase styles use letter-spacing 0.02em.
+   ============================================================= */
+
+.t-display        { font: 700 40px/48px var(--font-sans); text-transform: uppercase; letter-spacing: 0.02em; }  /* hero "WASSP PORTAL" (white) */
+.t-heading-lg     { font: 400 24px/32px var(--font-sans); text-transform: uppercase; letter-spacing: 0.02em; color: var(--navy-900); } /* home section headings, modal title */
+.t-heading-accent { font: 600 24px/32px var(--font-sans); text-transform: uppercase; color: var(--blue-600); } /* WASSP MISSION / GOALS */
+.t-heading-md     { font: 400 20px/28px var(--font-sans); }   /* hero subtitle, footer "Contact the Portal Team" (white) */
+.t-title-sm       { font: 500 16px/24px var(--font-sans); text-transform: uppercase; letter-spacing: 0.02em; color: var(--navy-900); } /* event card titles */
+.t-nav            { font: 400 16px/24px var(--font-sans); text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); } /* top nav, footer links */
+.t-section        { font: 500 16px/24px var(--font-sans); color: var(--navy-900); } /* modal section headings (Basic Details, Source), "File Details", card field labels ("Registration Status") */
+.t-body           { font: 400 16px/24px var(--font-sans); color: var(--navy-900); } /* paragraphs, table cells, radio labels, reference titles */
+.t-label          { font: 400 14px/20px var(--font-sans); color: var(--navy-900); } /* modal field labels (Title, Organization, Related Event) */
+.t-input          { font: 400 14px/20px var(--font-sans); color: var(--navy-900); } /* input values; placeholder uses --navy-600 */
+.t-body-sm        { font: 400 14px/20px var(--font-sans); color: var(--navy-900); } /* reference descriptions, chip text, See All links */
+.t-helper         { font: 400 14px/20px var(--font-sans); color: var(--navy-600); } /* helper text (full sentences, end with a period) */
+.t-caption        { font: 400 12px/16px var(--font-sans); color: var(--navy-600); } /* character counter */
+.t-button-sm      { font: 400 16px/24px var(--font-sans); } /* Download File */
+.t-button         { font: 500 16px/24px var(--font-sans); } /* Cancel, Add Recommendation, Create New Contact */

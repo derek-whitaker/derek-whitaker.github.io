@@ -1091,9 +1091,12 @@ th {
   }
 }
 
+/* Matches .cs-section__title on the newer case studies */
 .case-study-overview__content h2 {
   font-size: var(--fs-h2);
   font-weight: var(--fw-black);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
   margin: 0 0 var(--spacing-md) 0;
   color: var(--clr-text-primary);
 }
@@ -1355,8 +1358,17 @@ th {
 }
 
 /* Screenshot - a full-width product mockup with a caption */
+/* Subsection heading above a figure; matches .cs-block__title on the newer case studies */
+.cs-figure-title {
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+}
+
+/* Figures span the full column; the caption keeps the text measure */
 .cs-screenshot {
-  max-width: var(--width-content);
   margin: var(--spacing-md) 0;
 }
 
@@ -2057,6 +2069,226 @@ body:has(.lightbox[open]) {
   color: var(--clr-text-secondary);
   background: var(--clr-surface-subtle);
   border-radius: var(--radius-md);
+}
+
+/* Modal States - numbered grid of UI states that open in a gallery lightbox */
+.modal-states {
+  --state-border: #D0D8F3;
+  --state-border-active: #465CAA;
+  margin: 0 0 var(--spacing-md);
+}
+
+.modal-states__figure {
+  margin: 0;
+}
+
+.modal-states__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 899px) {
+  .modal-states__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .modal-states__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.modal-states__item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Where supported, start each row's screens at the same line even when descriptions wrap differently */
+@supports (grid-template-rows: subgrid) {
+  .modal-states__item {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+}
+
+.modal-states__link {
+  display: block;
+  align-self: start;
+  margin-top: 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: zoom-in;
+}
+
+.modal-states__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--state-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-base);
+}
+
+.modal-states__link:hover .modal-states__image,
+.modal-states__link:focus .modal-states__image {
+  border-color: var(--state-border-active);
+}
+
+.modal-states__link:focus-visible {
+  outline: 2px solid var(--state-border-active);
+  outline-offset: 3px;
+}
+
+.modal-states__label {
+  display: block;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+}
+
+.modal-states__desc {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--clr-text-secondary);
+}
+
+.modal-states .cs-caption {
+  margin-top: var(--spacing-md);
+}
+
+/* Prototype embed - an interactive prototype in an iframe that sizes itself to its content */
+.prototype-embed {
+  margin: 0 0 var(--spacing-md);
+}
+
+.prototype-embed__figure {
+  margin: 0;
+}
+
+.prototype-embed__frame {
+  display: block;
+  width: 100%;
+  /* Until the prototype reports its height */
+  height: 1600px;
+  border: none;
+}
+
+.prototype-embed .cs-caption {
+  margin-top: var(--spacing-sm);
+}
+
+/* Gallery lightbox - fills the viewport so empty space closes it like the backdrop */
+.lightbox--gallery {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  padding: 1rem;
+  color: var(--clr-white);
+  background: transparent;
+  border-radius: 0;
+  overflow: auto;
+}
+
+.lightbox--gallery[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox--gallery::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.gallery__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.lightbox--gallery .gallery__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 84vh;
+  background: var(--clr-white);
+  border-radius: var(--radius-sm);
+}
+
+.gallery__caption {
+  max-width: min(92vw, 40rem);
+  margin-top: 0.75rem;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lightbox--gallery .lightbox__close,
+.gallery__nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: var(--clr-white);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.lightbox--gallery .lightbox__close {
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.gallery__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.gallery__nav--prev {
+  left: 1rem;
+}
+
+.gallery__nav--next {
+  right: 1rem;
+}
+
+.lightbox--gallery .lightbox__close:hover,
+.gallery__nav:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox--gallery .lightbox__close:focus-visible,
+.gallery__nav:focus-visible {
+  outline: 2px solid var(--clr-white);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.gallery__nav svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* Stage Strip - process stages with a severity curve and scope brackets */
@@ -3380,8 +3612,8 @@ body:has(.lightbox[open]) {
 
 /* ==========================================================================
    RAFT case study updates (Nov 2026)
-   Scoped to .case-study-body where they touch shared components, so other
-   pages keep the site's green accent and dark table headers.
+   Scoped to .case-study-body--raft where they touch shared components, so
+   other case studies keep the site's green accent and dark table headers.
    ========================================================================== */
 
 /* RAFT brand blues (approximated from the RAFT logo; swap in exact brand values if available) */
@@ -3394,12 +3626,12 @@ body:has(.lightbox[open]) {
 }
 
 /* Inside the case study, the site's green accent becomes RAFT navy */
-.case-study-body {
+.case-study-body--raft {
   --clr-accent: var(--clr-raft-900);
   --clr-accent-hover: #0C2A44;
 }
 
-.case-study-body .donut {
+.case-study-body--raft .donut {
   --donut-1: var(--clr-raft-900);
   --donut-2: var(--clr-raft-700);
   --donut-3: var(--clr-raft-500);
@@ -3407,13 +3639,13 @@ body:has(.lightbox[open]) {
   --donut-5: var(--clr-raft-100);
 }
 
-.case-study-body .marker-list > li::before,
-.case-study-body .screen__marker {
+.case-study-body--raft .marker-list > li::before,
+.case-study-body--raft .screen__marker {
   background: var(--clr-raft-900);
 }
 
 /* Case-study tables: light headers instead of the site-wide dark th */
-.case-study-body th {
+.case-study-body--raft th {
   background: none;
   color: inherit;
 }

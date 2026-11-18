@@ -111,6 +111,7 @@
                 <li>Access the reports and recommendations that came out of an event</li>
                 <li>Experience a condensed and unclassified version of the War Room for those who couldn't attend in person</li>
               </ul>
+              <h3 class="cs-figure-title">The Home Page</h3>
               <figure class="cs-screenshot">
                 <button type="button" class="screen__frame" data-lightbox="screen-lightbox" aria-haspopup="dialog" aria-label="Enlarge screen: WASSP Portal home page">
                   <img src="img/case-studies/portal/portal-home.png" class="screen__image screen__image--wide" alt="The WASSP Portal home page, showing the WASSP mission and goals, recent portal updates, bi-weekly sync notes, important reference materials, a calendar, and registered and upcoming WASSP events with their registration status.">
@@ -120,6 +121,65 @@
                 </button>
                 <figcaption class="cs-caption">The home page gathers key functionality the SYSCOM leads requested during discovery: the latest outcomes, key documents, and upcoming events and their registration status.</figcaption>
               </figure>
+              <section class="modal-states" aria-labelledby="modal-states-title">
+                <h3 class="cs-figure-title" id="modal-states-title">Adding Recommendations to the WASSP Portal</h3>
+                <figure class="modal-states__figure">
+                  <ol class="modal-states__grid" role="list" data-gallery="modal-states-lightbox">
+                    <li class="modal-states__item">
+                      <span class="modal-states__label">Blank</span>
+                      <span class="modal-states__desc">Required fields gate submission; Source defaults to None.</span>
+                      <a href="img/case-studies/portal/modal-1-blank.png" class="modal-states__link" data-gallery-item>
+                        <img src="img/case-studies/portal/modal-1-blank.png" width="1350" height="2596" loading="lazy" class="modal-states__image" alt="The Add Recommendation modal with every field empty: Title, Description, Organization, Sub-Organization, Point of Contact, Related Recommendations, and Tags. Source is set to None, and the Add Recommendation button is disabled.">
+                      </a>
+                    </li>
+                    <li class="modal-states__item">
+                      <span class="modal-states__label">Filled: Event source</span>
+                      <span class="modal-states__desc">Choosing Event reveals one search field, nested under its option.</span>
+                      <a href="img/case-studies/portal/modal-2-event.png" class="modal-states__link" data-gallery-item>
+                        <img src="img/case-studies/portal/modal-2-event.png" width="1350" height="3094" loading="lazy" class="modal-states__image" alt="The Add Recommendation modal filled in, with Event selected as the source. A Related Event search field appears directly beneath the Event option, with Munitions III TTX selected. The Add Recommendation button is enabled.">
+                      </a>
+                    </li>
+                    <li class="modal-states__item">
+                      <span class="modal-states__label">Filled: File Library source</span>
+                      <span class="modal-states__desc">Existing files are linked.</span>
+                      <a href="img/case-studies/portal/modal-3-library.png" class="modal-states__link" data-gallery-item>
+                        <img src="img/case-studies/portal/modal-3-library.png" width="1350" height="3082" loading="lazy" class="modal-states__image" alt="The Add Recommendation modal filled in, with Choose from File Library selected as the source. A File search field appears beneath the option, with Shipyard Capacity TTX Findings.pdf selected. The Add Recommendation button is enabled.">
+                      </a>
+                    </li>
+                    <li class="modal-states__item">
+                      <span class="modal-states__label">Upload source: empty</span>
+                      <span class="modal-states__desc">Submission stays blocked until a file is attached.</span>
+                      <a href="img/case-studies/portal/modal-4-upload-empty.png" class="modal-states__link" data-gallery-item>
+                        <img src="img/case-studies/portal/modal-4-upload-empty.png" width="1350" height="3242" loading="lazy" class="modal-states__image" alt="The Add Recommendation modal filled in, with Upload a new file selected as the source. An empty drag-and-drop area appears beneath the option, noting that new uploads are added to the File Library. The Add Recommendation button is disabled.">
+                      </a>
+                    </li>
+                    <li class="modal-states__item">
+                      <span class="modal-states__label">Upload source: file attached</span>
+                      <span class="modal-states__desc">File details appear only after upload.</span>
+                      <a href="img/case-studies/portal/modal-5-upload-attached.png" class="modal-states__link" data-gallery-item>
+                        <img src="img/case-studies/portal/modal-5-upload-attached.png" width="1350" height="3610" loading="lazy" class="modal-states__image" alt="The Add Recommendation modal with Munitions III TTX After-Action Report.pdf attached as the upload. A File Details section appears beneath it with empty File Name, Resource Type, Owner Organization, and File Tags fields. The Add Recommendation button is disabled.">
+                      </a>
+                    </li>
+                    <li class="modal-states__item">
+                      <span class="modal-states__label">Upload source: complete</span>
+                      <span class="modal-states__desc">The file joins the File Library when the recommendation is saved.</span>
+                      <a href="img/case-studies/portal/modal-6-upload-complete.png" class="modal-states__link" data-gallery-item>
+                        <img src="img/case-studies/portal/modal-6-upload-complete.png" width="1350" height="3678" loading="lazy" class="modal-states__image" alt="The Add Recommendation modal with the uploaded file's details complete: the file name, After-Action Report as the resource type, ASN(RD&amp;A) as the owner organization, and file tags for munitions, supply chain, and industrial base. The Add Recommendation button is enabled.">
+                      </a>
+                    </li>
+                  </ol>
+                  <figcaption class="cs-caption">The Add Recommendation modal in six states. Select any state to enlarge it.</figcaption>
+                </figure>
+              </section>
+              <!-- PROTOTYPE: hidden for now; uncomment to restore.
+              <section class="prototype-embed" aria-labelledby="prototype-title">
+                <h3 class="cs-figure-title" id="prototype-title">Try the Add Recommendation Modal</h3>
+                <figure class="prototype-embed__figure">
+                  <iframe src="prototypes/add-recommendation.html" class="prototype-embed__frame" title="Interactive prototype of the Add Recommendation modal" loading="lazy" data-autoheight></iframe>
+                  <figcaption class="cs-caption">An interactive version of the modal. All data is fictional, and nothing you type or attach leaves your browser.</figcaption>
+                </figure>
+              </section>
+              -->
 
               <h2>The Impact</h2>
               <p>
@@ -159,6 +219,25 @@
           </form>
           <div class="lightbox__slot"></div>
         </div>
+      </dialog>
+
+      <!-- Gallery lightbox: steps through the modal states -->
+      <dialog class="lightbox lightbox--gallery" id="modal-states-lightbox" aria-label="Add Recommendation modal states">
+        <form method="dialog">
+          <button class="lightbox__close" aria-label="Close" autofocus>
+            <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 3 L13 13"/><path d="M13 3 L3 13"/></svg>
+          </button>
+        </form>
+        <button type="button" class="gallery__nav gallery__nav--prev" aria-label="Previous state" data-gallery-step="-1">
+          <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M10 3 L5 8 L10 13"/></svg>
+        </button>
+        <figure class="gallery__figure">
+          <img class="gallery__image" alt="">
+          <figcaption class="gallery__caption" aria-live="polite"></figcaption>
+        </figure>
+        <button type="button" class="gallery__nav gallery__nav--next" aria-label="Next state" data-gallery-step="1">
+          <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3 L11 8 L6 13"/></svg>
+        </button>
       </dialog>
 
       <script src="js/index.js"></script>

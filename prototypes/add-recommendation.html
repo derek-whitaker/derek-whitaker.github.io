@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Recommendation: Interactive Prototype</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Icon names must stay in alphabetical order -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0..1,0&icon_names=add,calendar_month,check_circle,close,description,expand_more,lightbulb,person,search&display=block" rel="stylesheet">
+        <link rel="stylesheet" href="wassp-tokens.css">
+        <link rel="stylesheet" href="add-recommendation.css">
+    </head>
+    <body>
+        <div class="prototype" id="prototype">
+
+            <!-- Demo controls: not part of the design -->
+            <div class="toolbar">
+                <span class="toolbar__tag">Prototype</span>
+                <button type="button" class="toolbar__btn" data-action="sample">Fill with sample data</button>
+                <button type="button" class="toolbar__btn" data-action="reset">Start over</button>
+            </div>
+
+            <div class="stage">
+
+                <!-- The modal -->
+                <section class="modal" id="modal" aria-labelledby="modal-title">
+                    <header class="modal__header">
+                        <h1 class="t-heading-lg modal__title" id="modal-title">Add Recommendation</h1>
+                        <button type="button" class="icon-btn" data-action="close" aria-label="Close">
+                            <span class="icon" aria-hidden="true">close</span>
+                        </button>
+                    </header>
+
+                    <form class="modal__form" id="form" novalidate>
+
+                        <section class="group" aria-labelledby="group-basic">
+                            <h2 class="t-section group__title" id="group-basic">Basic Details</h2>
+                            <div class="field">
+                                <label class="t-label" for="title">Title</label>
+                                <input class="input" id="title" type="text" placeholder="Recommendation title" autocomplete="off">
+                            </div>
+                            <div class="field">
+                                <label class="t-label" for="description">Description</label>
+                                <textarea class="input input--area" id="description" placeholder="What gap does this address, and what should change?" maxlength="1600" aria-describedby="description-count"></textarea>
+                                <span class="t-caption counter" id="description-count">0/1600</span>
+                            </div>
+                        </section>
+
+                        <section class="group" aria-labelledby="group-ownership">
+                            <h2 class="t-section group__title" id="group-ownership">Ownership</h2>
+                            <div class="field">
+                                <label class="t-label" for="org">Organization</label>
+                                <div class="select">
+                                    <select class="input" id="org" data-options="organizations">
+                                        <option value="">Select an organization</option>
+                                    </select>
+                                    <span class="icon" aria-hidden="true">expand_more</span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="t-label" for="suborg">Sub-Organization (Optional)</label>
+                                <div class="select">
+                                    <select class="input" id="suborg" data-options="subOrganizations">
+                                        <option value="">Select a sub-organization</option>
+                                    </select>
+                                    <span class="icon" aria-hidden="true">expand_more</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="group" aria-labelledby="group-contacts">
+                            <h2 class="t-section group__title" id="group-contacts">Points of Contact</h2>
+                            <div class="field">
+                                <label class="t-label" for="poc">Point of Contact</label>
+                                <div class="combo" data-id="poc" data-source="contacts" data-icon="person" data-multiple data-placeholder="Search contacts" data-chips-label="Selected points of contact"></div>
+                            </div>
+                            <div class="field">
+                                <button type="button" class="btn btn--ghost" data-action="new-contact">
+                                    <span class="icon" aria-hidden="true">add</span>
+                                    Create New Contact
+                                </button>
+                                <p class="t-helper note" id="contact-note" role="status"></p>
+                            </div>
+                        </section>
+
+                        <section class="group" aria-labelledby="group-source">
+                            <h2 class="t-section group__title" id="group-source">Source</h2>
+                            <p class="t-helper" id="source-help">Where did this recommendation come from?</p>
+                            <div class="radios" role="radiogroup" aria-labelledby="group-source" aria-describedby="source-help">
+
+                                <div class="radios__item">
+                                    <label class="radio">
+                                        <input type="radio" name="source" value="none" checked>
+                                        <span>None</span>
+                                    </label>
+                                </div>
+
+                                <div class="radios__item">
+                                    <label class="radio">
+                                        <input type="radio" name="source" value="event" aria-controls="source-event">
+                                        <span>Event</span>
+                                    </label>
+                                    <div class="nested" id="source-event" data-source-panel="event" hidden>
+                                        <div class="field">
+                                            <label class="t-label" for="event">Related Event</label>
+                                            <div class="combo" data-id="event" data-source="events" data-icon="calendar_month" data-placeholder="Search events" data-chips-label="Selected event"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="radios__item">
+                                    <label class="radio">
+                                        <input type="radio" name="source" value="upload" aria-controls="source-upload">
+                                        <span>Upload a new file</span>
+                                    </label>
+                                    <div class="nested" id="source-upload" data-source-panel="upload" hidden>
+                                        <p class="t-helper">New uploads are added to the File Library.</p>
+
+                                        <div class="dropzone" id="dropzone">
+                                            <p class="dropzone__prompt">
+                                                <strong>Drag and drop</strong> a file here or
+                                                <button type="button" class="link" data-action="choose-file">choose a file</button>
+                                            </p>
+                                            <p class="dropzone__meta">Maximum size: 100 MB</p>
+                                            <button type="button" class="link link--accent dropzone__sample" data-action="sample-file">No file handy? Use a sample file.</button>
+                                            <input type="file" id="file-input" hidden>
+                                        </div>
+                                        <p class="error" id="file-error" role="alert"></p>
+
+                                        <ul class="chips" id="file-chip" aria-label="Attached file"></ul>
+
+                                        <div class="file-details" id="file-details" hidden>
+                                            <h3 class="t-section">File Details</h3>
+                                            <div class="field">
+                                                <label class="t-label" for="file-name">File Name</label>
+                                                <input class="input" id="file-name" type="text" placeholder="Enter a file name" autocomplete="off">
+                                            </div>
+                                            <div class="field">
+                                                <label class="t-label" for="resource-type">Resource Type</label>
+                                                <div class="select">
+                                                    <select class="input" id="resource-type" data-options="resourceTypes">
+                                                        <option value="">Select type</option>
+                                                    </select>
+                                                    <span class="icon" aria-hidden="true">expand_more</span>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="t-label" for="owner-org">Owner Organization</label>
+                                                <div class="select">
+                                                    <select class="input" id="owner-org" data-options="organizations">
+                                                        <option value="">Select an organization</option>
+                                                    </select>
+                                                    <span class="icon" aria-hidden="true">expand_more</span>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="t-label" for="file-tags">File Tags (Optional)</label>
+                                                <div class="combo" data-id="file-tags" data-source="tags" data-multiple data-creatable data-placeholder="Search tags" data-chips-label="Selected file tags"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="radios__item">
+                                    <label class="radio">
+                                        <input type="radio" name="source" value="library" aria-controls="source-library">
+                                        <span>Choose from File Library</span>
+                                    </label>
+                                    <div class="nested" id="source-library" data-source-panel="library" hidden>
+                                        <div class="field">
+                                            <label class="t-label" for="library-file">File</label>
+                                            <div class="combo" data-id="library-file" data-source="files" data-icon="description" data-placeholder="Search files" data-chips-label="Selected file"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="group" aria-labelledby="group-related">
+                            <h2 class="t-section group__title" id="group-related">Related Recommendations (Optional)</h2>
+                            <p class="t-helper" id="related-help">Link recommendations that address similar gaps.</p>
+                            <div class="combo" data-id="related" data-source="recommendations" data-icon="lightbulb" data-multiple data-placeholder="Search recommendations" data-label="Related recommendations" data-describedby="related-help" data-chips-label="Linked recommendations"></div>
+                        </section>
+
+                        <section class="group" aria-labelledby="group-tags">
+                            <h2 class="t-section group__title" id="group-tags">Tags (Optional)</h2>
+                            <p class="t-helper" id="tags-help">Add keywords so others can find this recommendation.</p>
+                            <div class="combo" data-id="tags" data-source="tags" data-multiple data-creatable data-placeholder="Search tags" data-label="Tags" data-describedby="tags-help" data-chips-label="Selected tags"></div>
+                        </section>
+
+                        <div class="modal__footer">
+                            <p class="t-body-sm form-status" id="form-status" role="status"></p>
+                            <div class="modal__buttons">
+                                <button type="button" class="btn btn--secondary" data-action="close">Cancel</button>
+                                <button type="submit" class="btn btn--primary" id="submit" aria-disabled="true">Add Recommendation</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- After saving -->
+                <section class="panel" id="done" aria-labelledby="done-title" hidden>
+                    <span class="icon icon--filled panel__icon" aria-hidden="true">check_circle</span>
+                    <h1 class="t-heading-lg" id="done-title" tabindex="-1">Recommendation Added</h1>
+                    <p class="t-body panel__text" id="done-message"></p>
+                    <button type="button" class="btn btn--primary" data-action="restart">Add Another Recommendation</button>
+                </section>
+
+                <!-- After Cancel or Close -->
+                <section class="panel" id="closed" aria-labelledby="closed-title" hidden>
+                    <h1 class="t-heading-lg" id="closed-title" tabindex="-1">Modal Closed</h1>
+                    <p class="t-body panel__text">Nothing was saved.</p>
+                    <button type="button" class="btn btn--primary" data-action="restart">
+                        <span class="icon" aria-hidden="true">add</span>
+                        Add Recommendation
+                    </button>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="add-recommendation.js"></script>
+    </body>
+</html>

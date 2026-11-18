@@ -80,3 +80,71 @@ document.querySelectorAll('.lightbox').forEach(dialog => {
     dialog.returnFocus?.focus();
   });
 });
+
+// Embedded prototypes report their height, so their iframes never scroll
+const autoHeightFrames = [...document.querySelectorAll('iframe[data-autoheight]')];
+
+if (autoHeightFrames.length) {
+  window.addEventListener('message', (e) => {
+    if (e.origin !== window.location.origin) return;
+    if (e.data?.type !== 'prototype:height' || !Number.isFinite(e.data.height)) return;
+
+    const frame = autoHeightFrames.find(f => f.contentWindow === e.source);
+
+    if (frame) {
+      frame.style.height = `${e.data.height}px`;
+    }
+  });
+}
+
+// Gallery lightboxes: thumbnail links step through every image in the list.
+// Without <dialog> support the links simply open the image.
+document.querySelectorAll('[data-gallery]').forEach(gallery => {
+  const dialog = document.getElementById(gallery.dataset.gallery);
+
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+
+  const links = [...gallery.querySelectorAll('[data-gallery-item]')];
+  const image = dialog.querySelector('.gallery__image');
+  const caption = dialog.querySelector('.gallery__caption');
+  let current = 0;
+
+  const show = (index) => {
+    current = (index + links.length) % links.length;
+
+    const link = links[current];
+    const item = link.closest('li');
+    const label = item.querySelector('.modal-states__label').textContent.trim();
+    const desc = item.querySelector('.modal-states__desc').textContent.trim();
+
+    image.src = link.getAttribute('href');
+    image.alt = link.querySelector('img').alt;
+    caption.textContent = `${current + 1} of ${links.length}. ${label}: ${desc}`;
+  };
+
+  links.forEach((link, index) => {
+    link.setAttribute('aria-haspopup', 'dialog');
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      show(index);
+      dialog.returnFocus = link;
+      dialog.showModal();
+    });
+  });
+
+  dialog.querySelectorAll('[data-gallery-step]').forEach(button => {
+    button.addEventListener('click', () => {
+      show(current + Number(button.dataset.galleryStep));
+    });
+  });
+
+  dialog.addEventListener('keydown', (e) => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+      e.preventDefault();
+      show(current + (e.key === 'ArrowLeft' ? -1 : 1));
+    }
+  });
+});
