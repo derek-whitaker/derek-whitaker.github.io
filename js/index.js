@@ -106,6 +106,7 @@ document.querySelectorAll('[data-gallery]').forEach(gallery => {
 
   const links = [...gallery.querySelectorAll('[data-gallery-item]')];
   const image = dialog.querySelector('.gallery__image');
+  const scroller = dialog.querySelector('.gallery__scroller');
   const caption = dialog.querySelector('.gallery__caption');
   let current = 0;
 
@@ -117,8 +118,16 @@ document.querySelectorAll('[data-gallery]').forEach(gallery => {
     const label = item.querySelector('.modal-states__label').textContent.trim();
     const desc = item.querySelector('.modal-states__desc').textContent.trim();
 
+    const thumb = link.querySelector('img');
+
+    // Thumbnails are 2x exports, so actual size is half their pixel width.
+    // Width and height reserve the screen's shape before it loads.
+    image.width = thumb.getAttribute('width');
+    image.height = thumb.getAttribute('height');
+    dialog.style.setProperty('--gallery-width', `${thumb.getAttribute('width') / 2}px`);
     image.src = link.getAttribute('href');
-    image.alt = link.querySelector('img').alt;
+    image.alt = thumb.alt;
+    scroller.scrollTop = 0;
     caption.textContent = `${current + 1} of ${links.length}. ${label}: ${desc}`;
   };
 
@@ -145,6 +154,18 @@ document.querySelectorAll('[data-gallery]').forEach(gallery => {
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
       e.preventDefault();
       show(current + (e.key === 'ArrowLeft' ? -1 : 1));
+      return;
+    }
+
+    // Up/Down and Page Up/Down scroll the screen even when a button has focus
+    if (scroller && document.activeElement !== scroller) {
+      const page = scroller.clientHeight * 0.9;
+      const step = { ArrowUp: -60, ArrowDown: 60, PageUp: -page, PageDown: page }[e.key];
+
+      if (step) {
+        e.preventDefault();
+        scroller.scrollBy({ top: step });
+      }
     }
   });
 });

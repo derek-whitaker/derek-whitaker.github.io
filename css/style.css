@@ -2190,7 +2190,8 @@ body:has(.lightbox[open]) {
   height: 100%;
   max-width: none;
   max-height: none;
-  padding: 1rem;
+  /* Top padding keeps the close button clear of the screen */
+  padding: 4rem 1rem 1rem;
   color: var(--clr-white);
   background: transparent;
   border-radius: 0;
@@ -2211,17 +2212,29 @@ body:has(.lightbox[open]) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 100%;
   margin: 0;
+}
+
+/* Screens show at actual size (set from the image by JS) and scroll vertically */
+.gallery__scroller {
+  width: min(var(--gallery-width, 675px), 92vw);
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--clr-white);
+  border-radius: var(--radius-sm);
+}
+
+.gallery__scroller:focus-visible {
+  outline: 2px solid var(--clr-white);
+  outline-offset: 3px;
 }
 
 .lightbox--gallery .gallery__image {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 92vw;
-  max-height: 84vh;
-  background: var(--clr-white);
-  border-radius: var(--radius-sm);
 }
 
 .gallery__caption {
